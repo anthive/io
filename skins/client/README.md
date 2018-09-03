@@ -12,7 +12,7 @@
 - <img src="1/death@2x.png" width="40" height="40"> Death
 
 - <img src="1/hive@2x.png" width="40" height="40"> Hive
-- <img src="1/ant@2x.png" width="40" height="40"> Ant
+- <img src="1/ant@2x.png" width="30" height="40"> Ant
 
 
 # 2 Albino
@@ -29,4 +29,4 @@
 - <img src="2/death@2x.png" width="40" height="40"> Death
 
 - <img src="2/hive@2x.png" width="40" height="40"> Hive
-- <img src="2/ant@2x.png" width="40" height="40"> Ant
+- <img src="2/ant@2x.png" width="30" height="40"> Ant

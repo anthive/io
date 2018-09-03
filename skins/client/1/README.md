@@ -12,4 +12,4 @@
 - <img src="death@2x.png" width="40" height="40"> Death
 
 - <img src="hive@2x.png" width="40" height="40"> Hive
-- <img src="ant@2x.png" width="40" height="40"> Ant
+- <img src="ant@2x.png" width="30" height="40"> Ant
