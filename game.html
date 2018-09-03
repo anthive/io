@@ -14,7 +14,7 @@
 
     let gameid = queryString().gameid || null;
 
-    let dataUrl = gameid ? "https://storage.googleapis.com/anthive-dev-sandbox-games/" + gameid + ".json" : null;
+    let dataUrl = gameid ? "https://storage.googleapis.com/anthive-dev-sandbox-games/" + gameid + ".zip" : null;
 
     function queryString() {
         return location.search.replace("?", "").split("&").reduce((result, value) => {
