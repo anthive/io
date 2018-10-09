@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Anthive.io</title>
+    <title>Anthive.io Game</title>
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 <script>
     const gameid = queryString().gameid || null;
 
-    const dataUrl = gameid ? "https://storage.googleapis.com/anthive-dev-sandbox-games/" + gameid + ".zip" : null;
+    const dataUrl = gameid ? "https://storage.googleapis.com/anthive-dev-games/" + gameid + ".zip" : null;
 
     function queryString() {
         return location.search.replace("?", "").split("&").reduce((result, value) => {
@@ -30,7 +30,7 @@
     }
 </script>
 
-<script src="./js/anthive-2.1.min.js"></script>
+<script src="./js/anthive-2.2.min.js"></script>
 <script>
     new AnthivePlayer(dataUrl, "#player");
 </script>
