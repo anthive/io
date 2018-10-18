@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -377,6 +377,15 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #52d3aa;
   color: #fff;
   overflow: hidden;
+}
+#fh5co-home .fh5co-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
 }
 #fh5co-home .gradient {
   position: absolute;
