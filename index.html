@@ -192,17 +192,17 @@
 					<h2 class="to-animate">Rules</h2>
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 subtext to-animate">
-							<h3>This is a turn-based strategy game for your Bot. Compute, contemplate and plan each step of your ants so you can unfold next levels of the Ant World.
-<br><br>The goal of the game is to command your ants to collect food and return it to your hive to grow your colony.
-<br><br>Your bot starts the game with one ant and one hive on a two-dimensional map that consists of individual cells. Each cell might be occupied by one ant or by food with value from 1 to 9. Cell also might be marked as “hive”. If the hive id matches your bot id then your ants allowed to walk into a hive cell.
-<br><br>Your bot receives an information about the map with every turn. (POST with JSON payload). That includes location and an amount of food, ants, hives on the map. You also get a knowledge about your colony: how many ants you have, their location, health, and errors of each of your ants.
-<br><br>Your bot should compute (JSON response). That includes orders for each ant of your colony. Game supports following actions for your ants: “move”, “eat”, “load”, “unload”.  Every turn, each of your ants can perform only one action toward one of the four directions: “up”, “down”, “left”, “right”. In other words if you have 2 ants with ids 1 and 2 your bot response might look like this:
+              <h3>This is a turn-based strategy game for your Bot. Compute, contemplate and plan each step of your ants so you can unfold next levels of the Ant World.
+<br><br>The goal of the game is to write a strategy that helps your ants survive and procreate. Send commands to your ants in order for them to collect food, bring it to your hive, and to grow your colony. A player with the biggest colony wins the game.
+<br><br>Your bot starts the game with one ant and one hive on a two-dimensional map that consists of individual cells. Each cell might be occupied only by one ant or by one food with a value from 1 to 9. Cell also might be marked as “hive”. If the hive ID matches your bot ID then your ants are allowed to walk into a hive cell.
+<br><br>Your bot receives an information about the map with every turn. (POST with JSON payload). That includes location and amount of food, number of ants and hives on the map. You also get a knowledge about your colony: how many ants you have, their location, health, and errors of each of your ants.
+<br><br>To grow your colony you have to unload 5 foods into the cell of you hive, and then it will be converted to a new ant.
+<br><br>Your bot has to use computational thinking and computer programming to navigate and give orders to each of your ant.  (JSON response). Game supports following actions for your ants: “move”, “eat”, “load”, “unload”.  Every turn each of your ants can perform only one action toward one of the four directions: “up”, “down”, “left”, “right”. In other words if you have 2 ants with IDs 1 and 2, your bot response might look like this:
 <br><br>{"1":{"act":"move","dir":"down"},"17":{"act":"unload","dir":"right"}}
-<br><br>If your ant performs an inappropriate action it counts as an error. As example: move outside of the map or to a cell that is already occupied by ant/food;load food from the cell that does not have any, or unload food to the cell that is already full. The total number of errors is one of the parameters for defining a winner of the match.
-<br><br>You have to plan your moves in order for your ant to survive and procreate. Every ant has a Health that is scaled from 0 to 9. Health goes down by one point every 15 turns. You gain one health back every time you perform an action “eat” towards a cell with food. If ant’s health becomes 0 ant dies; dead ant get converted to one food on the same cell.
-<br><br>When amount of ants is bigger than the amount of hive cells, the hive will grow to match the ants count. Hive does not grow down when ant dies. There are no limits how big is your hive or how many ants you can have.
-<br><br>During Beta stage all games are limited to 1000 turns.
-</h3>
+<br><br>If your ant performs an inappropriate action it counts as an error. Moving outside of the map or to a cell that is already occupied by ant/food, loading food from the cell that does not have any, or unloading food to the cell that is already full - these are the errors that affect your performance. The total number of errors is one of the parameters for defining a winner of the match.
+<br><br>Every ant has a Health that is scaled from 0 to 9. Health goes down by one point every 15 turns. You gain one health back every time you perform an action “eat” towards a cell with food. If ant’s health becomes 0 ant dies.  Dead ant get converted to one food on the same cell.
+<br><br>When the amount of ants is bigger than the amount of hive cells, the hive will grow to match the ants’ count. Hive does not grow down when ant dies. There are no limits how big is your hive or how many ants you can have.
+<br><br>During Beta stage all games are limited to 1000 turns.</h3>
 						</div>
 					</div>
 				</div>
