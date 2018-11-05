@@ -1,12 +1,14 @@
 {
   "skins": [
     {
+      "id": 1,
       "name": "classic",
       "ant": "https://raw.githubusercontent.com/anthive/io/master/skins/client/1/ant%402x.png",
       "hive": "https://raw.githubusercontent.com/anthive/io/master/skins/client/1/hive%402x.png",
       "error": "https://raw.githubusercontent.com/anthive/io/master/skins/client/1/error%402x.png"
     },
     {
+      "id": 2,
       "name": "albino",
       "ant": "https://raw.githubusercontent.com/anthive/io/master/skins/client/2/ant%402x.png",
       "hive": "https://raw.githubusercontent.com/anthive/io/master/skins/client/2/hive%402x.png",
