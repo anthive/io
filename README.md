@@ -13,8 +13,8 @@ See also the list of [contributors](https://github.com/anthive/io/contributors) 
 
 ## Run locally
 ```
-npm install
-npm run serve
+yarn install
+yarn serve
 ```
 
 ## License
