@@ -16,7 +16,7 @@
                             <p class="lead text-white">Start Your new coding adventure by creating your own AI based ant-hive</p>
                             <div class="btn-wrapper">
                                 <base-button tag="a" href="#" class="mb-3 mb-sm-0" icon="fa fa-cloud-upload" style="background-color: #5f492f; border-color: #5f492f">
-                                    Release the bot
+                                    Release the bot test
                                 </base-button>
                             </div>
                         </div>
