@@ -23,5 +23,5 @@ jobs:
       - run: git config user.email "vitaly@kezlya.com"
       - run: git config user.name "Vitaly Kezlya"
       - run: git add .
-      - run: git commit -m "Update via CircleCI"
+      - run: git commit -m "Update via CircleCI [ci skip]"
       - run: git push -q https://${GITHUB_PERSONAL_TOKEN}@github.com/anthive/io.git $CIRCLE_BRANCH
