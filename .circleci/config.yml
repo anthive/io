@@ -1,8 +1,11 @@
 version: 2
 jobs:
   build:
+    branches:
+      ignore:
+        - master
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:8
     working_directory: ~/io
     steps:
       - checkout
@@ -16,6 +19,12 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn build
-      - run: rm -rf docs
-      - run: cp dist docs
+      - run: rm -rf docs/*
+      - run: cp -a dist/. docs/
+      - run: printf "anthive.io" > docs/CNAME
+      - run: git config credential.helper 'cache --timeout=120'
+      - run: git config user.email "vitaly@kezlya.com"
+      - run: git config user.name "Vitaly Kezlya"
+      - run: git add .
+      - run: git commit -m "Update via CircleCI [ci skip]"
       - run: git push -q https://${GITHUB_PERSONAL_TOKEN}@github.com/anthive/io.git $CIRCLE_BRANCH
