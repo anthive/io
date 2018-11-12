@@ -11,7 +11,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <h1 class="display-3 text-white">You are not playing a game</h1>
-                            <h5>Turn-based strategy game for your AI</h5>
+                            <h5>Turn-based strategy game for your AI 777</h5>
                             <p class="lead text-white">Start your new coding adventure with three simple steps</p>
                         </div>
 
