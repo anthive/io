@@ -48,7 +48,7 @@
                                         <h6 class="text-primary text-uppercase">2. Code strategies</h6>
                                         <p class="description mt-3">Alter logic with your own strategies. Git push to origin. Test/debug it in sandbox environment.
                                         </p>
-                                        <a href="/#rules" class="btn btn-primary mt-4">Rules</a>
+                                        <a href="/#rules" class="btn btn-primary mt-4">Rules 7</a>
                                     </div>
                                 </div>
                             </div>
