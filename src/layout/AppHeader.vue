@@ -1,8 +1,13 @@
 <template>
-    <header class="header-global">
-        <base-nav class="navbar-main" transparent type="" effect="light" expand>
+    <header class="header-global " :class="{ 'sticky-top': scrollPosition > 10, shadow: scrollPosition > 10}">
+        <base-nav class="navbar-main " :class="{stuck: scrollPosition > 10}" transparent type="" effect="light" expand>
             <a slot="brand" class="navbar-brand mr-lg-5" href="/">
-                <img src="img/brand/AntHive-logo.png">
+
+            <!--AntHive logo-->
+                <p class="anthive-logo" style="font-size: 30px;">
+                    <span>Ant</span><span>Hive.IO</span>
+                </p>
+            <!--AntHive logo-->
             </a>
 
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
@@ -32,7 +37,7 @@
                     <router-link to="https://profile.anthive.io/settings" class="dropdown-item">Settings</router-link>
                     <a href="https://profile.anthive.io/logout" @click="logged = !logged" class="dropdown-item">Log out</a>
                 </base-dropdown>
-                <a href="https://profile.anthive.io/" class="btn btn-primary order-md-4" style="background-color: #719E3B !important; border: 0; height: 45px;margin-top: 5px;" @click="logged = !logged" v-if="!logged">Sign In</a>
+                <a href="https://profile.anthive.io/" class="btn btn-primary order-md-4" style="background-color: #719E3B !important; border: 0; height: 45px;margin-top: 5px;" v-if="!logged">Sign In</a>
             </ul>
 
         </base-nav>
@@ -46,17 +51,44 @@ import CloseButton from "@/components/CloseButton";
 export default {
   data() {
     return {
-      logged: false
+      logged: false,
+      stickyOptions: {
+        marginTop: 0,
+        forName: 0,
+        className: "stuck"
+      },
+      scrollPosition: null
     };
   },
   components: {
     BaseNav,
     CloseButton,
     BaseDropdown
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
+    }
+  },
+  mounted() {
+    window.addEventListener("scroll", this.updateScroll);
   }
 };
 </script>
 <style>
+.anthive-logo {
+  text-transform: none !important;
+  margin-bottom: 0 !important;
+  font-weight: 500;
+}
+.anthive-logo span:first-child {
+  color: #000;
+}
+
+.anthive-logo span:last-child {
+  color: #db8f39;
+}
+
 .dropdown-item.active,
 .dropdown-item:active {
   color: #212529 !important;
@@ -66,6 +98,16 @@ export default {
 
 .profile-icon {
   transform: translateX(20px);
+}
+
+.stuck {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  color: #000 !important;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07) !important;
+}
+
+.stuck .navbar-nav .nav-link {
+  color: #000 !important;
 }
 
 @media only screen and (max-width: 400px) {
