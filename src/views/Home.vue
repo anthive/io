@@ -13,12 +13,7 @@
                             <h1 class="display-3 text-white">You are not playing a game
                             </h1>
                             <h5>Turn-based strategy game for your AI</h5>
-                            <p class="lead text-white">Start Your new coding adventure by creating your own AI based ant-hive</p>
-                            <div class="btn-wrapper">
-                                <base-button tag="a" href="#" class="mb-3 mb-sm-0" icon="fa fa-cloud-upload" style="background-color: #5f492f; border-color: #5f492f">
-                                    Release the bot test again test
-                                </base-button>
-                            </div>
+                            <p class="lead text-white">Start your new coding adventure with three simple steps</p>
                         </div>
 
                     </div>

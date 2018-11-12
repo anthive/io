@@ -1,14 +1,14 @@
 <template>
     <header class="header-global">
         <base-nav class="navbar-main" transparent type="" effect="light" expand>
-            <a slot="brand" class="navbar-brand mr-lg-5" href="https://demos.creative-tim.com/vue-argon-design-system/documentation">
-                <img src="img/brand/logo.png">
+            <a slot="brand" class="navbar-brand mr-lg-5" href="/">
+                <img src="img/brand/AntHive-logo.png">
             </a>
 
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
                 <div class="col-6 collapse-brand">
-                    <a href="#">
-                        <img src="img/brand/logo.png">
+                    <a href="/">
+                        <img src="img/brand/AntHive-logo.png">
                     </a>
                 </div>
                 <div class="col-6 collapse-close">
@@ -17,16 +17,12 @@
             </div>
 
             <ul class="navbar-nav navbar-nav-hover ml-auto">
-                    <a href="#" class="nav-link order-2 order-md-1">
+                    <a href="/rules.html" class="nav-link order-2 order-md-1">
                         <span class="nav-link-inner--text">Rules</span>
                     </a>
 
-                    <a href="#" class="nav-link order-3 order-md-2">
+                    <a href="/leaderboard.html" class="nav-link order-3 order-md-2">
                         <span class="nav-link-inner--text ">Leaderboards</span>
-                    </a>
-
-                    <a href="#" class="nav-link order-4 order-md-3">
-                        <span class="nav-link-inner--text">Tournaments</span>
                     </a>
                 <base-dropdown tag="li" class="nav-item order-1 order-md-4" v-if="logged">
                     <a slot="title" href="#" class="nav-item" data-toggle="dropdown" role="button">
