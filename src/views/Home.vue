@@ -10,8 +10,7 @@
                 <div class="col px-0">
                     <div class="row">
                         <div class="col-lg-6">
-                            <h1 class="display-3 text-white">You are not playing a game
-                            </h1>
+                            <h1 class="display-3 text-white">You are not playing a game</h1>
                             <h5>Turn-based strategy game for your AI</h5>
                             <p class="lead text-white">Start your new coding adventure with three simple steps</p>
                         </div>
@@ -34,10 +33,9 @@
                                             <i class="ni ni-check-bold"></i>
                                         </div>
                                         <h6 class="text-primary text-uppercase">1. Get a sample bot</h6>
-                                        <p class="description mt-3">
-                                            It's a wrapper with primitive logic. Choose coding language that you prefer. Git clone repo.
-                                        </p>
-                                        <a href="#" class="btn btn-primary mt-4">Learn more</a>
+                                        <p class="description mt-3">It's a wrapper with primitive logic. Choose coding language that you prefer. Git clone sample repository or <a href="https://github.com/new/import" target="_blank">import</a> it.</p>
+                                        <a href="https://github.com/anthive/cpp" class="btn btn-primary mt-4">C++</a>
+                                        <a href="https://github.com/anthive/go" class="btn btn-primary mt-4">GO</a>
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +48,7 @@
                                         <h6 class="text-primary text-uppercase">2. Code strategies</h6>
                                         <p class="description mt-3">Alter logic with your own strategies. Git push to origin. Test/debug it in sandbox environment.
                                         </p>
-                                        <a href="#" class="btn btn-primary mt-4">Learn more</a>
+                                        <a href="/#rules" class="btn btn-primary mt-4">Rules</a>
                                     </div>
                                 </div>
                             </div>
@@ -63,7 +61,7 @@
                                         <h6 class="text-primary text-uppercase">3. LINK YOUR REPO</h6>
                                         <p class="description mt-3">Link your repository in your profile.Set your username in ANTHIVE file.
                                         </p>
-                                        <a href="#" class="btn btn-primary mt-4">Learn more</a>
+                                        <a href="https://profile.anthive.io/settings" class="btn btn-primary mt-4">Settings</a>
                                     </div>
                                 </div>
                             </div>

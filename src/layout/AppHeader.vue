@@ -17,22 +17,22 @@
             </div>
 
             <ul class="navbar-nav navbar-nav-hover ml-auto">
-                    <a href="/rules.html" class="nav-link order-2 order-md-1">
+                    <a href="/#rules" class="nav-link order-2 order-md-1">
                         <span class="nav-link-inner--text">Rules</span>
                     </a>
 
-                    <a href="/leaderboard.html" class="nav-link order-3 order-md-2">
+                    <a href="/#leaderboard" class="nav-link order-3 order-md-2">
                         <span class="nav-link-inner--text ">Leaderboards</span>
                     </a>
                 <base-dropdown tag="li" class="nav-item order-1 order-md-4" v-if="logged">
                     <a slot="title" href="#" class="nav-item" data-toggle="dropdown" role="button">
                         <img src="img/profile-image.png" class="rounded-circle profile-icon" />
                     </a>
-                    <router-link to="/" class="dropdown-item">Profile</router-link>
-                    <router-link to="/" class="dropdown-item">Settings</router-link>
-                    <a href="#" @click="logged = !logged" class="dropdown-item">Log out</a>
+                    <router-link to="https://profile.anthive.io/" class="dropdown-item">Profile</router-link>
+                    <router-link to="https://profile.anthive.io/settings" class="dropdown-item">Settings</router-link>
+                    <a href="https://profile.anthive.io/logout" @click="logged = !logged" class="dropdown-item">Log out</a>
                 </base-dropdown>
-                <a href="#" class="btn btn-primary order-md-4" style="background-color: #719E3B !important; border: 0; height: 45px;margin-top: 5px;" @click="logged = !logged" v-if="!logged">Sign In</a>
+                <a href="https://profile.anthive.io/" class="btn btn-primary order-md-4" style="background-color: #719E3B !important; border: 0; height: 45px;margin-top: 5px;" @click="logged = !logged" v-if="!logged">Sign In</a>
             </ul>
 
         </base-nav>
