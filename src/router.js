@@ -3,6 +3,7 @@ import Router from "vue-router";
 import AppHeader from "./layout/AppHeader";
 import AppFooter from "./layout/AppFooter";
 import Home from "./views/Home.vue";
+import Rules from "./views/Rules.vue";
 
 Vue.use(Router);
 
@@ -15,6 +16,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Home,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/#rules",
+      name: "rules",
+      components: {
+        header: AppHeader,
+        default: Rules,
         footer: AppFooter
       }
     }

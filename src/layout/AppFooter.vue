@@ -4,11 +4,9 @@
             <div class="row align-items-center justify-content-md-between">
                 <div class="col-md-6">
                     <div class="copyright">
-                        
-                        <img src="img/brand/logo.png" >
+                        <img src="img/brand/AntHive-logo.png" >
                         <br>
                         <div style=" width: 20px; padding-bottom: 10px; margin-bottom: 10px; border-bottom: 2px solid #4A5F1C;">
-
                         </div>
                         Copyright &copy; 2018. All rights reserved.
                     </div>
@@ -16,23 +14,23 @@
                 <div class="col-md-6">
                     <ul class="nav nav-footer justify-content-end">
                         <li class="nav-item">
-                            <a href="https://www.creative-tim.com" class="nav-link" target="_blank">
+                            <a href="https://www.youtube.com/channel/UCx1KBAlciwcRuehIiOfnDVg" class="nav-link" target="_blank">
                                 <div class="social-icon yt-icon shadow">
 
                                 </div>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">
+                            <a href="https://facebook.com/AntHiveIO" class="nav-link" target="_blank">
                                 <div class="social-icon fb-icon shadow">
-                                    
+
                                 </div>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">
+                            <a href="https://twitter.com/AntHiveIO" class="nav-link" target="_blank">
                                 <div class="social-icon tw-icon shadow">
-                                    
+
                                 </div>
                             </a>
                         </li>
