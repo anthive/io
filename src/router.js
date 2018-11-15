@@ -4,6 +4,7 @@ import AppHeader from "./layout/AppHeader";
 import AppFooter from "./layout/AppFooter";
 import Home from "./views/Home.vue";
 import Rules from "./views/Rules.vue";
+import Leaderboard from "./views/Leaderboard.vue";
 
 Vue.use(Router);
 
@@ -21,11 +22,20 @@ export default new Router({
       }
     },
     {
-      path: "/#rules",
+      path: "/rules",
       name: "rules",
       components: {
         header: AppHeader,
         default: Rules,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/leaderboard",
+      name: "leaderboard",
+      components: {
+        header: AppHeader,
+        default: Leaderboard,
         footer: AppFooter
       }
     }

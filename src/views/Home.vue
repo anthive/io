@@ -27,20 +27,28 @@
                     <div class="col-lg-12">
                         <div class="row row-grid">
                             <div class="col-lg-4">
-                                <div class="card card-lift--hover shadow border-0 intro-card-scientist">
+                                <div class="card card-lift--hover shadow border-0 intro-card-scientist intro-card">
                                     <div class="card-body py-5 intro">
                                         <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
                                             <i class="ni ni-check-bold"></i>
                                         </div>
                                         <h6 class="text-primary text-uppercase">1. Get a sample bot</h6>
                                         <p class="description mt-3">It's a wrapper with primitive logic. Choose coding language that you prefer. Git clone sample repository or <a href="https://github.com/new/import" target="_blank">import</a> it.</p>
-                                        <a href="https://github.com/anthive/cpp" class="btn btn-primary mt-4">C++</a>
-                                        <a href="https://github.com/anthive/go" class="btn btn-primary mt-4">GO</a>
+                                        <div>
+                                            <span class="badge badge-pill badge-primary"><a href="https://github.com/anthive/cpp">C++</a></span>
+                                            <span class="badge badge-pill badge-primary"><a href="https://github.com/anthive/python">Python</a></span>
+                                            <span class="badge badge-pill badge-primary"><a href="https://github.com/anthive/go">GO</a></span>
+                                            <span class="badge badge-pill badge-primary"><a href="#">Java</a></span>
+                                            <span class="badge badge-pill badge-primary"><a href="https://github.com/anthive/js">JS</a></span>
+                                            <span class="badge badge-pill badge-primary"><a href="https://github.com/anthive/php">PHP</a></span>
+                                        </div>
+                                        <a href="https://github.com/anthive" class="btn btn-primary mt-4">Check repo</a>
+                                        
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="card card-lift--hover shadow border-0 intro-card-engineer-red">
+                                <div class="card card-lift--hover shadow border-0 intro-card-engineer-red intro-card">
                                     <div class="card-body py-5 intro">
                                         <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
                                             <i class="ni ni-istanbul"></i>
@@ -48,12 +56,12 @@
                                         <h6 class="text-primary text-uppercase">2. Code strategies</h6>
                                         <p class="description mt-3">Alter logic with your own strategies. Git push to origin. Test/debug it in sandbox environment.
                                         </p>
-                                        <a href="/#rules" class="btn btn-primary mt-4">Rules 7</a>
+                                        <a href="/rules" class="btn btn-primary mt-4">Rules</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="card card-lift--hover shadow border-0 intro-card-racing">
+                                <div class="card card-lift--hover shadow border-0 intro-card-racing intro-card">
                                     <div class="card-body py-5 intro">
                                         <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
                                             <i class="ni ni-planet"></i>
@@ -485,9 +493,13 @@ export default {
 };
 </script>
 
-<style scope>
+<style>
 h5 {
   color: #dc923f !important;
+}
+
+.badge {
+  background-color: #ded2c4 !important;
 }
 
 .ant-image {
