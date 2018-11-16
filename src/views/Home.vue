@@ -43,7 +43,7 @@
                                             <span class="badge badge-pill badge-primary"><a href="https://github.com/anthive/php">PHP</a></span>
                                         </div>
                                         <a href="https://github.com/anthive" class="btn btn-primary mt-4">Check repo</a>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -300,57 +300,6 @@
         <div class="container-fluid position-absolute brown-bg-2">
 
         </div>
-        <!-- Languages block -->
-        <section class="section section-lg pt-lg-0 mt-100">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12">
-                        <div class="row row-grid">
-                            <div class="col-12">
-                                <div class="row">
-                                    <h2 class="display-4 language-header text-center">Supported languages</h2>
-                                </div>
-
-                                <div class="row row-grid">
-
-
-                                    <div class="col-lg-2">
-                                        <div class="card shadow border-0 language-card python-icon">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="card shadow border-0 language-card java-icon">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="card shadow border-0 language-card go-icon">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="card shadow border-0 language-card js-icon">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="card shadow border-0 language-card csharp-icon">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="card shadow border-0 language-card php-icon">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-12 text-center">
-                                        <a href="#" class="btn btn-primary language-button">Do not see your favorite language?</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Numbers block -->
         <section class="section section-lg pt-lg-0 mt-100">
@@ -631,61 +580,6 @@ h6.text-primary {
   border-radius: 100% !important;
   margin: 0 auto;
 }
-
-.language-header {
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-.python-icon {
-  background-image: url(../img/python-icon.svg);
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.java-icon {
-  background-image: url(../img/java-icon.svg);
-  background-size: 40%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.java-icon {
-  background-image: url(../img/java-icon.svg);
-  background-size: 40%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.go-icon {
-  background-image: url(../img/golang-icon.svg);
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.js-icon {
-  background-image: url(../img/js-icon.svg);
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.csharp-icon {
-  background-image: url(../img/csharp-icon.svg);
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.php-icon {
-  background-image: url(../img/php-icon.svg);
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
 .language-button {
   margin-top: 30px;
 }
