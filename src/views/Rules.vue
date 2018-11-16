@@ -2,7 +2,7 @@
 <div>
 
         <section class="section section-lg pt-lg-0">
-            <div class="container-fluid" style="height: 200px;background-color: rgba(95, 73, 47, 0.25)">
+            <div class="container-fluid" style="height: 200px;background-color: rgba(95, 73, 47, 1)">
 
             </div>
 

@@ -10,27 +10,33 @@
                 <div class="col px-0">
                     <div class="row">
                         <div class="offset-lg-1 col-lg-10">
-
-
                                 <v-data-table
                                     :headers="headers"
                                     :items="APIdata"
                                     class="elevation-1"
                                     :rows-per-page-items="rowsPerPageItems"
+                                    item-key="rank"
+                                    :pagination.sync="pagination"
                                 >
                                     <template slot="items" slot-scope="props">
-                                    <td>test</td>
                                     <td class="text-xs-left">
                                         <div class="profile-chip shadow">
                                             <div class="profile-chip-image">
                                                 <img :src="props.item._source.picture" alt="">
                                             </div>
+                                            <div class="profile-chip-image">
+                                              <img src=""><!-- props.item._source.lang -->
+                                            </div>
                                             <div class="profile-chip-name">
                                                 {{ props.item._id }}
                                             </div>
+                                            <div class="profile-chip-skin">
+                                                
+                                            </div>
+                                            <div class="profile-chip-version">
+                                                {{props.item._source.version}}
+                                            </div>
                                         </div>
-                                        
-                                        
                                     </td>
                                     <td class="text-xs-left">{{ props.item._source.country }}</td>
                                     <td class="text-xs-left">{{ props.item._source.city }}</td>
@@ -62,19 +68,16 @@ export default {
   data() {
     return {
       headers: [
-        {
-          text: "Placement",
-          align: "left",
-          sortable: true,
-          value: "placement"
-        },
         { text: "User", value: "_id" },
         { text: "Country", value: "_source.country" },
         { text: "City", value: "_source.city" },
         { text: "Games played", value: "_source.games" },
-        { text: "Ranking", value: "rank" }
+        { text: "Ranking", value: "_source.ranking" }
       ],
-      leaderboard: [],
+      pagination: {
+        sortBy: "_source.ranking",
+        descending: true
+      },
       APIdata: [],
       rowsPerPageItems: [10]
     };
@@ -82,8 +85,7 @@ export default {
   mounted() {
     this.$http.get("https://search.anthive.io/users/_search").then(response => {
       this.APIdata = response.data.hits.hits;
-
-      console.log(this.APIdata[0]);
+      console.log(this.APIdata);
     });
   }
 };
@@ -100,11 +102,50 @@ export default {
   background-color: rgb(255, 255, 255);
   border-radius: 25px;
 }
+
+.profile-chip-name {
+  float: left;
+}
+
 .profile-chip-image {
+  position: relative;
   width: 48px;
   height: 48px;
   float: left;
   border-radius: 100%;
+  background-image: url(../img/unknown.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.profile-chip-image:nth-child(2) {
+  transform: translateX(-10px);
+  z-index: 1;
+}
+
+.profile-chip-skin {
+  width: 48px;
+  height: 48px;
+  float: right;
+  border-radius: 100%;
+  background-image: url(../img/unknown.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.profile-chip-version {
+  width: 48px;
+  height: 48px;
+  float: right;
+  border-radius: 100%;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  text-align: center;
+  line-height: 48px;
+  padding: 0;
 }
 
 .profile-chip-image img {

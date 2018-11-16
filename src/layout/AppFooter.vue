@@ -70,6 +70,10 @@ export default {};
   pointer-events: none;
 }
 
+.footer {
+  padding-bottom: 1px !important;
+}
+
 .social-icon {
   width: 34px;
   height: 34px;
