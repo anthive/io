@@ -25,16 +25,17 @@
                                                 <img :src="props.item._source.picture" alt="">
                                             </div>
                                             <div class="profile-chip-image">
-                                              <img src=""><!-- props.item._source.lang -->
+                                              <img :src="'https://anthive.io/skins/lang/' + props.item._source.lang + '.png'"><!-- props.item._source.lang -->
                                             </div>
                                             <div class="profile-chip-name">
                                                 {{ props.item._id }}
                                             </div>
-                                            <div class="profile-chip-skin">
-                                                
-                                            </div>
+                                            
                                             <div class="profile-chip-version">
                                                 {{props.item._source.version}}
+                                            </div>
+                                            <div class="profile-chip-skin">
+                                                Version 
                                             </div>
                                         </div>
                                     </td>
@@ -126,11 +127,11 @@ export default {
 }
 
 .profile-chip-skin {
-  width: 48px;
   height: 48px;
+  line-height: 48px;
+  padding-right: 5px;
   float: right;
   border-radius: 100%;
-  background-image: url(../img/unknown.png);
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -141,11 +142,13 @@ export default {
   height: 48px;
   float: right;
   border-radius: 100%;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(95, 73, 47, 0.9);
   font-size: 18px;
   text-align: center;
   line-height: 48px;
   padding: 0;
+  padding-right: 5px;
 }
 
 .profile-chip-image img {
