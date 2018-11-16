@@ -22,11 +22,11 @@
             </div>
 
             <ul class="navbar-nav navbar-nav-hover ml-auto">
-                    <a href="/#rules" class="nav-link order-2 order-md-1">
+                    <a href="/rules" class="nav-link order-2 order-md-1">
                         <span class="nav-link-inner--text">Rules</span>
                     </a>
 
-                    <a href="/#leaderboard" class="nav-link order-3 order-md-2">
+                    <a href="/leaderboard" class="nav-link order-3 order-md-2">
                         <span class="nav-link-inner--text ">Leaderboards</span>
                     </a>
                 <base-dropdown tag="li" class="nav-item order-1 order-md-4" v-if="logged">
@@ -37,7 +37,7 @@
                     <router-link to="https://profile.anthive.io/settings" class="dropdown-item">Settings</router-link>
                     <a href="https://profile.anthive.io/logout" @click="logged = !logged" class="dropdown-item">Log out</a>
                 </base-dropdown>
-                <a href="https://profile.anthive.io/" class="btn btn-primary order-md-4" style="background-color: #719E3B !important; border: 0; height: 45px;margin-top: 5px;" v-if="!logged">Sign In</a>
+                <a href="https://profile.anthive.io/" class="btn btn-primary order-md-4" style="background-color: #719E3B !important; border: 0; height: 38px;margin-top: 5px;" v-if="!logged">Sign In</a>
             </ul>
 
         </base-nav>
@@ -108,6 +108,12 @@ export default {
 
 .stuck .navbar-nav .nav-link {
   color: #000 !important;
+}
+.navbar-main {
+  padding: 0 !important;
+}
+.navbar-main .container {
+  padding: 1rem !important;
 }
 
 @media only screen and (max-width: 400px) {

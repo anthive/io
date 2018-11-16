@@ -44,6 +44,10 @@
 export default {};
 </script>
 <style>
+.footer {
+  background: #f4f5f7;
+  padding: 1rem 0;
+}
 .footer.has-cards:before {
   content: "";
   position: absolute;
@@ -64,6 +68,10 @@ export default {};
   position: relative;
   background: transparent;
   pointer-events: none;
+}
+
+.footer {
+  padding-bottom: 1px !important;
 }
 
 .social-icon {

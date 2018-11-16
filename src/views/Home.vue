@@ -27,20 +27,28 @@
                     <div class="col-lg-12">
                         <div class="row row-grid">
                             <div class="col-lg-4">
-                                <div class="card card-lift--hover shadow border-0 intro-card-scientist">
+                                <div class="card card-lift--hover shadow border-0 intro-card-scientist intro-card">
                                     <div class="card-body py-5 intro">
                                         <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
                                             <i class="ni ni-check-bold"></i>
                                         </div>
                                         <h6 class="text-primary text-uppercase">1. Get a sample bot</h6>
                                         <p class="description mt-3">It's a wrapper with primitive logic. Choose coding language that you prefer. Git clone sample repository or <a href="https://github.com/new/import" target="_blank">import</a> it.</p>
-                                        <a href="https://github.com/anthive/cpp" class="btn btn-primary mt-4">C++</a>
-                                        <a href="https://github.com/anthive/go" class="btn btn-primary mt-4">GO</a>
+                                        <div>
+                                            <span class="badge badge-pill badge-primary"><a href="https://github.com/anthive/cpp">C++</a></span>
+                                            <span class="badge badge-pill badge-primary"><a href="https://github.com/anthive/python">Python</a></span>
+                                            <span class="badge badge-pill badge-primary"><a href="https://github.com/anthive/go">GO</a></span>
+                                            <span class="badge badge-pill badge-primary"><a href="#">Java</a></span>
+                                            <span class="badge badge-pill badge-primary"><a href="https://github.com/anthive/js">JS</a></span>
+                                            <span class="badge badge-pill badge-primary"><a href="https://github.com/anthive/php">PHP</a></span>
+                                        </div>
+                                        <a href="https://github.com/anthive" class="btn btn-primary mt-4">Check repo</a>
+
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="card card-lift--hover shadow border-0 intro-card-engineer-red">
+                                <div class="card card-lift--hover shadow border-0 intro-card-engineer-red intro-card">
                                     <div class="card-body py-5 intro">
                                         <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
                                             <i class="ni ni-istanbul"></i>
@@ -48,12 +56,12 @@
                                         <h6 class="text-primary text-uppercase">2. Code strategies</h6>
                                         <p class="description mt-3">Alter logic with your own strategies. Git push to origin. Test/debug it in sandbox environment.
                                         </p>
-                                        <a href="/#rules" class="btn btn-primary mt-4">Rules 7</a>
+                                        <a href="/rules" class="btn btn-primary mt-4">Rules</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4">
-                                <div class="card card-lift--hover shadow border-0 intro-card-racing">
+                                <div class="card card-lift--hover shadow border-0 intro-card-racing intro-card">
                                     <div class="card-body py-5 intro">
                                         <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
                                             <i class="ni ni-planet"></i>
@@ -292,57 +300,6 @@
         <div class="container-fluid position-absolute brown-bg-2">
 
         </div>
-        <!-- Languages block -->
-        <section class="section section-lg pt-lg-0 mt-100">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12">
-                        <div class="row row-grid">
-                            <div class="col-12">
-                                <div class="row">
-                                    <h2 class="display-4 language-header text-center">Supported languages</h2>
-                                </div>
-
-                                <div class="row row-grid">
-
-
-                                    <div class="col-lg-2">
-                                        <div class="card shadow border-0 language-card python-icon">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="card shadow border-0 language-card java-icon">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="card shadow border-0 language-card go-icon">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="card shadow border-0 language-card js-icon">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="card shadow border-0 language-card csharp-icon">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="card shadow border-0 language-card php-icon">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-12 text-center">
-                                        <a href="#" class="btn btn-primary language-button">Do not see your favorite language?</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Numbers block -->
         <section class="section section-lg pt-lg-0 mt-100">
@@ -485,9 +442,13 @@ export default {
 };
 </script>
 
-<style scope>
+<style>
 h5 {
   color: #dc923f !important;
+}
+
+.badge {
+  background-color: #ded2c4 !important;
 }
 
 .ant-image {
@@ -619,61 +580,6 @@ h6.text-primary {
   border-radius: 100% !important;
   margin: 0 auto;
 }
-
-.language-header {
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-.python-icon {
-  background-image: url(../img/python-icon.svg);
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.java-icon {
-  background-image: url(../img/java-icon.svg);
-  background-size: 40%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.java-icon {
-  background-image: url(../img/java-icon.svg);
-  background-size: 40%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.go-icon {
-  background-image: url(../img/golang-icon.svg);
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.js-icon {
-  background-image: url(../img/js-icon.svg);
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.csharp-icon {
-  background-image: url(../img/csharp-icon.svg);
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.php-icon {
-  background-image: url(../img/php-icon.svg);
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
 .language-button {
   margin-top: 30px;
 }
