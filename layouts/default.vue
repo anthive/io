@@ -1,67 +1,41 @@
 <template>
-  <v-app dark>
-    <v-toolbar
-      :clipped-left="clipped"
-      fixed
-      app
-    >
-      <v-toolbar-side-icon @click="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'" />
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>web</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>remove</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title"/>
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>menu</v-icon>
-      </v-btn>
+  <v-app light>
+    <v-toolbar fixed class="white">
+      <v-toolbar-title >
+        <logo/>
+      </v-toolbar-title>
     </v-toolbar>
     <v-content>
-      <v-container>
+      <v-container-fluid>
         <nuxt />
-      </v-container>
+      </v-container-fluid>
     </v-content>
-    <v-footer
-      :fixed="fixed"
-      app
-    >
-      <span>&copy; 2017</span>
-    </v-footer>
+
+      <v-footer class="white">
+        <v-layout row wrap align-center>
+          <v-flex xs12>
+            <div class="white--text ml-3">
+              <logo/>
+            </div>
+          </v-flex>
+        </v-layout>
+      </v-footer>
   </v-app>
 </template>
 
 <script>
+import Logo from '~/components/Logo.vue'
+import VuetifyLogo from '~/components/VuetifyLogo.vue'
+
 export default {
+  components: {
+    Logo,
+    VuetifyLogo
+  },
   data() {
-    return {
-      clipped: false,
-      drawer: true,
-      fixed: false,
-      items: [
-        { icon: 'apps', title: 'Welcome', to: '/' },
-        { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
-    }
+    return {}
   }
 }
 </script>
+
+
