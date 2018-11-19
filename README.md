@@ -1,22 +1,22 @@
-# AntHive.IO
+# AntHive
 
-AntHIve.IO is a turn-base coding game. Command your ants to collect food and return it to your hive to grow your colony. A player with the biggest colony and less errors wins the game. For detailed rules please visit [Rules Section ](https://anthive.io/rules/)
+> Turn-based codding game
 
-## Contributing
+## Build Setup
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+``` bash
+# install dependencies
+$ yarn install
 
-* Hat tip to anyone whose code was used
-* We are hiring help.anthive.io@gmail.com
+# serve with hot reload at localhost:3000
+$ yarn run dev
 
-See also the list of [contributors](https://github.com/anthive/io/contributors) who participated in this project.
+# build for production and launch server
+$ yarn run build
+$ yarn start
 
-## Run locally
+# generate static project
+$ yarn run generate
 ```
-yarn install
-yarn serve
-```
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
