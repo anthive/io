@@ -20,33 +20,55 @@
 
   <v-footer
       height="auto"
+      width="100%"
     >
-      <v-card
-        flat
-        tile
-        class="white grey--text text-xs-center"
-      >
-        <v-card-text>
-          <v-btn
-            v-for="icon in icons"
-            :key="icon"
-            class="mx-3 grey--text"
-            icon
+      <v-layout row align-center wrap>
+        <v-flex xs12>
+
+        
+
+          <v-card
+            flat
+            tile
+            class="white grey--text text-xs-center"
           >
-            <v-icon size="24px"></v-icon>
-          </v-btn>
-        </v-card-text>
+            <v-card-text>
+              <v-btn
+                v-for="icon in icons"
+                :key="icon"
+                class="mx-3 grey--text"
+                icon
+              >
+                <v-icon size="24px"></v-icon>
+              </v-btn>
+            </v-card-text>
 
-        <v-card-text class="grey--text pt-0">
-          Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        </v-card-text>
+            <v-card-text class="grey--text pt-0" width="100%">
+              <a href="#">
+                <v-btn fab medium class="yt-icon">
+                  
+                </v-btn>
+              </a>
+              <a href="#">
+                <v-btn fab medium class="tw-icon">
+                  
+                </v-btn>
+              </a>
+              <a href="#">
+                <v-btn fab medium class="fb-icon">
+                  
+                </v-btn>
+              </a>
+            </v-card-text>
 
-        <v-divider></v-divider>
+            <v-divider></v-divider>
 
-        <v-card-text class="grey--text">
-          <logo/>
-        </v-card-text>
-      </v-card>
+            <v-card-text class="grey--text">
+              <logo/>
+            </v-card-text>
+          </v-card>
+        </v-flex>
+      </v-layout>
   </v-footer>
   </v-app>
 </template>
@@ -81,6 +103,23 @@ export default {
 .shadow {
   box-shadow: none !important;
   margin-top: 20px !important;
+}
+.yt-icon {
+  background-image: url(/yt-icon.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.tw-icon {
+  background-image: url(/twitter-icon.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.fb-icon {
+  background-image: url(/facebook-icon.png);
+  background-size: cover;
+  background-position: center center;
 }
 </style>
 
