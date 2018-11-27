@@ -2,50 +2,50 @@
 
 
         <section class="section section-lg pt-lg-0">
-        <v-parallax 
-          src="/home_bg.png" 
-          align
-          height="300">
-        </v-parallax>
-        <v-layout align-center justify-center row fill-height mt-5>
-          <v-flex xs12 md8 offset2>
-                                <v-data-table
-                                    :headers="headers"
-                                    :items="APIdata"
-                                    class="elevation-1"
-                                    :rows-per-page-items="rowsPerPageItems"
-                                    item-key="rank"
-                                    :pagination.sync="pagination"
-                                >
-                                    <template slot="items" slot-scope="props">
-                                    <td class="text-xs-left">
-                                        <div class="profile-chip elevation-3">
-                                            <div class="profile-chip-image">
-                                                <img :src="props.item._source.picture" alt="">
-                                            </div>
-                                            <div class="profile-chip-image">
-                                              <img :src="'https://anthive.io/skins/lang/' + props.item._source.lang + '.png'"><!-- props.item._source.lang -->
-                                            </div>
-                                            <div class="profile-chip-name">
-                                                {{ props.item._id }}
-                                            </div>
-                                            
-                                            <div class="profile-chip-version">
-                                                {{props.item._source.version}}
-                                            </div>
-                                            <div class="profile-chip-skin">
-                                                Version 
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="text-xs-left">{{ props.item._source.country }}</td>
-                                    <td class="text-xs-left">{{ props.item._source.city }}</td>
-                                    <td class="text-xs-left">{{ props.item._source.games }}</td>
-                                    <td class="text-xs-left">{{ props.item._source.ranking }}</td>
-                                    </template>
-                                </v-data-table>
-        </v-flex>
-        </v-layout>
+          <v-parallax 
+            src="/leaderboard_bg.png" 
+            align
+            height="300">
+          </v-parallax>
+          <v-layout align-center justify-center row fill-height mt-5>
+            <v-flex xs12 md8 offset2>
+              <v-data-table
+                  :headers="headers"
+                  :items="APIdata"
+                  class="elevation-1"
+                  :rows-per-page-items="rowsPerPageItems"
+                  item-key="rank"
+                  :pagination.sync="pagination"
+              >
+                  <template slot="items" slot-scope="props">
+                  <td class="text-xs-left">
+                      <div class="profile-chip elevation-3">
+                          <div class="profile-chip-image">
+                              <img :src="props.item._source.picture" alt="">
+                          </div>
+                          <div class="profile-chip-image">
+                            <img :src="'https://anthive.io/skins/lang/' + props.item._source.lang + '.png'"><!-- props.item._source.lang -->
+                          </div>
+                          <div class="profile-chip-name">
+                              {{ props.item._id }}
+                          </div>
+                                                
+                          <div class="profile-chip-version">
+                              {{props.item._source.version}}
+                          </div>
+                          <div class="profile-chip-skin">
+                              Version 
+                          </div>
+                      </div>
+                  </td>
+                  <td class="text-xs-left">{{ props.item._source.country }}</td>
+                  <td class="text-xs-left">{{ props.item._source.city }}</td>
+                  <td class="text-xs-left">{{ props.item._source.games }}</td>
+                  <td class="text-xs-left">{{ props.item._source.ranking }}</td>
+                  </template>
+              </v-data-table>
+            </v-flex>
+          </v-layout>
         </section>
     
 

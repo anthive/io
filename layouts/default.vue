@@ -21,28 +21,16 @@
   <v-footer
       height="auto"
       width="100%"
+      class="mt-5"
     >
       <v-layout row align-center wrap>
         <v-flex xs12>
-
-        
-
           <v-card
             flat
             tile
             class="white grey--text text-xs-center"
           >
-            <v-card-text>
-              <v-btn
-
-                class="mx-3 grey--text"
-                icon
-              >
-                <v-icon size="24px"></v-icon>
-              </v-btn>
-            </v-card-text>
-
-            <v-card-text class="grey--text pt-0" width="100%">
+            <v-card-text class="grey--text " width="100%">
               <a href="#">
                 <v-btn fab medium class="yt-icon">
                   
