@@ -105,6 +105,9 @@ export default {
 </script>
 
 <style>
+.undeco {
+  text-decoration: none;
+}
 .shadow {
   box-shadow: none !important;
   margin-top: 20px !important;
