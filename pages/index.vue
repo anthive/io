@@ -3,7 +3,7 @@
   <v-app light>
     <v-content>
       <section>
-        <v-parallax src="/home_bg.png" min-height="600">
+        <v-parallax src="/img/home_bg.png" min-height="600">
           <v-container>
             <v-layout align-center justify-start row wrap fill-height class="white--text">
               <v-flex offset-sm2 sm8 offset-md2 md4 my-5>
@@ -109,7 +109,7 @@
                     <v-layout align-center justify-center row wrap fill-height>
                       <v-flex xs12 sm4 md4 pa-5 justify-left>
                         <v-img
-                          src="/ant_ml.svg"
+                          src="/img/ant_ml.svg"
                           aspect-ratio="1"
                           max-width="100%"
                           contain
@@ -135,7 +135,7 @@
                     <v-layout align-center justify-center row wrap fill-height>
                       <v-flex xs12 sm4 md4 pa-5 justify-left>
                         <v-img
-                          src="/ant_engineer_red.svg"
+                          src="/img/ant_engineer_red.svg"
                           aspect-ratio="1"
                           max-width="100%"
                           contain
@@ -160,7 +160,7 @@
                     <v-layout align-center justify-center row wrap fill-height>
                       <v-flex xs12 sm4 md4 pa-5 justify-center>
                         <v-img
-                          src="/ant_engineer_blue.svg"
+                          src="/img/ant_engineer_blue.svg"
                           aspect-ratio="1"
                           width="100%"
                           contain
@@ -186,7 +186,7 @@
                     <v-layout align-center justify-center row wrap fill-height>
                       <v-flex xs4 sm4 md4 lg4 pa-5 justify-left>
                         <v-img
-                          src="/ant_racing.svg"
+                          src="/img/ant_racing.svg"
                           aspect-ratio="1"
                           width="100%"
                           contain
@@ -221,7 +221,7 @@
                     <v-flex xs12 md12 lg4 offset-md2 my-0 justify-center>
                       <v-card class="elevation-0 transparent">
                         <v-img
-                          src="/play_button.png"
+                          src="/img/play_button.png"
                           style="margin: 0 auto;"
                           aspect-ratio="1"
                           max-width="128px"
@@ -262,7 +262,7 @@
                 <v-flex xs12 md12 lg8 my-5>
                   <v-layout align-center justify-center row wrap fill-height>
                     <v-flex xs12 md6 pa-5 justify-left>
-                      <v-img src="/lb_teaser.png" aspect-ratio="1" contain></v-img>
+                      <v-img src="/img/lb_teaser.png" aspect-ratio="1" contain></v-img>
                     </v-flex>
                     <v-flex xs12 md6 justify-right>
                       <v-card
@@ -284,7 +284,7 @@
                 <v-flex xs12 md12 lg8 my-5>
                   <v-layout align-center justify-center row wrap fill-height>
                     <v-flex xs12 md6 pa-5 justify-left>
-                      <v-img src="/badges_trinity.png" aspect-ratio="1" contain></v-img>
+                      <v-img src="/img/badges_trinity.png" aspect-ratio="1" contain></v-img>
                     </v-flex>
                     <v-flex xs12 md6 justify-right>
                       <v-card
@@ -397,7 +397,7 @@
       </section>
 
       <section>
-        <v-parallax src="/home_bg.png" min-height="300" m4-2>
+        <v-parallax src="/img/home_bg.png" min-height="300" m4-2>
           <v-layout column wrap class="my-5" align-center>
             <v-flex xs12 style="width:100%;">
               <v-container grid-list-xl class="my-5">
@@ -441,19 +441,6 @@
   </v-app>
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
-
-export default {
-  components: {
-    Logo,
-    VuetifyLogo
-  }
-}
-</script>
-
-
 <style>
 .brown a {
   color: #fff !important;
@@ -473,7 +460,7 @@ export default {
 }
 
 .video_bg {
-  background-image: url(/howto_bg.png);
+  background-image: url(/img/howto_bg.png);
   background-size: 90% 90%;
 }
 
@@ -530,14 +517,14 @@ export default {
 }
 
 .ant-card-scientist {
-  background-image: url(/ant_ml_25.png);
+  background-image: url(/img/ant_ml_25.png);
   background-size: 250px;
   background-position: -110px center;
   background-repeat: no-repeat;
 }
 
 .ant-card-racing {
-  background-image: url(/ant_racing_25.png) !important;
+  background-image: url(/img/ant_racing_25.png) !important;
   background-size: 250px;
   background-position: -110px center;
   background-repeat: no-repeat;
@@ -546,7 +533,7 @@ export default {
 .brown-bg-1 {
   width: 100%;
   height: 100%;
-  background-image: url(/brown-shape-1.png);
+  background-image: url(/img/brown-shape-1.png);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -555,21 +542,21 @@ export default {
 .brown-bg-2 {
   width: 100%;
   height: 100%;
-  background-image: url(/brown-shape-2.png);
+  background-image: url(/img/brown-shape-2.png);
   background-size: 120%;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .bug {
-  background-image: url(/bug.svg) !important;
+  background-image: url(/img/bug.svg) !important;
   background-size: 200px;
   background-position: -110px center;
   background-repeat: no-repeat;
 }
 
 .mail {
-  background-image: url(/mail.svg) !important;
+  background-image: url(/img/mail.svg) !important;
   background-size: 200px;
   background-position: -110px center;
   background-repeat: no-repeat;

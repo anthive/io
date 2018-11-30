@@ -79,14 +79,12 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import logo from '~/components/logo.vue'
 import Vuetify from 'vuetify'
 
 export default {
   components: {
-    Logo,
-    VuetifyLogo
+    logo
   },
   data() {
     return {
@@ -113,21 +111,24 @@ export default {
   margin-top: 20px !important;
 }
 .yt-icon {
-  background-image: url(/yt-icon.png);
+  background-image: url(/img/yt-icon.png);
   background-size: cover;
   background-position: center center;
 }
 
 .tw-icon {
-  background-image: url(/twitter-icon.png);
+  background-image: url(/img/twitter-icon.png);
   background-size: cover;
   background-position: center center;
 }
 
 .fb-icon {
-  background-image: url(/facebook-icon.png);
+  background-image: url(/img/facebook-icon.png);
   background-size: cover;
   background-position: center center;
 }
 </style>
 
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">

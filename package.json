@@ -1,5 +1,5 @@
 {
-  "name": "AntHive",
+  "name": "AntHive.IO",
   "version": "1.0.0",
   "description": "Turn-based codding game",
   "author": "Vitaly Kezlya",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
+    "@nuxtjs/google-analytics": "^2.0.2",
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0",
     "vue-resource": "^1.5.1",

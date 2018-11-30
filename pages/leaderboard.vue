@@ -1,6 +1,6 @@
 <template>
   <section class="section section-lg pt-lg-0">
-    <v-parallax src="/leaderboard_bg.png" align height="300"></v-parallax>
+    <v-parallax src="/img/leaderboard_bg.png" align height="300"></v-parallax>
     <v-layout align-center justify-center row fill-height mt-5>
       <v-flex xs12 md8 offset2>
         <v-data-table
@@ -22,9 +22,7 @@
                   <!-- props.item._source.lang -->
                 </div>
                 <div class="profile-chip-name">{{ props.item._id }}</div>
-
-                <div class="profile-chip-version">{{props.item._source.version}}</div>
-                <div class="profile-chip-skin">Version</div>
+                <div class="profile-chip-version">v.{{props.item._source.version}}</div>
               </div>
             </td>
             <td class="text-xs-left">{{ props.item._source.country }}</td>

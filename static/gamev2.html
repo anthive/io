@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AntHive.IO Game</title>
+</head>
+<body>
+<div id="player">
+    <h2 class="loading">Loading...</h2>
+</div>
+
+<script>
+    const gameid = queryString().gameid || null;
+    const dataUrl = gameid ? "https://storage.googleapis.com/anthive-dev-games/" + gameid + ".zip" : null;
+    function queryString() {
+        return location.search.replace("?", "").split("&").reduce((result, value) => {
+            if (!value) {
+                return result;
+            }
+            const params = value.split("=");
+            result[params[0]] = params[1];
+            return result;
+        }, {});
+    }
+</script>
+
+<script src="./js/anthive-2.2.min.js"></script>
+<script>
+    new AnthivePlayer(dataUrl, "#player");
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122954385-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122954385-1');
+</script>
+
+</body>
+</html>
