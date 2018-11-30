@@ -1,6 +1,6 @@
 # AntHive.IO
 
-AntHIve.IO is a turn-base coding game. Command your ants to collect food and return it to your hive to grow your colony. A player with the biggest colony and less errors wins the game. For detailed rules please visit [Rules Section ](https://anthive.io/rules/)
+AntHIve.IO is a turn-based coding game. Command your ants to collect food and return it to your hive to grow your colony. A player with the biggest colony and less errors wins the game. For detailed rules please visit [Rules Section ](https://anthive.io/rules/)
 
 ## Contributing
 
@@ -14,7 +14,7 @@ See also the list of [contributors](https://github.com/anthive/io/contributors) 
 ## Run locally
 ```
 yarn install
-yarn serve
+yarn run dev
 ```
 
 ## License
