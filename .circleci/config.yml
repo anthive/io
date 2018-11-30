@@ -19,6 +19,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn generate
+      - run: yarn build
       - run: rm -rf docs/*
       - run: cp -a dist/. docs/
       - run: printf "anthive.io" > docs/CNAME
