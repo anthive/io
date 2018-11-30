@@ -70,6 +70,7 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    "quiet": false
   }
 }
