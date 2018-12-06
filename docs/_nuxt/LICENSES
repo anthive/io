@@ -1,4 +1,10 @@
 /*!
+ * vue-resource v1.5.1
+ * https://github.com/pagekit/vue-resource
+ * Released under the MIT License.
+ */
+
+/*!
  * Vue.js v2.5.17
  * (c) 2014-2018 Evan You
  * Released under the MIT License.
@@ -3414,11 +3420,5 @@
 /*!
  * vue-no-ssr v1.1.0
  * (c) 2018-present egoist <0x142857@gmail.com>
- * Released under the MIT License.
- */
-
-/*!
- * vue-resource v1.5.1
- * https://github.com/pagekit/vue-resource
  * Released under the MIT License.
  */
