@@ -1,0 +1,1 @@
+{"version":3,"file":"ClientEvents.js","sourceRoot":"./src/player/","sources":["enums/ClientEvents.ts"],"names":[],"mappings":";;AAAA,IAAY,YASX;AATD,WAAY,YAAY;IACpB,qEAAqB,CAAA;IACrB,6DAAiB,CAAA;IACjB,mEAAoB,CAAA;IACpB,mEAAoB,CAAA;IACpB,uEAAsB,CAAA;IACtB,iEAAmB,CAAA;IACnB,uEAAsB,CAAA;IACtB,+DAAkB,CAAA;AACtB,CAAC,EATW,YAAY,GAAZ,oBAAY,KAAZ,oBAAY,QASvB"}

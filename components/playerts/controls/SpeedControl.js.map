@@ -1,0 +1,1 @@
+{"version":3,"file":"SpeedControl.js","sourceRoot":"./src/player/","sources":["controls/SpeedControl.ts"],"names":[],"mappings":";;AAAA,uCAAoC;AAEpC,MAAa,YAAa,SAAQ,iBAAO;IACrC;QACI,KAAK,EAAE,CAAC;IACZ,CAAC;IAEM,OAAO,CAAC,KAAa;QACxB,IAAI,KAAK,KAAK,IAAI,CAAC,MAAM,CAAC,KAAK,EAAE;YAC7B,OAAO;SACV;QAED,IAAI,CAAC,MAAM,CAAC,KAAK,GAAG,KAAK,CAAC;IAC9B,CAAC;CACJ;AAZD,oCAYC"}

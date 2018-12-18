@@ -1,6 +1,6 @@
 <template>
   <section class="section section-lg pt-lg-0">
-    </player>
+    <player></player>
   </section>
 </template>
 

@@ -1,0 +1,1 @@
+{"version":3,"file":"PrevControl.js","sourceRoot":"./src/player/","sources":["controls/PrevControl.ts"],"names":[],"mappings":";;AAAA,uCAAoC;AAEpC,MAAa,WAAY,SAAQ,iBAAO;IACpC;QACI,KAAK,EAAE,CAAC;IACZ,CAAC;IAEM,OAAO;QACV,IAAI,CAAC,MAAM,CAAC,IAAI,EAAE,CAAC;IACvB,CAAC;IAED,IAAW,QAAQ;QACf,OAAO,IAAI,CAAC,MAAM,CAAC,YAAY,KAAK,CAAC,CAAC;IAC1C,CAAC;CACJ;AAZD,kCAYC"}
