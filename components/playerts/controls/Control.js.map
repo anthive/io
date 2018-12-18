@@ -1,1 +1,0 @@
-{"version":3,"file":"Control.js","sourceRoot":"./src/player/","sources":["controls/Control.ts"],"names":[],"mappings":";;AACA,sCAAmC;AAEnC,MAAa,OAAO;IAChB,IAAc,MAAM;QAChB,OAAO,eAAM,CAAC,QAAQ,CAAC;IAC3B,CAAC;IAEM,OAAO,CAAC,MAAY;QACvB,MAAM,IAAI,KAAK,CAAC,4CAA4C,CAAC,CAAC;IAClE,CAAC;IAED,IAAW,QAAQ;QACf,OAAO,KAAK,CAAC;IACjB,CAAC;CACJ;AAZD,0BAYC"}
