@@ -9,13 +9,13 @@
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn flat>
-          <nuxt-link to="/leaderboard" class="undeco">Leaderboard</nuxt-link>
+          <nuxt-link to="/leaderboard/" class="undeco">Leaderboard</nuxt-link>
         </v-btn>
         <v-btn flat>
-          <nuxt-link to="/rules" class="undeco">Rules</nuxt-link>
+          <nuxt-link to="/rules/" class="undeco">Rules</nuxt-link>
         </v-btn>
         <v-btn color="green white--text darken-2 mx-0">
-          <a style="color:#fff;" class="undeco" href="https://profile.anthive.io/">Login</a>
+          <a style="color:#fff;" class="undeco" href="https://profile.anthive.io/login/">Login</a>
         </v-btn>
       </v-toolbar-items>
       <v-menu class="hidden-md-and-up">
@@ -53,24 +53,11 @@
 
     <v-footer height="auto" width="100%">
       <v-layout row wrap white>
-        <v-flex xs10 justify-start>
-          <v-card-text class="grey--text">
-            <logo/>
-            <br>Copyright&copy;, 2018
-          </v-card-text>
-        </v-flex>
-
-        <v-flex xs2>
-          <v-card-text class="grey--text justify-right" width="100%">
-            <a href="#">
-              <v-btn fab small class="yt-icon"></v-btn>
-            </a>
-            <a href="#">
-              <v-btn fab small class="tw-icon"></v-btn>
-            </a>
-            <a href="#">
-              <v-btn fab small class="fb-icon"></v-btn>
-            </a>
+        <v-flex xs12 >
+          <v-card-text class="dark--text">
+            <b>AntHive.IO</b> Copyright&copy;, 2018
+            <v-spacer></v-spacer>
+            Report an <a href="https://github.com/anthive/io/issues">Issue on GitHub</a>
           </v-card-text>
         </v-flex>
       </v-layout>

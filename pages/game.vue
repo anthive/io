@@ -41,5 +41,6 @@ export default {
 .ant-player {
   background-image: url("https://anthive.io/skins/server/1/background.png");
   background-repeat: repeat;
+  margin-top: 100px;
 }
 </style>
