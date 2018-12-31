@@ -22,11 +22,11 @@ export default {
     //      player_script.setAttribute('src','/js/anthive.js')
     //      document.head.appendChild(player_script);
 
-    console.log("sdfas",AnthivePlayer);
+    const base = "https://storage.googleapis.com/anthive-prod-games/";
+    const gameid = this.$route.query.id || "";
+    const version = this.$route.query.v || "";
 
-   const gameid = this.$route.query.id || null;
-
-    const dataUrl = gameid ? "https://storage.googleapis.com/anthive-dev-games/" + gameid + ".zip" : null;
+    const dataUrl = base + version + "/" + gameid + ".zip";
     if (dataUrl != null){
       const Myplayer  = new AnthivePlayer(dataUrl,"#player");
     } else {

@@ -24,8 +24,7 @@ module.exports = {
           'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
       }
     ],
-    script: [ { src: '/js/anthive-3.0.js' }
-    ],
+    script: [ { src: '/js/anthive-3.0.js' } ],
   },
 
   /*
