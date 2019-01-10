@@ -1,30 +1,37 @@
-<template>
-  <section>
-    <v-layout column align-center>
-      <v-flex xs12 md8 lg8>
-        <div id="player" class="ant-player">
-            <h2 class="loading">{{status}}</h2>
-        </div>
+<template lang="pug">
+  section
+    v-layout(column align-center)
+      v-flex(xs12 md8 lg8 class="players")
+        template(v-for="(player, index) in players")
+          v-chip
+            v-avatar
+              v-img(:src="pictureUrl(player.Username,70)")
+            v-avatar
+              v-img(:src="getLang(player.Lang)")
+            v-avatar
+              v-img(:src="getSkin(player.Skin)")
+            span {{player.Username}}
+          b(v-if="index+1<players.length") VS
 
-      </v-flex>
-      <v-flex xs12 md8 lg8>
-        <v-toolbar flat>
-          <v-toolbar-items>
-            <v-btn @click="navigate('prev')" title="Previous" icon><v-icon>skip_previous</v-icon></v-btn>
-            <v-btn @click="playPause()" :title="isPlaying ? 'pause':'play'" icon><v-icon>{{ isPlaying ? 'pause':'play_arrow' }}</v-icon></v-btn>
-            <v-btn @click="navigate('next')" title="Next" icon><v-icon>skip_next</v-icon></v-btn>
-          </v-toolbar-items>
-          <v-toolbar-title class="body-2 grey--text text--darken-2">Speed:</v-toolbar-title>
-          <v-toolbar-items>
-            <v-btn @click="setSpeed(1)" title="Speed 1x" :disabled="currentSpeed == 1" icon>1x</v-btn>
-            <v-btn @click="setSpeed(2)" title="Speed 2x" :disabled="currentSpeed == 2" icon>2x</v-btn>
-            <v-btn @click="setSpeed(4)" title="Speed 4x" :disabled="currentSpeed == 4" icon>4x</v-btn>
-          </v-toolbar-items>
-          <v-toolbar-title class="body-2 grey--text text--darken-2">Ticks: {{ this.currentTick }} out of {{ this.totalTicks }}</v-toolbar-title>
-        </v-toolbar>
-      </v-flex>
-    </v-layout>
-  </section>
+      v-flex(xs12 md8 lg8)
+        div(id="player" class="ant-player")
+            h2(class="loading") {{status}}
+
+      v-flex(xs12 md8 lg8)
+        v-toolbar(v-if="players.length>0" flat)
+          v-toolbar-items
+            v-btn(@click="navigate('prev')" title="Previous" icon)
+              v-icon skip_previous
+            v-btn(@click="playPause()" :title="isPlaying ? 'pause':'play'" icon)
+              v-icon {{ isPlaying ? 'pause':'play_arrow' }}
+            v-btn(@click="navigate('next')" title="Next" icon)
+              v-icon skip_next
+          v-toolbar-title(class="body-2 grey--text text--darken-2") Speed:
+          v-toolbar-items
+            v-btn(@click="setSpeed(1)" title="Speed 1x" :disabled="currentSpeed == 1" icon) 1x
+            v-btn(@click="setSpeed(2)" title="Speed 2x" :disabled="currentSpeed == 2" icon) 2x
+            v-btn(@click="setSpeed(4)" title="Speed 4x" :disabled="currentSpeed == 4" icon) 4x
+          v-toolbar-title(class="body-2 grey--text text--darken-2") Ticks: {{ this.currentTick }} out of {{ this.totalTicks }}
 </template>
 
 <script>
@@ -34,6 +41,7 @@ export default {
   data: () => ({
     status: "Loading...",
     isPlaying: true,
+    players: [],
     currentTick: 0,
     currentSpeed: 4,
     totalTicks: 0,
@@ -47,6 +55,7 @@ export default {
       player = new AnthivePlayer(dataUrl,"#player");
       player.on(AnthivePlayer.onReady, () => {
         this.totalTicks =player.total;
+        this.players = player.players;
       });
       player.on(AnthivePlayer.onFrameRendered, () => {
         this.currentTick = player.currentIndex;
@@ -76,7 +85,19 @@ export default {
     setSpeed(value) {
       this.currentSpeed = value
       player.speed = value
-    }
+    },
+    pictureUrl(username,size){
+      if (username.startsWith('sample-')) {
+        return this.langUrl(username.substring(7))
+      }
+      return "https://github.com/"+username+".png?size="+size;
+    },
+    getSkin(skin) {
+      return "https://anthive.io/skins/client/"+skin+"/ant.png";
+    },
+    getLang(lang) {
+      return "https://anthive.io/skins/lang/"+lang+".png";
+    },
   }
 }
 </script>
@@ -84,6 +105,8 @@ export default {
 .ant-player {
   background-image: url("https://anthive.io/skins/server/1/background.png");
   background-repeat: repeat;
+}
+.players {
   margin-top: 100px;
 }
 </style>
