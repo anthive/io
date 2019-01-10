@@ -4,12 +4,12 @@
       v-parallax(src="/img/leaderboard_bg.png" align height="300")
       v-layout(align-center justify-center row fill-height mt-5)
         v-flex(xs12 md8 offset2)
-          v-list(three-line)
+          v-list(three-line subheader class='pb-0')
             template(v-for="(player, index) in players.slice(0, 3)")
-              v-list-tile
-                v-list-tile-avatar
-                  span(class='title') {{index+1}}
-                v-list-tile-avatar(:size=70)
+              v-list-tile(:to="{ path: '/user/?username=' + player.Username}")
+                v-list-tile-avatar(class='mt-0')
+                  span(class='title orange--text text--darken-3') {{index+1}}
+                v-list-tile-avatar(class='mt-0' :size=70)
                   v-img(:src="pictureUrl(player.Username,70)")
                 v-list-tile-content
                   v-list-tile-title(class='title px-3') {{player.Username}}
@@ -18,9 +18,9 @@
                   span(class='title') {{player.Wealth}}
                     v-icon attach_money
               v-divider
-          v-list()
+          v-list(two-line subheader)
             template(v-for="(player, index) in players.slice(3)")
-              v-list-tile
+              v-list-tile(:to="{ path: '/user/?username=' + player.Username}")
                 v-list-tile-avatar
                   span {{index+4}}
                 v-list-tile-avatar(:size=40)
@@ -104,3 +104,5 @@ export default {
   }
 };
 </script>
+<style>
+</style>
