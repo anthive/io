@@ -3,15 +3,16 @@
     v-layout(column align-center)
       v-flex(xs12 md8 lg8 class="players")
         template(v-for="(player, index) in players")
-          v-chip
-            v-avatar
-              v-img(:src="pictureUrl(player.Username,70)")
-            v-avatar
-              v-img(:src="getLang(player.Lang)")
-            v-avatar
-              v-img(:src="getSkin(player.Skin)")
-            span {{player.Username}}
-          b(v-if="index+1<players.length") VS
+          a(:href="'/user/?username=' + player.Username")
+            v-chip
+              v-avatar
+                v-img(:src="us.photoUrl(player.Username,70)")
+              v-avatar
+                v-img(:src="us.langUrl(player.Lang)")
+              v-avatar
+                v-img(:src="us.skinUrl(player.Skin)")
+              b {{player.Username}}
+          b(v-if="index+1<players.length") &nbsp;VS&nbsp;
 
       v-flex(xs12 md8 lg8)
         div(id="player" class="ant-player")
@@ -35,12 +36,15 @@
 </template>
 
 <script>
+import userService from "@/services/User";
+
 var player = null;
 
 export default {
   data: () => ({
     status: "Loading...",
     isPlaying: true,
+    us: userService,
     players: [],
     currentTick: 0,
     currentSpeed: 4,
@@ -85,18 +89,6 @@ export default {
     setSpeed(value) {
       this.currentSpeed = value
       player.speed = value
-    },
-    pictureUrl(username,size){
-      if (username.startsWith('sample-')) {
-        return this.langUrl(username.substring(7))
-      }
-      return "https://github.com/"+username+".png?size="+size;
-    },
-    getSkin(skin) {
-      return "https://anthive.io/skins/client/"+skin+"/ant.png";
-    },
-    getLang(lang) {
-      return "https://anthive.io/skins/lang/"+lang+".png";
     },
   }
 }
