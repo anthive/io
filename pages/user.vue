@@ -10,7 +10,7 @@
         <br/>
         <br/>
         <br/>
-        <h1>Hello player </h1>
+        <h1>Hello player new text </h1>
 
       </v-flex>
 
