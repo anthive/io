@@ -1,16 +1,49 @@
+import axios from "axios";
 
-const baseURL = "https://anthive.io/"
+const baseURL = "https://anthive.io/";
+const githubURL = "https://api.github.com/";
 
 class User {
-  static langUrl(lang){
-    return baseURL+"skins/lang/"+lang+".png";
+  static getUserdata(username) {
+    var ghAxios = axios.create({
+      baseURL: githubURL,
+      timeout: 3000
+    });
+
+    return ghAxios.get('users/'+username)
+      .then((res) => {
+        var user = res.data;
+
+        return {
+          name: (user.name != null) ? user.name : username,
+          avatar: this.photoUrl(username, 250),
+          company: user.company,
+          location: user.location,
+          blog: (user.blog != '') ? user.blog : null
+        };
+      })
+      .catch((err) => {
+        if(err.response.status == 404) {
+          return {
+            name: username,
+            avatar: this.photoUrl(username, 250),
+            company: null,
+            location: null,
+            blog: null
+          }
+        }
+      });
   }
 
   static photoUrl(username, size){
     if (username.startsWith('sample-')) {
-      return this.langUrl(username.substring(7))
+      return this.langUrl(username.substring(7));
     }
     return "https://github.com/"+username+".png?size="+size;
+  }
+
+  static langUrl(lang){
+    return baseURL+"skins/lang/"+lang+".png";
   }
 
   static skinUrl(skin) {

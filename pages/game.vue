@@ -62,7 +62,7 @@ export default {
         this.players = player.players;
       });
       player.on(AnthivePlayer.onFrameRendered, () => {
-        this.currentTick = player.currentIndex;
+        this.currentTick = player.currentIndex + 1;
       });
     } else {
       this.status = "Can't find game."

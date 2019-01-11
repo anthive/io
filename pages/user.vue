@@ -4,21 +4,21 @@
       v-layout(row wrap mt-5 pt-5 class="")
         v-flex(shrink class="mr-4 mb-4")
           v-card(max-width="250")
-            v-img(min-width="250" :src="us.photoUrl($route.query.username,460)")
-              v-avatar(size="100")
-                v-img(:src="us.langUrl('go')" class="elevation-2")
+            v-img(min-width="250" src="https://dummyimage.com/400x400/f1f1f1/f1f1f1" v-if="!user.avatar")
+            v-img(min-width="250" :src="user.avatar" v-if="user.avatar")
+              v-avatar(size="40" tile)
+                v-img(:src="us.langUrl('php')" class="white elevation-2")
             v-card-title()
-              h3(class="headline") Vitaly Kezlya
-            //- v-card-text(class="pt-0")
-            v-card-text(class="user__card-text pt-0 pb-1")
+              h3(class="headline") {{ user.name }}
+            v-card-text(class="user__card-text pt-0" v-if="user.company")
               v-icon(size="20" class="mr-2") people
-              span AntHive.IO AntHive.IO AntHive.IO AntHive.IO
-            v-card-text(class="user__card-text py-1")
+              span {{ user.company }}
+            v-card-text(class="user__card-text pt-0" v-if="user.location")
               v-icon(size="20" class="mr-2") place
-              span San Francisco
-            v-card-text(class="user__card-text pt-1")
+              span {{ user.location }}
+            v-card-text(class="user__card-text pt-0" v-if="user.blog")
               v-icon(size="20" class="mr-2") public
-              a(href="#" target="_blank") http://kezlya.com
+              a(:href="user.blog" target="_blank") {{ user.blog }}
         v-flex(grow class="")
           gamesTable(:columns="columns")
 </template>
@@ -32,6 +32,7 @@ export default {
   name: 'user',
   data: () => ({
     status: null,
+    user: {},
     us: userService,
     columns: [
       {
@@ -55,16 +56,15 @@ export default {
     ]
   }),
   mounted() {
+    var username = this.$route.query.username
 
-    console.log(this.$route.query.username)
-    const ghAxios = axios.create({
-      baseURL: 'https://api.github.com/',
-      timeout: 3000
-    });
+    if(username == '') {
+      this.$router.push('/leaderboard')
+    }
 
-    const hhh = ghAxios.get("users/kezlya").then(function (data){
-      console.log(data);
-    });
+    this.us.getUserdata(username).then((result) => {
+      this.user = result
+    })
   },
   components: {
     gamesTable
