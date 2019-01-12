@@ -1,42 +1,46 @@
-<template>
-  <v-layout row wrap>
-    <v-data-table
+<template lang="pug">
+  #games-table
+    h3(class="headline mb-2") User games 
+      span(class="grey--text") (2584)
+    v-data-table(
       hide-actions
       :loading="loading"
       :headers="columns"
       :items="items"
-    >
-      <template slot="headers" slot-scope="props">
-        <th
+      class="text-xs-center"
+    )
+      template(slot="headers" slot-scope="props")
+        th(
           v-for="(column, index) in props.headers"
           :class="dataTableClasses(column)"
           :key="index"
-          @click="doSort(column);"
-        >
-          {{ column.text }}
-          <v-icon small v-if="column.sortable">arrow_upward</v-icon>
-        </th>
-      </template>
-      <template slot="items" slot-scope="props">
-        <td
+          @click="doSort(column)"
+          class="pr-2"
+        ) {{ column.text }}
+          v-icon(small v-if="column.sortable") arrow_upward
+
+      template(slot="items" slot-scope="props")
+        td(
           v-for="(column, index) in columns"
           :key="index"
           v-html="getColumnData(props.item, column)"
-        ></td>
-      </template>
-    </v-data-table>
-    <div class="text-xs-center pt-2">
-      <v-pagination
-        @input="changePage($event);"
+        )
+
+    v-toolbar(flat)
+      v-pagination(
+        @input="changePage($event)"
         v-model="pagination.page"
         :length="pages"
-      ></v-pagination>
-    </div>
-  </v-layout>
+        total-visible="10"
+        class="mx-auto"
+        color="orange darken-3"
+      )
 </template>
 
 <script>
+import userService from "@/services/User";
 import axios from "axios";
+
 export default {
   name: "gamesTable",
   props: {
@@ -112,9 +116,15 @@ export default {
     getColumnData(row, field) {
       let [l1, l2] = field.value.split(".");
       let value = row[l1];
+
+      if(l1 == 'Played') {
+        return this.us.timeAgo(row[l1])
+      }
+
       if (l2) {
         value = row[l1] ? row[l1][l2] : "-";
       }
+
       return value;
     },
     async getData(type, ...params) {
@@ -123,12 +133,16 @@ export default {
         const response = await axios[type](...params);
         if (response.data.hits.hits.length > 0) {
           let arr = [];
+
           this.pages = this.pagination.totalPages = Math.ceil(
             response.data.hits.total / this.pagination.size
           );
           response.data.hits.hits.forEach(el => {
-            arr.push({ id: el._id, ...el._source });
+            if(el._source.Author) {
+              arr.push({ id: el._id, ...el._source });
+            }
           });
+
           this.$set(this, "items", arr);
         }
         this.hasError = false;
@@ -141,6 +155,7 @@ export default {
     }
   },
   data: () => ({
+    us: userService,
     loading: false,
     sorting: {},
     errorsSend: null,

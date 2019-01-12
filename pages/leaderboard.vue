@@ -16,7 +16,7 @@
                   v-list-tile-sub-title(class='px-3') {{player.Games}} games
                 v-list-tile-action
                   span(class='title') {{us.scoreString(player.Wealth)}}
-                    v-icon bubble_chart
+                    v-icon(class="ml-1") bubble_chart
               v-divider
           v-list(two-line subheader)
             template(v-for="(player, index) in players.slice(3)")
@@ -30,7 +30,7 @@
                   v-list-tile-sub-title {{player.Games}} games
                 v-list-tile-action
                   span(class='subtitle') {{us.scoreString(player.Wealth)}}
-                    v-icon bubble_chart
+                    v-icon(class="ml-1") bubble_chart
               v-divider
 </template>
 
@@ -95,13 +95,7 @@ export default {
       };
     },
     pictureUrl(username,size){
-      if (username.startsWith('sample-')) {
-        return this.langUrl(username.substring(7))
-      }
-      return "https://github.com/"+username+".png?size="+size;
-    },
-    langUrl(lang){
-      return "https://anthive.io/skins/lang/"+lang+".png";
+      return this.us.photoUrl(username, size);
     }
   }
 };

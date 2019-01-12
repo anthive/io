@@ -68,7 +68,7 @@ class User {
           minute: 60 * 1000,
           second: 1000,
         };
-    if (diff > this._periods.month) {
+    if (diff > periods.month) {
       // it was at least a month ago
       return Math.floor(diff / periods.month) + "m ago";
     } else if (diff > periods.week) {
