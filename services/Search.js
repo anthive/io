@@ -20,13 +20,11 @@ class Search  {
     const query = {
       size: size,
       sort: sort,
-      from: size*page,
+      from: size*(page-1),
       query: { bool: { filter: filter }}
     };
-console.log("Size",size);
-    const resp = await esAxios.get(handle, this.wrap(query));
-    console.log("resp",resp);
 
+    const resp = await esAxios.get(handle, this.wrap(query));
     if(resp.status == 200){
       return resp.data.hits;
     }

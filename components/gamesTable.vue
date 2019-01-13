@@ -15,7 +15,14 @@
           @click="doSort(column)"
           class="pr-2"
         ) {{ column.text }}
-          v-icon(small v-if="column.sortable") arrow_upward
+          v-icon(
+            small
+            v-if="(column.hasOwnProperty('sort')) && column.sort =='asc'"
+          ) arrow_upward
+          v-icon(
+            small
+            v-if="(column.hasOwnProperty('sort')) && column.sort == 'desc'"
+          ) arrow_downward
 
       template(slot="items" slot-scope="props")
         td(
@@ -27,7 +34,7 @@
     v-toolbar(flat)
       v-pagination(
         @input="changePage($event)"
-        v-model="pagination.page"
+        v-model="currentPage"
         :length="pages"
         total-visible="10"
         class="mx-auto"
@@ -45,7 +52,7 @@ export default {
     PageSize: {
       type: Number,
       required: true,
-      default: () => 100
+      default: () => 10
     },
     Filters: {
       type: Array,
@@ -54,75 +61,87 @@ export default {
     }
   },
 
-  //TODO: double check this
-  computed: {
-    getPagination() {
-      return {
-        sort: this.pagination.sort,
-        size: this.pagination.size,
-        from: this.pagination.from
-      };
-    }
-  },
+  data: () => ({
+    us: userService,
+    loading: false,
+    pages: 0,
+    currentPage: 1,
+    sort:[],
+
+    desc: false,
+    columns: [
+      {
+        text: "Players",
+        align: "left",
+        value: "players"
+      },
+      {
+        text: "Ticks",
+        align: "left",
+        sortable: true,
+        value: "Age"
+      },
+      {
+        text: "Wealth",
+        align: "right",
+        sortable: true,
+        sort: "desc",
+        value: "Wealth"
+      },
+      {
+        text: "Date",
+        align: "right",
+        sortable: true,
+        value: "Played"
+      }
+    ],
+    items: []
+  }),
+
   methods: {
-    log(m) {
-      console.log(m);
+    changePage(pageNumber) {
+      this.currentPage = pageNumber;
+      this.loadGames();
     },
-    changePage(e) {
-      if (e == 1) {
-        this.pagination.from = 0;
-      } else if (e == 2) {
-        this.pagination.from = this.pagination.size;
-      } else {
-        this.pagination.from = this.pagination.size * e - this.pagination.size;
-      }
-      //
-      // const size = 7;
-      // const sort = [{"Wealth": "desc"}];
-      // const page = 1
-      // const filter = [{ "term":  { "Players.Username": "kezlya"}}];
-      //
-      // searchService.searchGames(sort, page, size,filter);
 
-      // this.getData("get", this.url + "/", {
-      //   params: { ...this.getPagination }
-      // });
-    },
-    doSort(e) {
-      if (!e.sortable) return;
-      if (!this.desc) {
-        this.desc = true;
-        this.pagination.sort = `${e.value}:desc`;
-      } else {
-        this.desc = false;
-        this.pagination.sort = `${e.value}:asc`;
+    doSort(field) {
+      if (!field.sortable) return;
+
+      function nextValue(value) {
+        if (value == null) {
+          return "asc";
+        } else if (value == "asc"){
+          return "desc";
+        } else if (value == "desc"){
+          return null;
+        }
       }
 
-      // const size = 7;
-      // const sort = [{"Wealth": "desc"}];
-      // const page = 1
-      // const filter = [{ "term":  { "Players.Username": "kezlya"}}];
-      //
-      // searchService.searchGames(sort, page, size,filter);
+      this.sort = [];
+      field.sort = nextValue(field.sort);
+      this.columns.forEach(col => {
+        if (col.sort != null){
+          let sr = {};
+          sr[col.value] = col.sort;
+          this.sort.push(sr);
+        }
+      });
 
-      // this.getData("get", this.url + "/", {
-      //   params: {
-      //     ...this.getPagination
-      //   }
-      // });
+      this.loadGames();
     },
+
     dataTableClasses(column) {
-      console.log(
-        column.value,
-        column.value == (this.pagination.sort != null)
-          ? this.pagination.sort.split(":")[0]
-            ? "active"
-            : ""
-          : ""
-      );
+      // console.log(
+      //   column.value,
+      //   column.value == (this.pagination.sort != null)
+      //     ? this.pagination.sort.split(":")[0]
+      //       ? "active"
+      //       : ""
+      //     : ""
+      // );
       let name = "";
-      if (this.pagination.sort != null)
-        name = this.pagination.sort.split(":")[0];
+      // if (this.pagination.sort != null)
+      //   name = this.pagination.sort.split(":")[0];
       return [
         "column",
         column.sortable ? "sortable" : "",
@@ -130,62 +149,35 @@ export default {
         column.value == name ? "active" : ""
       ];
     },
-    getColumnData(row, field) {
-      let [l1, l2] = field.value.split(".");
-      let value = row[l1];
 
-      if(l1 == 'Played') {
-        return this.us.timeAgo(row[l1])
+    //READY
+    getColumnData(data, field) {
+      let value = '';
+      switch (field.value) {
+        case 'Age':
+          value = data._source.Age
+          break;
+        case 'Played':
+          value = this.us.timeAgo(data._source.Played)+"<br>by "+
+            data._source.Author
+          break;
+        case 'Wealth':
+          value = data._source.Wealth
+          break;
       }
-
-      if (l2) {
-        value = row[l1] ? row[l1][l2] : "-";
-      }
-
       return value;
-    },
-    async getData(type, ...params) {
-      try {
-        this.loading = true;
-        const response = await axios[type](...params);
-        if (response.data.hits.hits.length > 0) {
-          let arr = [];
-
-          this.pages = this.pagination.totalPages = Math.ceil(
-            response.data.hits.total / this.pagination.size
-          );
-          response.data.hits.hits.forEach(el => {
-            if(el._source.Author) {
-              arr.push({ id: el._id, ...el._source });
-            }
-          });
-
-          this.$set(this, "items", arr);
-        }
-        this.hasError = false;
-      } catch (error) {
-        this.errorsSend = error.response.data;
-        this.hasError = true;
-      } finally {
-        this.loading = false;
-      }
     },
 
     async loadGames(){
-      const size = 7;
-      const sort = [{"Wealth": "desc"}];
-      const page = 1
+      this.loading = true;
+
       const filter = [{ "term":  { "Players.Username": "kezlya"}}];
-console.log("SIIIIZZZEE", this.PageSize)
-
-      searchService.searchGames(sort, page, this.PageSize,filter).then(games =>{
+      searchService.searchGames(this.sort, this.currentPage, this.PageSize, filter).then(games =>{
         if (games != null) {
-          this.total = games.total;
+          this.pages = Math.ceil(games.total/this.PageSize);
           this.items = games.hits;
-
-          console.log(this.total);
-          console.log(this.items);
         }
+        this.loading = false;
       });
     }
 
@@ -195,44 +187,6 @@ console.log("SIIIIZZZEE", this.PageSize)
 
   },
 
-
-  data: () => ({
-    us: userService,
-    loading: false,
-    sorting: {},
-    errorsSend: null,
-    hasError: false,
-    desc: false,
-    pages: 200,
-    isLoading: false,
-    pagination: {
-      size: 200,
-      page: 1,
-      sort: null,
-      from: 0
-    },
-    columns: [
-      {
-        text: "Author",
-        align: "left",
-        sortable: true,
-        value: "Author"
-      },
-      {
-        text: "Age",
-        align: "left",
-        sortable: true,
-        value: "Age"
-      },
-      {
-        text: "Played",
-        align: "left",
-        sortable: true,
-        value: "Played"
-      }
-    ],
-    items: []
-  }),
   created() {
     this.loadGames();
   }
