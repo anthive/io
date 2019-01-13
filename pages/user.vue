@@ -20,7 +20,7 @@
               v-icon(size="20" class="mr-2") public
               a(:href="user.blog" target="_blank") {{ user.blog }}
         v-flex(grow class="")
-          gamesTable(:columns="columns")
+          gamesTable(:Filters="filters" :PageSize=17)
 </template>
 
 <script>
@@ -34,26 +34,7 @@ export default {
     status: null,
     user: {},
     us: userService,
-    columns: [
-      {
-        text: "Author",
-        align: "left",
-        sortable: true,
-        value: "Author"
-      },
-      {
-        text: "Age",
-        align: "left",
-        sortable: true,
-        value: "Age"
-      },
-      {
-        text: "Played",
-        align: "left",
-        sortable: true,
-        value: "Played"
-      }
-    ]
+    filters: [{ "term":  { "Players.Username": "kezlya"}}],
   }),
   mounted() {
     var username = this.$route.query.username

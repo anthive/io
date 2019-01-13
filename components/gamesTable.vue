@@ -1,7 +1,5 @@
 <template lang="pug">
   #games-table
-    h3(class="headline mb-2") User games 
-      span(class="grey--text") (2584)
     v-data-table(
       hide-actions
       :loading="loading"
@@ -39,21 +37,24 @@
 
 <script>
 import userService from "@/services/User";
-import axios from "axios";
+import searchService from "@/services/Search";
 
 export default {
   name: "gamesTable",
   props: {
-    columns: {
+    PageSize: {
+      type: Number,
+      required: true,
+      default: () => 100
+    },
+    Filters: {
       type: Array,
       required: true,
       default: () => []
-    },
-    url: {
-      type: String,
-      default: "https://search.anthive.io/_search"
     }
   },
+
+  //TODO: double check this
   computed: {
     getPagination() {
       return {
@@ -75,9 +76,17 @@ export default {
       } else {
         this.pagination.from = this.pagination.size * e - this.pagination.size;
       }
-      this.getData("get", this.url + "/", {
-        params: { ...this.getPagination }
-      });
+      //
+      // const size = 7;
+      // const sort = [{"Wealth": "desc"}];
+      // const page = 1
+      // const filter = [{ "term":  { "Players.Username": "kezlya"}}];
+      //
+      // searchService.searchGames(sort, page, size,filter);
+
+      // this.getData("get", this.url + "/", {
+      //   params: { ...this.getPagination }
+      // });
     },
     doSort(e) {
       if (!e.sortable) return;
@@ -88,11 +97,19 @@ export default {
         this.desc = false;
         this.pagination.sort = `${e.value}:asc`;
       }
-      this.getData("get", this.url + "/", {
-        params: {
-          ...this.getPagination
-        }
-      });
+
+      // const size = 7;
+      // const sort = [{"Wealth": "desc"}];
+      // const page = 1
+      // const filter = [{ "term":  { "Players.Username": "kezlya"}}];
+      //
+      // searchService.searchGames(sort, page, size,filter);
+
+      // this.getData("get", this.url + "/", {
+      //   params: {
+      //     ...this.getPagination
+      //   }
+      // });
     },
     dataTableClasses(column) {
       console.log(
@@ -152,8 +169,33 @@ export default {
       } finally {
         this.loading = false;
       }
+    },
+
+    async loadGames(){
+      const size = 7;
+      const sort = [{"Wealth": "desc"}];
+      const page = 1
+      const filter = [{ "term":  { "Players.Username": "kezlya"}}];
+console.log("SIIIIZZZEE", this.PageSize)
+
+      searchService.searchGames(sort, page, this.PageSize,filter).then(games =>{
+        if (games != null) {
+          this.total = games.total;
+          this.items = games.hits;
+
+          console.log(this.total);
+          console.log(this.items);
+        }
+      });
     }
+
+
+
+
+
   },
+
+
   data: () => ({
     us: userService,
     loading: false,
@@ -161,22 +203,38 @@ export default {
     errorsSend: null,
     hasError: false,
     desc: false,
-    pages: 20,
+    pages: 200,
     isLoading: false,
     pagination: {
-      size: 20,
+      size: 200,
       page: 1,
       sort: null,
       from: 0
     },
+    columns: [
+      {
+        text: "Author",
+        align: "left",
+        sortable: true,
+        value: "Author"
+      },
+      {
+        text: "Age",
+        align: "left",
+        sortable: true,
+        value: "Age"
+      },
+      {
+        text: "Played",
+        align: "left",
+        sortable: true,
+        value: "Played"
+      }
+    ],
     items: []
   }),
   created() {
-    this.getData("get", this.url, {
-      params: {
-        ...this.getPagination
-      }
-    });
+    this.loadGames();
   }
 };
 </script>
