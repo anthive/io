@@ -23,7 +23,7 @@ class Search  {
       from: size*(page-1),
       query: { bool: { filter: filter }}
     };
-
+    //console.log("filters",filter);
     const resp = await esAxios.get(handle, this.wrap(query));
     if(resp.status == 200){
       return resp.data.hits;

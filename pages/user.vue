@@ -35,15 +35,16 @@ export default {
     status: null,
     user: {},
     us: userService,
-    filters: [{ "term":  { "Players.Username": "kezlya"}}],
+    filters: [],
   }),
-  mounted() {
+  created() {
     var username = this.$route.query.username
 
     if(username == '') {
       this.$router.push('/leaderboard')
     }
 
+    this.filters = [{ "term":  { "Players.Username": username}}];
     this.us.getUserdata(username).then((result) => {
       this.user = result
     })

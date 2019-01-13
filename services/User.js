@@ -53,7 +53,7 @@ class User {
   static scoreString(value){
     var suffixes = ["", "K", "M", "B","t"];
     var suffixNum = Math.floor(((""+value).length-1)/3);
-    console.log(value, suffixNum);
+    //console.log(value, suffixNum);
     var shortValue = parseFloat((suffixNum != 0 ? (value / Math.pow(1000,suffixNum)) : value).toPrecision(2));
     return shortValue+suffixes[suffixNum];
   }

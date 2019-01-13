@@ -8,6 +8,7 @@
       class="text-xs-center"
     )
       template(slot="headers" slot-scope="props")
+        th(class="left") Players
         th(
           v-for="(column, index) in props.headers"
           :class="dataTableClasses(column)"
@@ -17,19 +18,33 @@
         ) {{ column.text }}
           v-icon(
             small
-            v-if="(column.hasOwnProperty('sort')) && column.sort =='asc'"
+            v-if="(column.hasOwnProperty('sort')) && column.sort =='desc'"
           ) arrow_upward
           v-icon(
             small
-            v-if="(column.hasOwnProperty('sort')) && column.sort == 'desc'"
+            v-if="(column.hasOwnProperty('sort')) && column.sort == 'asc'"
           ) arrow_downward
 
       template(slot="items" slot-scope="props")
-        td(
-          v-for="(column, index) in columns"
-          :key="index"
-          v-html="getColumnData(props.item, column)"
-        )
+        tr(@click="openGame(props.item)")
+          td(class="left")
+            v-chip(
+              v-for="(player, pIndex) in props.item._source.Players"
+            )
+              v-avatar
+                img(:src="us.photoUrl(player.Username,50)")
+              v-avatar
+                img(:src="us.langUrl(player.Lang)")
+              v-avatar
+                img(:src="us.skinUrl(player.Skin)")
+              v-avatar(color="#F0DAB8") v.{{ player.Version }}
+              b {{ player.Username }}
+              span &nbsp;&nbsp;&nbsp;{{player.Wealth}}
+          td(
+            v-for="(column, index) in columns"
+            :key="index"
+            v-html="getColumnData(props.item, column)"
+          )
 
     v-toolbar(flat)
       v-pagination(
@@ -60,21 +75,13 @@ export default {
       default: () => []
     }
   },
-
   data: () => ({
     us: userService,
     loading: false,
     pages: 0,
     currentPage: 1,
     sort:[],
-
-    desc: false,
     columns: [
-      {
-        text: "Players",
-        align: "left",
-        value: "players"
-      },
       {
         text: "Ticks",
         align: "left",
@@ -97,7 +104,10 @@ export default {
     ],
     items: []
   }),
-
+  created() {
+    this.preapareSort()
+    this.loadGames();
+  },
   methods: {
     changePage(pageNumber) {
       this.currentPage = pageNumber;
@@ -107,18 +117,20 @@ export default {
     doSort(field) {
       if (!field.sortable) return;
 
-      function nextValue(value) {
-        if (value == null) {
-          return "asc";
-        } else if (value == "asc"){
-          return "desc";
-        } else if (value == "desc"){
-          return null;
-        }
+      if (field.sort == null) {
+        field.sort = "asc";
+      } else if (field.sort == "asc"){
+        field.sort = "desc";
+      } else if (field.sort == "desc"){
+        field.sort = null;
       }
 
+      this.preapareSort()
+      this.loadGames();
+    },
+
+    preapareSort(){
       this.sort = [];
-      field.sort = nextValue(field.sort);
       this.columns.forEach(col => {
         if (col.sort != null){
           let sr = {};
@@ -126,28 +138,19 @@ export default {
           this.sort.push(sr);
         }
       });
-
-      this.loadGames();
     },
 
     dataTableClasses(column) {
-      // console.log(
-      //   column.value,
-      //   column.value == (this.pagination.sort != null)
-      //     ? this.pagination.sort.split(":")[0]
-      //       ? "active"
-      //       : ""
-      //     : ""
-      // );
-      let name = "";
-      // if (this.pagination.sort != null)
-      //   name = this.pagination.sort.split(":")[0];
       return [
         "column",
         column.sortable ? "sortable" : "",
-        this.desc ? "desc" : "asc",
-        column.value == name ? "active" : ""
+        //column.sort != null ? "desc" : "asc",
+        column.sort != null ? "active" : ""
       ];
+    },
+
+    openGame(data){
+       this.$router.push("/game/?id="+data._id+"&v="+data._source.Version);
     },
 
     //READY
@@ -170,9 +173,7 @@ export default {
 
     async loadGames(){
       this.loading = true;
-
-      const filter = [{ "term":  { "Players.Username": "kezlya"}}];
-      searchService.searchGames(this.sort, this.currentPage, this.PageSize, filter).then(games =>{
+      searchService.searchGames(this.sort, this.currentPage, this.PageSize, this.Filters).then(games =>{
         if (games != null) {
           this.pages = Math.ceil(games.total/this.PageSize);
           this.items = games.hits;
@@ -180,15 +181,6 @@ export default {
         this.loading = false;
       });
     }
-
-
-
-
-
-  },
-
-  created() {
-    this.loadGames();
   }
 };
 </script>
