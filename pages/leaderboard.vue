@@ -4,41 +4,43 @@
       v-parallax(src="/img/leaderboard_bg.png" align height="300")
       v-layout(align-center justify-center row fill-height mt-5)
         v-flex(xs12 md8 offset2)
-          v-list(three-line)
+          v-list(three-line subheader class='pb-0')
             template(v-for="(player, index) in players.slice(0, 3)")
-              v-list-tile
-                v-list-tile-avatar
-                  span(class='title') {{index+1}}
-                v-list-tile-avatar(:size=70)
-                  v-img(:src="pictureUrl(player.Username,70)")
+              v-list-tile(:to="{ path: '/user/?username=' + player.Username}")
+                v-list-tile-avatar(class='mt-0')
+                  span(class='title orange--text text--darken-3') {{index+1}}
+                v-list-tile-avatar(class='mt-0' :size=70)
+                  v-img(:src="us.photoUrl(player.Username,70)")
                 v-list-tile-content
                   v-list-tile-title(class='title px-3') {{player.Username}}
                   v-list-tile-sub-title(class='px-3') {{player.Games}} games
                 v-list-tile-action
-                  span(class='title') {{player.Wealth}}
-                    v-icon attach_money
+                  span(class='title') {{us.scoreString(player.Wealth)}}
+                    v-icon(class="ml-1") bubble_chart
               v-divider
-          v-list()
+          v-list(two-line subheader)
             template(v-for="(player, index) in players.slice(3)")
-              v-list-tile
+              v-list-tile(:to="{ path: '/user/?username=' + player.Username}")
                 v-list-tile-avatar
                   span {{index+4}}
                 v-list-tile-avatar(:size=40)
-                  v-img(:src="pictureUrl(player.Username,40)")
+                  v-img(:src="us.photoUrl(player.Username,40)")
                 v-list-tile-content
                   v-list-tile-title {{player.Username}}
                   v-list-tile-sub-title {{player.Games}} games
                 v-list-tile-action
-                  span(class='subtitle') {{player.Wealth}}
-                    v-icon attach_money
+                  span(class='subtitle') {{us.scoreString(player.Wealth)}}
+                    v-icon(class="ml-1") bubble_chart
               v-divider
 </template>
 
 <script>
+import userService from "@/services/User";
 import axios from "axios";
 export default {
   name: "Leaderboard",
   data: () => ({
+    us: userService,
     players:[],
     elastic: axios.create({
       baseURL: 'https://search.anthive.io/',
@@ -93,14 +95,10 @@ export default {
       };
     },
     pictureUrl(username,size){
-      if (username.startsWith('sample-')) {
-        return this.langUrl(username.substring(7))
-      }
-      return "https://github.com/"+username+".png?size="+size;
-    },
-    langUrl(lang){
-      return "https://anthive.io/skins/lang/"+lang+".png";
+      return this.us.photoUrl(username, size);
     }
   }
 };
 </script>
+<style>
+</style>
