@@ -1,5 +1,7 @@
 <template lang="pug">
   #games-table
+    h3(class="headline mt-1 mb-3") User games 
+      span(class="grey--text") ({{ totalGames }})
     v-data-table(
       hide-actions
       :loading="loading"
@@ -8,13 +10,12 @@
       class="text-xs-center"
     )
       template(slot="headers" slot-scope="props")
-        th(class="left") Players
+        th(class="text-xs-center") Player VS
         th(
           v-for="(column, index) in props.headers"
           :class="dataTableClasses(column)"
           :key="index"
           @click="doSort(column)"
-          class="pr-2"
         ) {{ column.text }}
           v-icon(
             small
@@ -26,20 +27,23 @@
           ) arrow_downward
 
       template(slot="items" slot-scope="props")
-        tr(@click="openGame(props.item)")
-          td(class="left")
-            v-chip(
-              v-for="(player, pIndex) in props.item._source.Players"
-            )
-              v-avatar
-                img(:src="us.photoUrl(player.Username,50)")
-              v-avatar
-                img(:src="us.langUrl(player.Lang)")
-              v-avatar
-                img(:src="us.skinUrl(player.Skin)")
-              v-avatar(color="#F0DAB8") v.{{ player.Version }}
-              b {{ player.Username }}
-              span &nbsp;&nbsp;&nbsp;{{player.Wealth}}
+        tr(@click="openGame(props.item)" style="cursor: pointer;")
+          td
+            v-layout(column align-center class="my-3")
+              v-chip(
+                v-for="(player, pIndex) in props.item._source.Players"
+                :key="player.id"
+                class="my-1"
+              )
+                v-avatar
+                  img(:src="us.photoUrl(player.Username,50)")
+                v-avatar
+                  img(:src="us.langUrl(player.Lang)")
+                v-avatar
+                  img(:src="us.skinUrl(player.Skin)")
+                v-avatar(color="#F0DAB8") v.{{ player.Version }}
+                b {{ player.Username }}
+                span &nbsp;&nbsp;&nbsp;{{player.Wealth}}
           td(
             v-for="(column, index) in columns"
             :key="index"
@@ -79,6 +83,7 @@ export default {
     us: userService,
     loading: false,
     pages: 0,
+    totalGames: 0,
     currentPage: 1,
     sort:[],
     columns: [
@@ -161,8 +166,8 @@ export default {
           value = data._source.Age
           break;
         case 'Played':
-          value = this.us.timeAgo(data._source.Played)+"<br>by "+
-            data._source.Author
+          value = this.us.timeAgo(data._source.Played)+"<br><span class='grey--text'>by "+
+            data._source.Author+"</span>"
           break;
         case 'Wealth':
           value = data._source.Wealth
@@ -176,6 +181,7 @@ export default {
       searchService.searchGames(this.sort, this.currentPage, this.PageSize, this.Filters).then(games =>{
         if (games != null) {
           this.pages = Math.ceil(games.total/this.PageSize);
+          this.totalGames = games.total;
           this.items = games.hits;
         }
         this.loading = false;
