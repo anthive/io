@@ -1,5 +1,15 @@
 <template lang="pug">
   #games-table
+    //- .test-chip.my-5
+    //-   userInfo(
+    //-     username="kezlya"
+    //-     photo="https://avatars0.githubusercontent.com/u/2000153?s=50&v=4"
+    //-     lang="https://anthive.io/skins/lang/go.png"
+    //-     version="v.63"
+    //-     skin=""
+    //-     hive=""
+    //-     score="2019"
+    //-   )
     h3(class="headline mt-1 mb-3") User games 
       span(class="grey--text") ({{ totalGames }})
     v-data-table(
@@ -10,7 +20,7 @@
       class="text-xs-center"
     )
       template(slot="headers" slot-scope="props")
-        th(class="text-xs-center") Player VS
+        th(class="text-xs-left") Players
         th(
           v-for="(column, index) in props.headers"
           :class="dataTableClasses(column)"
@@ -29,21 +39,36 @@
       template(slot="items" slot-scope="props")
         tr(@click="openGame(props.item)" style="cursor: pointer;")
           td
-            v-layout(column align-center class="my-3")
-              v-chip(
-                v-for="(player, pIndex) in props.item._source.Players"
-                :key="player.id"
-                class="my-1"
+            v-layout(
+              v-for="(player, pIndex) in props.item._source.Players"
+              :key="player.id"
+              align-center
+              class="my-3"
+            )
+              span.mr-4.grey--text {{ pIndex+1 }}
+              userInfo(
+                :username="player.Username"
+                :photo="us.photoUrl(player.Username,50)"
+                :lang="us.langUrl(player.Lang)"
+                :version="player.Version"
+                :skin="us.skinUrl(player.Skin)"
+                hive=""
+                :score="player.Wealth"
               )
-                v-avatar
-                  img(:src="us.photoUrl(player.Username,50)")
-                v-avatar
-                  img(:src="us.langUrl(player.Lang)")
-                v-avatar
-                  img(:src="us.skinUrl(player.Skin)")
-                v-avatar(color="#F0DAB8") v.{{ player.Version }}
-                b {{ player.Username }}
-                span &nbsp;&nbsp;&nbsp;{{player.Wealth}}
+              //- v-chip(
+              //-   v-for="(player, pIndex) in props.item._source.Players"
+              //-   :key="player.id"
+              //-   class="my-1"
+              //- )
+              //-   v-avatar
+              //-     img(:src="us.photoUrl(player.Username,50)")
+              //-   v-avatar
+              //-     img(:src="us.langUrl(player.Lang)")
+              //-   v-avatar
+              //-     img(:src="us.skinUrl(player.Skin)")
+              //-   v-avatar(color="#F0DAB8") v.{{ player.Version }}
+              //-   b {{ player.Username }}
+              //-   span &nbsp;&nbsp;&nbsp;{{player.Wealth}}
           td(
             v-for="(column, index) in columns"
             :key="index"
@@ -62,11 +87,15 @@
 </template>
 
 <script>
+import userInfo from "@/components/UserInfo";
 import userService from "@/services/User";
 import searchService from "@/services/Search";
 
 export default {
   name: "gamesTable",
+  components: {
+    userInfo
+  },
   props: {
     PageSize: {
       type: Number,

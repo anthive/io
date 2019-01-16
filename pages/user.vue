@@ -20,8 +20,10 @@
             v-card-text(class="user__card-text pt-0" v-if="user.blog")
               v-icon(size="20" class="mr-2") public
               a(:href="user.blog" target="_blank") {{ user.blog }}
-        v-flex(grow class="")
-          gamesTable(:Filters="filters" :PageSize=17)
+        v-flex(grow class="mb-4 py-2 px-2 white")
+          span Chart
+      v-flex(grow)
+        gamesTable(:Filters="filters" :PageSize=17)
 </template>
 
 <script>
