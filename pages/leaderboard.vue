@@ -17,7 +17,7 @@
                     v-list-tile-sub-title(class='px-3') {{player.Games}} games
                   v-list-tile-action.pr-3
                     span(class='title') {{us.scoreString(player.Wealth)}}
-                      v-icon(class="ml-1") bubble_chart
+                      v-icon.orange--text.text--lighten-2(class="ml-1") bubble_chart
                 v-divider
             v-list.pb-0(two-line subheader)
               template(v-for="(player, index) in players.slice(3)")
@@ -31,7 +31,7 @@
                     v-list-tile-sub-title {{player.Games}} games
                   v-list-tile-action.pr-3
                     span(class='subtitle') {{us.scoreString(player.Wealth)}}
-                      v-icon(class="ml-1") bubble_chart
+                      v-icon.orange--text.text--lighten-2(class="ml-1") bubble_chart
                 v-divider
 </template>
 

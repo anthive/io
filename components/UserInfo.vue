@@ -17,6 +17,8 @@
           v-avatar(size="30" class="mr-3 grey lighten-3 grey--text text--darken-5 caption") v.{{ version }}
         v-list-tile-content.px-3.orange.lighten-5
           v-list-tile-sub-tile.orange--text.text--lighten-2.caption.font-weight-bold {{ score }}
+            v-avatar(size="25")
+              v-icon.ml-1.orange--text.text--lighten-1(size="25") bubble_chart
 
 </template>
 
@@ -46,7 +48,7 @@ export default {
 
 <style>
   .user-info {
-    margin-right: 50px;
+    margin-right: 60px;
     border-radius: 2px;
     overflow: hidden;
     transition: all ease .5s;
