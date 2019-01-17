@@ -143,18 +143,6 @@
                 </v-flex>
 
                 <v-flex xs12 lg8 my-5>
-                  <Chart
-                    title="Hello charts"
-                    :values="[['Jan 1',        938,         522],
-          ['Jan 2',       1120,        599],
-          ['Jan 3',       1167,        587],
-          ['Jan 4',      1110,        615],
-          ['Jan 5',       691,         629]]"
-                    username="kezlya"
-                  ></Chart>
-                </v-flex>
-
-                <v-flex xs12 lg8 my-5>
                   <v-card class="elevation-6 white">
                     <v-layout align-center justify-center row wrap fill-height>
                       <v-flex xs12 sm4 md4 pa-5 justify-left>
@@ -335,11 +323,7 @@
 </template>
 <script>
 //import { AnthivePlayer } from "anthive-player";
-import Chart from '@/components/chart'
 export default {
-  components: {
-    Chart
-  },
   mounted() {
     const dataUrl =
       'https://storage.googleapis.com/anthive-dev-games/Kj5A2SydOFlqgLIu35Br.zip'

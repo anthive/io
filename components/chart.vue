@@ -1,22 +1,15 @@
-<template>
-  <v-card class="elevation-6 white">
-    <v-layout align-center justify-center row wrap fill-height>
-      <v-flex xs12 md12 pa-0 justify-right>
-        <v-card-title primary-title class="layout justify-start">
-          <div class="headline text-xs-left px-3">{{title}}</div>
-        </v-card-title>
-        <v-card-text>
-          <GChart
+<template  lang="pug">
+  v-card(class="elevation-6 white")
+    v-layout(align-center justify-center row wrap fill-height)
+      v-flex(xs12 md12 pa-0 justify-right)
+        v-card-title(primary-title class="layout justify-start")
+          GChart(
             type="ColumnChart"
             :data="chartData"
             :options="chartOptions"
             :settings="{ packages: ['corechart'] }"
-          ></GChart>
-        </v-card-text>
-        <div class="text-xs-left pa-3"></div>
-      </v-flex>
-    </v-layout>
-  </v-card>
+          )
+        div(class="text-xs-left pa-3")
 </template>
 
 <script>

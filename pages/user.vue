@@ -21,12 +21,13 @@
               v-icon(size="20" class="mr-2") public
               a(:href="user.blog" target="_blank") {{ user.blog }}
         v-flex(grow class="mb-4 py-2 px-2 white")
-          span Chart
+          Chart(title="Hello charts" :values="userChartData" username="kezlya")
       v-flex(grow)
         gamesTable(:Filters="filters" :PageSize=17)
 </template>
 
 <script>
+import Chart from '@/components/chart'
 import gamesTable from "@/components/gamesTable";
 import userService from "@/services/User";
 import axios from "axios";
@@ -38,6 +39,11 @@ export default {
     user: {},
     us: userService,
     filters: [],
+    userChartData: [['Jan 1',        938,         522],
+['Jan 2',       1120,        599],
+['Jan 3',       1167,        587],
+['Jan 4',      1110,        615],
+['Jan 5',       691,         629]],
   }),
   created() {
     var username = this.$route.query.username.toLowerCase()
@@ -52,7 +58,8 @@ export default {
     })
   },
   components: {
-    gamesTable
+    gamesTable,
+    Chart
   }
 }
 </script>
