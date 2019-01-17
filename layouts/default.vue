@@ -1,6 +1,6 @@
 <template>
   <v-app light>
-    <v-toolbar scroll-off-screen fixed class="px-5">
+    <v-toolbar scroll-off-screen fixed class="header__nav px-5">
       <v-toolbar-title>
         <nuxt-link to="/" class="undeco">
           <logo/>
@@ -8,15 +8,9 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn flat>
-          <nuxt-link to="/leaderboard/" class="undeco">Leaderboard</nuxt-link>
-        </v-btn>
-        <v-btn flat>
-          <nuxt-link to="/rules/" class="undeco">Rules</nuxt-link>
-        </v-btn>
-        <v-btn color="green white--text darken-2 mx-0">
-          <a style="color:#fff;" class="undeco" href="https://profile.anthive.io/login/">Login</a>
-        </v-btn>
+        <v-btn to="/leaderboard/" flat>Leaderboard</v-btn>
+        <v-btn to="/rules/" flat>Rules</v-btn>
+        <v-btn href="https://profile.anthive.io/login/" class="green darken-2 white--text" flat>Login</v-btn>
       </v-toolbar-items>
       <v-menu class="hidden-md-and-up">
         <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
@@ -90,6 +84,9 @@ export default {
 </script>
 
 <style>
+.header__nav {
+  z-index: 10;
+}
 .undeco {
   text-decoration: none;
 }

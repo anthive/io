@@ -1,5 +1,17 @@
 <template lang="pug">
   #games-table
+    //- .test-chip.my-5
+    //-   userInfo(
+    //-     username="kezlya"
+    //-     photo="https://avatars0.githubusercontent.com/u/2000153?s=50&v=4"
+    //-     lang="https://anthive.io/skins/lang/go.png"
+    //-     version="v.63"
+    //-     skin=""
+    //-     hive=""
+    //-     score="2019"
+    //-   )
+    h3(class="headline mt-1 mb-3") User games 
+      span(class="grey--text") ({{ totalGames }})
     v-data-table(
       hide-actions
       :loading="loading"
@@ -8,13 +20,12 @@
       class="text-xs-center"
     )
       template(slot="headers" slot-scope="props")
-        th(class="left") Players
+        th(class="text-xs-left") Players
         th(
           v-for="(column, index) in props.headers"
           :class="dataTableClasses(column)"
           :key="index"
           @click="doSort(column)"
-          class="pr-2"
         ) {{ column.text }}
           v-icon(
             small
@@ -26,20 +37,38 @@
           ) arrow_downward
 
       template(slot="items" slot-scope="props")
-        tr(@click="openGame(props.item)")
-          td(class="left")
-            v-chip(
+        tr(@click="openGame(props.item)" style="cursor: pointer;")
+          td
+            v-layout(
               v-for="(player, pIndex) in props.item._source.Players"
+              :key="player.id"
+              align-center
+              class="my-3"
             )
-              v-avatar
-                img(:src="us.photoUrl(player.Username,50)")
-              v-avatar
-                img(:src="us.langUrl(player.Lang)")
-              v-avatar
-                img(:src="us.skinUrl(player.Skin)")
-              v-avatar(color="#F0DAB8") v.{{ player.Version }}
-              b {{ player.Username }}
-              span &nbsp;&nbsp;&nbsp;{{player.Wealth}}
+              span.mr-4.grey--text {{ pIndex+1 }}
+              userInfo(
+                :username="player.Username"
+                :photo="us.photoUrl(player.Username,50)"
+                :lang="us.langUrl(player.Lang)"
+                :version="player.Version"
+                :skin="us.skinUrl(player.Skin)"
+                hive=""
+                :score="player.Wealth"
+              )
+              //- v-chip(
+              //-   v-for="(player, pIndex) in props.item._source.Players"
+              //-   :key="player.id"
+              //-   class="my-1"
+              //- )
+              //-   v-avatar
+              //-     img(:src="us.photoUrl(player.Username,50)")
+              //-   v-avatar
+              //-     img(:src="us.langUrl(player.Lang)")
+              //-   v-avatar
+              //-     img(:src="us.skinUrl(player.Skin)")
+              //-   v-avatar(color="#F0DAB8") v.{{ player.Version }}
+              //-   b {{ player.Username }}
+              //-   span &nbsp;&nbsp;&nbsp;{{player.Wealth}}
           td(
             v-for="(column, index) in columns"
             :key="index"
@@ -58,11 +87,15 @@
 </template>
 
 <script>
+import userInfo from "@/components/UserInfo";
 import userService from "@/services/User";
 import searchService from "@/services/Search";
 
 export default {
   name: "gamesTable",
+  components: {
+    userInfo
+  },
   props: {
     PageSize: {
       type: Number,
@@ -79,6 +112,7 @@ export default {
     us: userService,
     loading: false,
     pages: 0,
+    totalGames: 0,
     currentPage: 1,
     sort:[],
     columns: [
@@ -161,8 +195,8 @@ export default {
           value = data._source.Age
           break;
         case 'Played':
-          value = this.us.timeAgo(data._source.Played)+"<br>by "+
-            data._source.Author
+          value = this.us.timeAgo(data._source.Played)+"<br><span class='grey--text'>by "+
+            data._source.Author+"</span>"
           break;
         case 'Wealth':
           value = data._source.Wealth
@@ -176,6 +210,7 @@ export default {
       searchService.searchGames(this.sort, this.currentPage, this.PageSize, this.Filters).then(games =>{
         if (games != null) {
           this.pages = Math.ceil(games.total/this.PageSize);
+          this.totalGames = games.total;
           this.items = games.hits;
         }
         this.loading = false;
