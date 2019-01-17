@@ -10,7 +10,7 @@
     //-     hive=""
     //-     score="2019"
     //-   )
-    h3(class="headline mt-1 mb-3") User games 
+    h3(class="headline mt-1 mb-3") User games
       span(class="grey--text") ({{ totalGames }})
     v-data-table(
       hide-actions

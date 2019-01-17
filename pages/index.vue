@@ -7,23 +7,21 @@
           <v-container>
             <v-layout align-center justify-start row wrap fill-height class="white--text">
               <v-flex offset-sm2 sm8 offset-md2 md4 my-5>
+                <div
+                  class="white--text mb-2 mt-5 display-1 text-xs-left font-weight-bold"
+                >You are not playing a game</div>
 
-                <div class="white--text mb-2 mt-5 display-1 text-xs-left font-weight-bold">
-                  You are not playing a game
-                </div>
+                <div
+                  class="subheading mb-3 text-xs-left font-weight-bold orange--text text--darken-1"
+                >Turn-based strategy game for your AI</div>
 
-                <div class="subheading mb-3 text-xs-left font-weight-bold orange--text text--darken-1">
-                  Turn-based strategy game for your AI
-                </div>
-
-                <div class="title font-weight-regular">
-                  Start your new coding adventure with 3 simple steps
-                </div>
-
+                <div
+                  class="title font-weight-regular"
+                >Start your new coding adventure with 3 simple steps</div>
               </v-flex>
               <v-flex>
                 <div id="player" class="ant-player">
-                    <h2 class="loading">Loading...</h2>
+                  <h2 class="loading">Loading...</h2>
                 </div>
               </v-flex>
             </v-layout>
@@ -80,7 +78,9 @@
                     <v-card-title primary-title class="layout justify-left">
                       <div class="headline text-xs-left px-3">2. LINK YOUR REPO</div>
                     </v-card-title>
-                    <v-card-text class="subheading">In your repository set your username in ANTHIVE file. Link your repository in profile settings page.</v-card-text>
+                    <v-card-text
+                      class="subheading"
+                    >In your repository set your username in ANTHIVE file. Link your repository in profile settings page.</v-card-text>
                     <v-btn class="ma-3" color="brown white--text">
                       <a href="https://profile.anthive.io/login/" class="undeco">Profile</a>
                     </v-btn>
@@ -95,15 +95,16 @@
                     <v-card-title primary-title class="layout justify-start">
                       <div class="headline text-xs-left px-3">3. CODE STRATEGIES</div>
                     </v-card-title>
-                    <v-card-text class="subheading">Refactor code with your own strategies. Git push to origin. Start games, compete and climb the <a
-                      href="/leaderboard/" style="color: blue">leaderboard</a>.</v-card-text>
+                    <v-card-text
+                      class="subheading"
+                    >Refactor code with your own strategies. Git push to origin. Start games, compete and climb the
+                      <a href="/leaderboard/" style="color: blue">leaderboard</a>.
+                    </v-card-text>
                     <v-btn class="ma-3" color="brown">
                       <nuxt-link to="/rules/" class="nuxt-link">Rules</nuxt-link>
                     </v-btn>
                   </v-card>
                 </v-flex>
-
-
               </v-layout>
             </v-container>
           </v-flex>
@@ -191,7 +192,6 @@
                     </v-layout>
                   </v-card>
                 </v-flex>
-
               </v-layout>
             </v-container>
           </v-flex>
@@ -259,9 +259,7 @@
                         <v-card-title primary-title class="layout justify-start">
                           <div class="headline text-xs-left px-3">Badges and Ranking</div>
                         </v-card-title>
-                        <v-card-text>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien velit, sodales in elementum sed, facilisis suscipit massa. Maecenas efficitur lectus non ligula accumsan euismod in a quam. Vivamus finibus tincidunt tellus vitae aliquet. Suspendisse justo ipsum, pharetra non pretium ut, scelerisque ac mi. Pellentesque hendrerit sodales tortor, in faucibus diam tempus ac. Donec convallis fringilla mauris vitae tristique.
-                        </v-card-text>
+                        <v-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien velit, sodales in elementum sed, facilisis suscipit massa. Maecenas efficitur lectus non ligula accumsan euismod in a quam. Vivamus finibus tincidunt tellus vitae aliquet. Suspendisse justo ipsum, pharetra non pretium ut, scelerisque ac mi. Pellentesque hendrerit sodales tortor, in faucibus diam tempus ac. Donec convallis fringilla mauris vitae tristique.</v-card-text>
                       </v-card>
                     </v-flex>
                   </v-layout>
@@ -278,7 +276,6 @@
             <v-flex xs12 style="width:100%;">
               <v-container grid-list-xl class="my-5">
                 <v-layout align-center justify-center row wrap fill-height>
-
                   <v-flex xs12 md6 lg4 xl3 pa-5>
                     <v-card
                       class="elevation-6 white px-0 pa-3 mail"
@@ -290,8 +287,11 @@
                         class="body-1 text-xs-left px-0 grey--text"
                       >Stay in touch and get latest news first!</v-card-text>
                       <v-btn color="brown white--text darken-2 mx-0">
-                         <a target="_blank" href="https://visitor.r20.constantcontact.com/d.jsp?llr=iei6rx6ab&amp;p=oi&amp;m=1131440677000&amp;sit=hmwc8c9mb&amp;f=c1095ec4-d2a5-4f31-85e6-9f5d16f7d72c">Subscribe</a>
-                       </v-btn>
+                        <a
+                          target="_blank"
+                          href="https://visitor.r20.constantcontact.com/d.jsp?llr=iei6rx6ab&amp;p=oi&amp;m=1131440677000&amp;sit=hmwc8c9mb&amp;f=c1095ec4-d2a5-4f31-85e6-9f5d16f7d72c"
+                        >Subscribe</a>
+                      </v-btn>
                     </v-card>
                   </v-flex>
 
@@ -307,12 +307,11 @@
                       <v-card-text
                         class="body-1 text-xs-left px-0 grey--text"
                       >Tell us on our github repo and we wil fix it!</v-card-text>
-                        <v-btn color="brown white--text darken-2 mx-0">
-                          <a href="https://github.com/anthive/io/issues">Report issue</a>
-                        </v-btn>
+                      <v-btn color="brown white--text darken-2 mx-0">
+                        <a href="https://github.com/anthive/io/issues">Report issue</a>
+                      </v-btn>
                     </v-card>
                   </v-flex>
-
                 </v-layout>
               </v-container>
             </v-flex>
@@ -324,18 +323,18 @@
 </template>
 <script>
 //import { AnthivePlayer } from "anthive-player";
-
 export default {
   mounted() {
-    const dataUrl ="https://storage.googleapis.com/anthive-dev-games/Kj5A2SydOFlqgLIu35Br.zip";
-    const Myplayer  = new AnthivePlayer(dataUrl,"#player");
-  },
+    const dataUrl =
+      'https://storage.googleapis.com/anthive-dev-games/Kj5A2SydOFlqgLIu35Br.zip'
+    const Myplayer = new AnthivePlayer(dataUrl, '#player')
+  }
 }
 </script>
 
 <style>
 .ant-player {
-  background-image: url("https://anthive.io/skins/server/1/background.png");
+  background-image: url('https://anthive.io/skins/server/1/background.png');
 }
 
 .brown a {
