@@ -54,13 +54,13 @@ export default {
     ],
   }),
   created() {
-    var username = this.$route.query.username.toLowerCase()
+    var username = this.$route.query.username;
 
     if(username == '') {
       this.$router.push('/leaderboard')
     }
 
-    this.filters = [{ "term":  { "Players.Username": username}}];
+    this.filters = [{ "term":  { "Players.Username.keyword": username}}];
     this.us.getUserdata(username).then((result) => {
       this.user = result
     })
