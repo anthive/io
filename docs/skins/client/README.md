@@ -1,32 +1,51 @@
-# 1 Classic
+# How to add "skin/theme"
+- Download sample skin pack LINK here [skin pack 0.zip](./0.zip)
+- Place your art to the transparent placeholder in the pack. *Do not change dimensions or names of the files.*
+- Submit PR
+- Assign it to @kezlya
 
-- <img src="1/birth@2x.png" width="40" height="40"> Birth
-- <img src="1/noaction@2x.png" width="40" height="40"> No Action
-- <img src="1/slow@2x.png" width="40" height="40"> Slow
-- <img src="1/badmove@2x.png" width="40" height="40"> Bad Move
-- <img src="1/badload@2x.png" width="40" height="40"> Bad Load
-- <img src="1/badunload@2x.png" width="40" height="40"> Bad Unload
-- <img src="1/badeat@2x.png" width="40" height="40"> Bad Eat
-- <img src="1/collision@2x.png" width="40" height="40"> Collision
-- <img src="1/error@2x.png" width="40" height="40"> Error
-- <img src="1/death@2x.png" width="40" height="40"> Death
+## 1. Fire Ant
 
-- <img src="1/hive@2x.png" width="40" height="40"> Hive
-- <img src="1/ant@2x.png" width="30" height="40"> Ant
+<img src="./1/hiveBig.png"><img src="./1/antBig.png">
+- In Game <img src="./1/hive.png"> <img src="./1/ant.png">
+- Events: <img src="./1/birth.png">
+<img src="./1/noaction.png">
+<img src="./1/slow.png">
+<img src="./1/badmove.png">
+<img src="./1/badload.png">
+<img src="./1/badunload.png">
+<img src="./1/badeat.png">
+<img src="./1/collision.png">
+<img src="./1/error.png">
+<img src="./1/death.png">
 
 
-# 2 Albino
+## 2. Albino Ant
 
-- <img src="2/birth@2x.png" width="40" height="40"> Birth
-- <img src="2/noaction@2x.png" width="40" height="40"> No Action
-- <img src="2/slow@2x.png" width="40" height="40"> Slow
-- <img src="2/badmove@2x.png" width="40" height="40"> Bad Move
-- <img src="2/badload@2x.png" width="40" height="40"> Bad Load
-- <img src="2/badunload@2x.png" width="40" height="40"> Bad Unload
-- <img src="2/badeat@2x.png" width="40" height="40"> Bad Eat
-- <img src="2/collision@2x.png" width="40" height="40"> Collision
-- <img src="2/error@2x.png" width="40" height="40"> Error
-- <img src="2/death@2x.png" width="40" height="40"> Death
+<img src="./2/hiveBig.png"><img src="./2/antBig.png">
+- In Game <img src="./2/hive.png"> <img src="./2/ant.png">
+- Events: <img src="./2/birth.png">
+<img src="./2/noaction.png">
+<img src="./2/slow.png">
+<img src="./2/badmove.png">
+<img src="./2/badload.png">
+<img src="./2/badunload.png">
+<img src="./2/badeat.png">
+<img src="./2/collision.png">
+<img src="./2/error.png">
+<img src="./2/death.png">
 
-- <img src="2/hive@2x.png" width="40" height="40"> Hive
-- <img src="2/ant@2x.png" width="30" height="40"> Ant
+## 3. Rick
+
+<img src="./3/hiveBig.png"><img src="./3/antBig.png">
+- In Game <img src="./3/hive.png"> <img src="./3/ant.png">
+- Events: <img src="./3/birth.png">
+<img src="./3/noaction.png">
+<img src="./3/slow.png">
+<img src="./3/badmove.png">
+<img src="./3/badload.png">
+<img src="./3/badunload.png">
+<img src="./3/badeat.png">
+<img src="./3/collision.png">
+<img src="./3/error.png">
+<img src="./3/death.png">
