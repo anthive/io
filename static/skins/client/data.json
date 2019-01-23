@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Fire ant",
+    "url": "https://anthive.io/skins/client/1/",
+    "ant": "https://anthive.io/skins/client/1/ant.png",
+    "antBig": "https://anthive.io/skins/client/1/antBig.png",
+    "hive": "https://anthive.io/skins/client/1/hive.png",
+    "hiveBig": "https://anthive.io/skins/client/1/hiveBig.png",
+    "events": ["badeat", "badload", "badmove", "badunload", "birth", "collision", "death", "error", "noaction", "slow"]
+  },
+  {
+    "id": 2,
+    "name": "Albino ant",
+    "url": "https://anthive.io/skins/client/2/",
+    "ant": "https://anthive.io/skins/client/2/ant.png",
+    "antBig": "https://anthive.io/skins/client/2/antBig.png",
+    "hive": "https://anthive.io/skins/client/2/hive.png",
+    "hiveBig": "https://anthive.io/skins/client/2/hiveBig.png",
+    "events": ["badeat", "badload", "badmove", "badunload", "birth", "collision", "death", "error", "noaction", "slow"]
+  }
+]
