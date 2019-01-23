@@ -64,3 +64,19 @@
 <img src="./4/collision.png">
 <img src="./4/error.png">
 <img src="./4/death.png">
+
+
+## 5. Galactic Federation
+
+<img src="./5/hiveBig.png"><img src="./5/antBig.png">
+- In Game <img src="./5/hive.png"> <img src="./5/ant.png">
+- Events: <img src="./5/birth.png">
+<img src="./5/noaction.png">
+<img src="./5/slow.png">
+<img src="./5/badmove.png">
+<img src="./5/badload.png">
+<img src="./5/badunload.png">
+<img src="./5/badeat.png">
+<img src="./5/collision.png">
+<img src="./5/error.png">
+<img src="./5/death.png">

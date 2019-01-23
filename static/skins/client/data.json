@@ -38,5 +38,15 @@
     "hive": "https://anthive.io/skins/client/4/hive.png",
     "hiveBig": "https://anthive.io/skins/client/4/hiveBig.png",
     "events": ["badeat", "badload", "badmove", "badunload", "birth", "collision", "death", "error", "noaction", "slow"]
+  },
+  {
+    "id": 5,
+    "name": "Galactic Federation",
+    "url": "https://anthive.io/skins/client/5/",
+    "ant": "https://anthive.io/skins/client/5/ant.png",
+    "antBig": "https://anthive.io/skins/client/5/antBig.png",
+    "hive": "https://anthive.io/skins/client/5/hive.png",
+    "hiveBig": "https://anthive.io/skins/client/5/hiveBig.png",
+    "events": ["badeat", "badload", "badmove", "badunload", "birth", "collision", "death", "error", "noaction", "slow"]
   }
 ]
