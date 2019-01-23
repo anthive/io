@@ -49,3 +49,18 @@
 <img src="./3/collision.png">
 <img src="./3/error.png">
 <img src="./3/death.png">
+
+## 4. Morty
+
+<img src="./4/hiveBig.png"><img src="./4/antBig.png">
+- In Game <img src="./4/hive.png"> <img src="./4/ant.png">
+- Events: <img src="./4/birth.png">
+<img src="./4/noaction.png">
+<img src="./4/slow.png">
+<img src="./4/badmove.png">
+<img src="./4/badload.png">
+<img src="./4/badunload.png">
+<img src="./4/badeat.png">
+<img src="./4/collision.png">
+<img src="./4/error.png">
+<img src="./4/death.png">
