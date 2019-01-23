@@ -1,7 +1,7 @@
 <template lang="pug">
   #user
     v-container
-      v-layout(row wrap mt-5 pt-5 class="")
+      v-layout(row wrap mt-5 pt-5)
         v-flex(shrink class="mr-4 mb-4")
           v-card(max-width="250")
             v-img(min-width="250" src="https://dummyimage.com/400x400/f1f1f1/f1f1f1" v-if="!user.avatar")
@@ -20,8 +20,9 @@
             v-card-text(class="user__card-text pt-0" v-if="user.blog")
               v-icon(size="20" class="mr-2") public
               a(:href="user.blog" target="_blank") {{ user.blog }}
-        v-flex(grow class="mb-4 py-2 px-2 white")
-          Chart(title="Hello charts" :values="userChartData" username="kezlya")
+        v-flex.mb-4.pa-0(grow)
+          h3(class="headline mt-1 mb-3") Bot performance in the last 10 days
+          Chart.elevation-1(:values="userChartData" username="kezlya")
       v-flex(grow)
         gamesTable(:Filters="filters" :PageSize=17)
 </template>
@@ -39,11 +40,18 @@ export default {
     user: {},
     us: userService,
     filters: [],
-    userChartData: [['Jan 1',        938,         522],
-['Jan 2',       1120,        599],
-['Jan 3',       1167,        587],
-['Jan 4',      1110,        615],
-['Jan 5',       691,         629]],
+    userChartData: [
+      ['Jan 1',        938,         522],
+      ['Jan 2',       1120,        599],
+      ['Jan 3',       1167,        587],
+      ['Jan 4',      1110,        615],
+      ['Jan 5',       691,         629],
+      ['Jan 6',       712,         810],
+      ['Jan 7',       810,         950],
+      ['Jan 8',       950,         1100],
+      ['Jan 9',       1100,         1350],
+      ['Jan 10',       1200,         1150]
+    ],
   }),
   created() {
     var username = this.$route.query.username.toLowerCase()

@@ -5,7 +5,7 @@
       v-layout(align-center justify-center row fill-height)
         v-flex(xs12 md8 offset2)
           v-card.leaderboard__card
-            v-list(three-line subheader class='pb-0')
+            v-list.pb-0(three-line subheader)
               template(v-for="(player, index) in players.slice(0, 3)")
                 v-list-tile(:to="{ path: '/user/?username=' + player.Username}")
                   v-list-tile-avatar(class='mt-0')
