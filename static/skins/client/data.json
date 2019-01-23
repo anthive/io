@@ -18,5 +18,15 @@
     "hive": "https://anthive.io/skins/client/2/hive.png",
     "hiveBig": "https://anthive.io/skins/client/2/hiveBig.png",
     "events": ["badeat", "badload", "badmove", "badunload", "birth", "collision", "death", "error", "noaction", "slow"]
+  },
+  {
+    "id": 3,
+    "name": "Rick",
+    "url": "https://anthive.io/skins/client/3/",
+    "ant": "https://anthive.io/skins/client/3/ant.png",
+    "antBig": "https://anthive.io/skins/client/3/antBig.png",
+    "hive": "https://anthive.io/skins/client/3/hive.png",
+    "hiveBig": "https://anthive.io/skins/client/3/hiveBig.png",
+    "events": ["badeat", "badload", "badmove", "badunload", "birth", "collision", "death", "error", "noaction", "slow"]
   }
 ]
