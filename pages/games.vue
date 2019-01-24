@@ -1,7 +1,7 @@
 <template lang="pug">
   section(class="section section-lg pt-lg-0")
     v-parallax(
-      src="/img/home_bg.png" 
+      src="/img/home_bg.png"
       align
       height="300"
     )
@@ -34,7 +34,10 @@ export default {
   created() {
     var username = 'kezlya'
 
-    this.filters = [{ "term":  { "Players.Username.keyword": username}}];
+    this.filters = [
+      {"term": { "Age": 1000 }},
+      {"range": { "Wealth": { "gte": 1000, "lte": 3000 }}}
+    ];
   },
   components: {
     GamesTable
