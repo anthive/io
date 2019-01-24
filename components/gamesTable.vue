@@ -1,15 +1,5 @@
 <template lang="pug">
   #games-table
-    //- .test-chip.my-5
-    //-   userInfo(
-    //-     username="kezlya"
-    //-     photo="https://avatars0.githubusercontent.com/u/2000153?s=50&v=4"
-    //-     lang="https://anthive.io/skins/lang/go.png"
-    //-     version="v.63"
-    //-     skin=""
-    //-     hive=""
-    //-     score="2019"
-    //-   )
     h3(class="headline mt-1 mb-3") User games
       span(class="grey--text") ({{ totalGames }})
     v-data-table(
@@ -38,38 +28,19 @@
 
       template(slot="items" slot-scope="props")
         tr(@click="openGame(props.item)" style="cursor: pointer;")
-          td
-            v-layout(
+          td.py-1.text-xs-left
+            userInfo.my-1.mr-3(
               v-for="(player, pIndex) in props.item._source.Players"
               :key="player.id"
-              align-center
-              class="my-3"
+              :username="player.Username"
+              :photo="us.photoUrl(player.Username,50)"
+              :lang="us.langUrl(player.Lang)"
+              :version="player.Version"
+              :skin="us.skinUrl(player.Skin)"
+              hive=""
+              :score="player.Wealth"
             )
-              span.mr-4.grey--text {{ pIndex+1 }}
-              userInfo(
-                :username="player.Username"
-                :photo="us.photoUrl(player.Username,50)"
-                :lang="us.langUrl(player.Lang)"
-                :version="player.Version"
-                :skin="us.skinUrl(player.Skin)"
-                hive=""
-                :score="player.Wealth"
-              )
-              //- v-chip(
-              //-   v-for="(player, pIndex) in props.item._source.Players"
-              //-   :key="player.id"
-              //-   class="my-1"
-              //- )
-              //-   v-avatar
-              //-     img(:src="us.photoUrl(player.Username,50)")
-              //-   v-avatar
-              //-     img(:src="us.langUrl(player.Lang)")
-              //-   v-avatar
-              //-     img(:src="us.skinUrl(player.Skin)")
-              //-   v-avatar(color="#F0DAB8") v.{{ player.Version }}
-              //-   b {{ player.Username }}
-              //-   span &nbsp;&nbsp;&nbsp;{{player.Wealth}}
-          td(
+          td.games-table__meta.subheading(
             v-for="(column, index) in columns"
             :key="index"
             v-html="getColumnData(props.item, column)"
@@ -220,4 +191,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+  .games-table__meta {
+    min-width: 150px;
+  }
+</style>
