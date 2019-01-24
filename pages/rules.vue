@@ -1,5 +1,5 @@
 <template>
-  <section class="section section-lg pt-lg-0">
+  <section>
   <v-parallax
     src="/img/home_bg.png" 
     align
@@ -10,7 +10,7 @@
       <v-card
         flat
         tile
-        class="white text-xs-left pa-3 mb-5 elevation-6 rules__card"
+        class="white text-xs-left pa-3 elevation-6 rules__card"
       >
         <v-card-title>
           <h1>Rules</h1>
