@@ -29,6 +29,12 @@
  * @license  MIT
  */
 
+/*!
+ * vue-no-ssr v1.1.0
+ * (c) 2018-present egoist <0x142857@gmail.com>
+ * Released under the MIT License.
+ */
+
 /*!*****************************************!*\
   !*** ./src/components/VAlert/VAlert.ts ***!
   \*****************************************/
@@ -3410,9 +3416,3 @@
   \******************************************************************************/
 
 /*! no static exports found */
-
-/*!
- * vue-no-ssr v1.1.0
- * (c) 2018-present egoist <0x142857@gmail.com>
- * Released under the MIT License.
- */
