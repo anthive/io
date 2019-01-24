@@ -24,6 +24,8 @@
           h3(class="headline mt-1 mb-3") Bot performance in the last 10 days
           Chart.elevation-1(:values="userChartData" username="kezlya")
       v-flex(grow)
+        h3(class="headline mt-1 mb-3") User games:
+          //TODO: use v-on span(class="grey--text") ({{ totalGames }})
         gamesTable(:Filters="filters" :PageSize=17)
 </template>
 

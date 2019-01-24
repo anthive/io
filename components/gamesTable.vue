@@ -1,7 +1,5 @@
 <template lang="pug">
   #games-table
-    h3(class="headline mt-1 mb-3" v-if="ShowTitle") User games
-      span(class="grey--text") ({{ totalGames }})
     v-data-table(
       hide-actions
       :loading="loading"
@@ -77,18 +75,12 @@ export default {
       type: Array,
       required: true,
       default: () => []
-    },
-    ShowTitle: {
-      type: Boolean,
-      required: false,
-      default: () => true
     }
   },
   data: () => ({
     us: userService,
     loading: false,
     pages: 0,
-    totalGames: 0,
     currentPage: 1,
     sort:[],
     columns: [
@@ -115,11 +107,6 @@ export default {
     items: []
   }),
   created() {
-    console.log(12312312)
-    console.log(this.ShowTitle)
-
-    ///////////////////
-
     this.preapareSort()
     this.loadGames();
   },
@@ -191,7 +178,9 @@ export default {
       searchService.searchGames(this.sort, this.currentPage, this.PageSize, this.Filters).then(games =>{
         if (games != null) {
           this.pages = Math.ceil(games.total/this.PageSize);
-          this.totalGames = games.total;
+          // TODO:
+          // use $emit  to pass data back to parent games.total;
+          // https://forum.vuejs.org/t/passing-data-back-to-parent/1201
           this.items = games.hits;
         }
         this.loading = false;
