@@ -15,8 +15,8 @@
           b(v-if="index+1<players.length") &nbsp;VS&nbsp;
 
       v-flex(xs12 md8 lg8)
-        div(id="player" class="ant-player")
-            h2(class="loading") {{status}}
+        div(id="player" :style="{background: '#ccc url(/skins/server/'+theme+'/background.png)' }")
+          h2(class="loading") {{status}}
 
       v-flex(xs12 md8 lg8)
         v-toolbar(v-if="players.length>0" flat)
@@ -49,6 +49,7 @@ export default {
     currentTick: 0,
     currentSpeed: 4,
     totalTicks: 0,
+    theme: 1,
   }),
   mounted() {
     const base = "https://storage.googleapis.com/anthive-prod-games/";
@@ -60,6 +61,7 @@ export default {
       player.on(AnthivePlayer.onReady, () => {
         this.totalTicks =player.total;
         this.players = player.players;
+        this.theme = player.theme;
       });
       player.on(AnthivePlayer.onFrameRendered, () => {
         this.currentTick = player.currentIndex + 1;
@@ -94,8 +96,7 @@ export default {
 }
 </script>
 <style>
-.ant-player {
-  background-image: url("https://anthive.io/skins/server/1/background.png");
+#player {
   background-repeat: repeat;
 }
 .players {
