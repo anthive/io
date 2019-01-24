@@ -1,6 +1,6 @@
 <template lang="pug">
   #games-table
-    h3(class="headline mt-1 mb-3") User games
+    h3(class="headline mt-1 mb-3" v-if="ShowTitle") User games
       span(class="grey--text") ({{ totalGames }})
     v-data-table(
       hide-actions
@@ -77,6 +77,11 @@ export default {
       type: Array,
       required: true,
       default: () => []
+    },
+    ShowTitle: {
+      type: Boolean,
+      required: false,
+      default: () => true
     }
   },
   data: () => ({
@@ -110,6 +115,11 @@ export default {
     items: []
   }),
   created() {
+    console.log(12312312)
+    console.log(this.ShowTitle)
+
+    ///////////////////
+
     this.preapareSort()
     this.loadGames();
   },

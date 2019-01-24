@@ -1,7 +1,7 @@
 <template lang="pug">
   #user
-    v-container
-      v-layout(row wrap mt-5 pt-5)
+    v-container.pb-0
+      v-layout(row wrap mt-5 pt-3)
         v-flex(shrink class="mr-4 mb-4")
           v-card(max-width="250")
             v-img(min-width="250" src="https://dummyimage.com/400x400/f1f1f1/f1f1f1" v-if="!user.avatar")
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import Chart from '@/components/chart'
+import Chart from '@/components/chart';
 import gamesTable from "@/components/gamesTable";
 import userService from "@/services/User";
 import axios from "axios";
