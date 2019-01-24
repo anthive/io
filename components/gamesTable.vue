@@ -40,7 +40,7 @@
               hive=""
               :score="player.Wealth"
             )
-          td.games-table__meta(
+          td.games-table__meta.subheading(
             v-for="(column, index) in columns"
             :key="index"
             v-html="getColumnData(props.item, column)"

@@ -14,11 +14,11 @@
           img.mx-auto(:src="skin" width="20")
           v-list-tile-sub-title.caption.user-info__version v.{{ version }}
         v-list-tile-content.px-3
-          v-list-tile-title {{ username }}
+          v-list-tile-title.font-weight-bold {{ username }}
         v-list-tile-content.px-3.orange.lighten-5
-          v-list-tile-sub-title.orange--text.text--lighten-2.body-1.font-weight-bold {{ score }}
-            v-avatar(size="20")
-              v-icon.ml-1.orange--text.text--lighten-1(size="20") bubble_chart
+          v-list-tile-sub-title.orange--text.text--lighten-2.title.font-weight-bold {{ score }}
+            v-avatar(size="40")
+              v-icon.ml-1.orange--text.text--lighten-1(size="40") bubble_chart
 
 </template>
 
@@ -36,12 +36,12 @@ export default {
     score: Number
   },
   data: () => ({
-    hiveStatic: 'background: green url(https://anthive.io/skins/client/2/hive@2x.png);'
+    hiveStatic: 'background: green url(https://anthive.io/skins/client/1/hive.png);'
   }),
   created() {
   },
   methods: {
-    
+
   }
 };
 </script>
