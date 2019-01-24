@@ -1,22 +1,22 @@
-# 1 Classic
+# How to add "skin/theme"
+- Download [theme pack 0.zip](./0.zip)
+- Place your art to the transparent placeholder in the pack. *Do not change dimensions or names of the files.*
+- Submit PR
+- Assign it to @kezlya
 
-<img src="1/background.png" width="200" height="200">
-
-- <img src="1/fog@2x.png" width="40" height="40"> Fog
-- <img src="1/foodsmall@2x.png" width="40" height="40"> Small Food
-- <img src="1/foodmid@2x.png" width="40" height="40"> Mid Food
-- <img src="1/foodbig@2x.png" width="40" height="40"> Big Food
-- <img src="1/rock@2x.png" width="40" height="40"> Rock
-- <img src="1/water@2x.png" width="40" height="40"> Water
+## 1. Grass
+### Food: <img src="./1/foodsmall.png"> <img src="./1/foodmid.png"> <img src="./1/foodbig.png">
+<img src="./1/background.png" width="300px">
 
 
-# 2 Desert
+## 2. Sand
+### Food: <img src="./2/foodsmall.png"> <img src="./2/foodmid.png"> <img src="./2/foodbig.png">
+<img src="./2/background.png" width="300px">
 
-<img src="2/background.png" width="200" height="200">
+## 3. Picnic
+### Food: <img src="./3/foodsmall.png"> <img src="./3/foodmid.png"> <img src="./3/foodbig.png">
+<img src="./3/background.png" width="300px">
 
-- <img src="2/fog@2x.png" width="40" height="40"> Fog
-- <img src="2/foodsmall@2x.png" width="40" height="40"> Small Food
-- <img src="2/foodmid@2x.png" width="40" height="40"> Mid Food
-- <img src="2/foodbig@2x.png" width="40" height="40"> Big Food
-- <img src="2/rock@2x.png" width="40" height="40"> Rock
-- <img src="2/water@2x.png" width="40" height="40"> Water
+## 4. Space
+### Food: <img src="./4/foodsmall.png"> <img src="./4/foodmid.png"> <img src="./4/foodbig.png">
+<img src="./4/background.png" width="300px">

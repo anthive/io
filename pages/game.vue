@@ -95,7 +95,7 @@ export default {
 </script>
 <style>
 .ant-player {
-  background-image: url("https://anthive.io/skins/server/1/background.png");
+  background-image: url("/skins/server/1/background.png");
   background-repeat: repeat;
 }
 .players {
