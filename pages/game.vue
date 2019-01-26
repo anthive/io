@@ -1,19 +1,24 @@
 <template lang="pug">
   section
     v-layout(column align-center)
-      v-flex(xs12 md8 lg8 class="players")
+      v-flex.players.mx-4.px-5.text-xs-center(xs12 md8 lg8)
         template(v-for="(player, index) in players")
-          a(:href="'/user/?username=' + player.Username")
-            v-chip
-              v-avatar
-                v-img(:src="us.photoUrl(player.Username,70)")
-              v-avatar
-                v-img(:src="us.langUrl(player.Lang)")
-              v-avatar
-                v-img(:src="us.skinUrl(player.Skin)")
-              b {{player.Username}}
-          b(v-if="index+1<players.length") &nbsp;VS&nbsp;
-
+          userInfoFull(
+            :username="player.Username"
+            :photo="us.photoUrl(player.Username,100)"
+            :lang="us.langUrl(player.Lang)"
+            :version="player.Version"
+            :skin="us.skinUrl(player.Skin)"
+            :hive="player.Skin"
+            :score="player.Wealth"
+            :span="[player.Y, player.X]"
+            :stats="player.Stats"
+          )
+          
+          //- TO DO: 
+          //- div.d-inline
+          //- span.game__vs-separator.mx-4.grey--text(v-if="index+1<players.length") VS
+            //- v-layout(row) 
       v-flex(xs12 md8 lg8)
         div(id="player" :style="{background: '#ccc url(/skins/server/'+theme+'/background.png)' }")
           h2(class="loading") {{status}}
@@ -37,6 +42,7 @@
 
 <script>
 import userService from "@/services/User";
+import userInfoFull from "@/components/UserInfoFull";
 
 var player = null;
 
@@ -51,6 +57,9 @@ export default {
     totalTicks: 0,
     theme: 1,
   }),
+  components: {
+    userInfoFull
+  },
   mounted() {
     const base = "https://storage.googleapis.com/anthive-prod-games/";
     const gameid = this.$route.query.id || "";
@@ -62,6 +71,9 @@ export default {
         this.totalTicks =player.total;
         this.players = player.players;
         this.theme = player.theme;
+
+        console.log('here users')
+        console.log(this.players)
       });
       player.on(AnthivePlayer.onFrameRendered, () => {
         this.currentTick = player.currentIndex + 1;
@@ -101,5 +113,10 @@ export default {
 }
 .players {
   margin-top: 100px;
+}
+
+.game__vs-separator {
+  position: relative;
+  top: -80px;
 }
 </style>
