@@ -49,4 +49,14 @@
     "hiveBig": "https://anthive.io/skins/client/5/hiveBig.png",
     "events": ["badeat", "badload", "badmove", "badunload", "birth", "collision", "death", "error", "noaction", "slow"]
   }
+  {
+    "id": 6,
+    "name": "Ant man",
+    "url": "https://anthive.io/skins/client/6/",
+    "ant": "https://anthive.io/skins/client/6/ant.png",
+    "antBig": "https://anthive.io/skins/client/6/antBig.png",
+    "hive": "https://anthive.io/skins/client/6/hive.png",
+    "hiveBig": "https://anthive.io/skins/client/6/hiveBig.png",
+    "events": ["badeat", "badload", "badmove", "badunload", "birth", "collision", "death", "error", "noaction", "slow"]
+  }
 ]
