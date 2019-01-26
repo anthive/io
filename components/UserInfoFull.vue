@@ -1,5 +1,5 @@
 <template lang="pug">
-  .user-info-full.mb-3.elevation-1
+  .user-info-full.mr-3.mb-3.elevation-1
     v-card(:to="{ path: '/user/?username=' + username }")
       v-layout(row)
         v-flex
