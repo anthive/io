@@ -31,11 +31,9 @@
               v-for="(player, pIndex) in props.item._source.Players"
               :key="player.id"
               :username="player.Username"
-              :photo="us.photoUrl(player.Username,50)"
-              :lang="us.langUrl(player.Lang)"
+              :lang="player.Lang"
               :version="player.Version"
-              :skin="us.skinUrl(player.Skin)"
-              hive=""
+              :skin="player.Skin"
               :score="player.Wealth"
             )
           td.games-table__meta.subheading(
@@ -192,6 +190,6 @@ export default {
 
 <style>
   .games-table__meta {
-    min-width: 150px;
+    min-width: 100px;
   }
 </style>

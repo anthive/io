@@ -1,23 +1,21 @@
 <template lang="pug">
   section
     v-layout(column align-center)
-      v-flex(xs12 md8 lg8 class="players")
+      v-flex.players.mx-4.px-5.text-xs-center(xs12 md8 lg8)
         template(v-for="(player, index) in players")
-          a(:href="'/user/?username=' + player.Username")
-            v-chip
-              v-avatar
-                v-img(:src="us.photoUrl(player.Username,70)")
-              v-avatar
-                v-img(:src="us.langUrl(player.Lang)")
-              v-avatar
-                v-img(:src="us.skinUrl(player.Skin)")
-              b {{player.Username}}
-          b(v-if="index+1<players.length") &nbsp;VS&nbsp;
-
+          userInfoFull(
+            :username="player.Username"
+            :lang="player.Lang"
+            :version="player.Version"
+            :skin="player.Skin"
+            :score="player.Wealth"
+            :span="[player.Y, player.X]"
+            :stats="player.Stats"
+          )
+          span.game__vs-separator.mx-4(v-if="index+1<players.length") VS
       v-flex(xs12 md8 lg8)
         div(id="player" :style="{background: '#ccc url(/skins/server/'+theme+'/background.png)' }")
           h2(class="loading") {{status}}
-
       v-flex(xs12 md8 lg8)
         v-toolbar(v-if="players.length>0" flat)
           v-toolbar-items
@@ -36,7 +34,7 @@
 </template>
 
 <script>
-import userService from "@/services/User";
+import userInfoFull from "@/components/UserInfoFull";
 
 var player = null;
 
@@ -44,13 +42,15 @@ export default {
   data: () => ({
     status: "Loading...",
     isPlaying: true,
-    us: userService,
     players: [],
     currentTick: 0,
     currentSpeed: 4,
     totalTicks: 0,
     theme: 1,
   }),
+  components: {
+    userInfoFull
+  },
   mounted() {
     const base = "https://storage.googleapis.com/anthive-prod-games/";
     const gameid = this.$route.query.id || "";
@@ -101,5 +101,10 @@ export default {
 }
 .players {
   margin-top: 100px;
+}
+
+.game__vs-separator {
+  position: relative;
+  top: -80px;
 }
 </style>
