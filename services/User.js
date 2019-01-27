@@ -46,8 +46,18 @@ class User {
     return baseURL+"skins/lang/"+lang+".png";
   }
 
-  static skinUrl(skin) {
-      return baseURL+"skins/client/"+skin+"/ant.png";
+  static antUrl(skin, big=false) {
+    if (big){
+      return baseURL+"skins/client/"+skin+"/antBig.png";
+    }
+    return baseURL+"skins/client/"+skin+"/ant.png";
+  }
+
+  static hiveUrl(skin, big=false) {
+    if (big){
+      return baseURL+"skins/client/"+skin+"/hiveBig.png";
+    }
+    return baseURL+"skins/client/"+skin+"/hive.png";
   }
 
   static scoreString(value){
