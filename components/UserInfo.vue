@@ -4,44 +4,41 @@
       v-list-tile(class="grey lighten-4")
         v-list-tile-content
           v-list-tile-avatar(size="48" tile).user-info__photo-avatar
-            v-img(:src="photo" class="grey lighten-4")
+            v-img(:src="us.photoUrl(username, 96)" class="lighten-4")
         v-list-tile-content.user-info__lang
           v-list-tile-avatar(size="48" tile).user-info__lang-avatar
-            v-img(:src="lang" class="grey lighten-2")
+            v-img(:src="us.langUrl(lang)" class="lighten-2")
         //- v-list-tile-content.user-info__skin.px-2.green.lighten-2(style="background: #000;")
         //- v-list-tile-content.px-3.user-info__skin(:style="hiveStatic")
-        v-list-tile-content.text-xs-center.user-info__skin(:style="hiveStatic")
-          img.mx-auto(:src="skin" width="20")
-          v-list-tile-sub-title.caption.user-info__version v.{{ version }}
+        v-list-tile-content.text-xs-center.user-info__skin(:style="'background: green url('+us.hiveUrl(skin)+');'")
+          img.mx-auto(:src="us.antUrl(skin)" width="20")
+          v-list-tile-sub-title.black--text.user-info__version v.{{ version }}
         v-list-tile-content.px-3
           v-list-tile-title.font-weight-bold {{ username }}
         v-list-tile-content.px-3.orange.lighten-5
-          v-list-tile-sub-title.orange--text.text--lighten-2.title.font-weight-bold {{ score }}
-            v-avatar(size="40")
-              v-icon.ml-1.orange--text.text--lighten-1(size="40") bubble_chart
-
+          v-list-tile-sub-title.orange--text.title.font-weight-bold {{ score }}
+            v-avatar(size="20")
+              v-icon.ml-1.orange--text.text--lighten-1(size="20") bubble_chart
 </template>
 
 <script>
+import userService from "@/services/User";
 
 export default {
   name: "usesrInfo",
   props: {
     username: String,
-    photo: String,
     lang: String,
     version: String,
-    skin: String,
-    hive: String,
+    skin: Number,
     score: Number
   },
   data: () => ({
-    hiveStatic: 'background: green url(https://anthive.io/skins/client/1/hive.png);'
+    us: userService
   }),
   created() {
   },
   methods: {
-
   }
 };
 </script>
