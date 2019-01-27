@@ -5,24 +5,17 @@
         template(v-for="(player, index) in players")
           userInfoFull(
             :username="player.Username"
-            :photo="us.photoUrl(player.Username,100)"
-            :lang="us.langUrl(player.Lang)"
+            :lang="player.Lang"
             :version="player.Version"
-            :skin="us.skinUrl(player.Skin)"
-            :hive="player.Skin"
+            :skin="player.Skin"
             :score="player.Wealth"
             :span="[player.Y, player.X]"
             :stats="player.Stats"
           )
-          
-          //- TO DO: 
-          //- div.d-inline
-          //- span.game__vs-separator.mx-4.grey--text(v-if="index+1<players.length") VS
-            //- v-layout(row) 
+          span.game__vs-separator.mx-4(v-if="index+1<players.length") VS
       v-flex(xs12 md8 lg8)
         div(id="player" :style="{background: '#ccc url(/skins/server/'+theme+'/background.png)' }")
           h2(class="loading") {{status}}
-
       v-flex(xs12 md8 lg8)
         v-toolbar(v-if="players.length>0" flat)
           v-toolbar-items
@@ -41,7 +34,6 @@
 </template>
 
 <script>
-import userService from "@/services/User";
 import userInfoFull from "@/components/UserInfoFull";
 
 var player = null;
@@ -50,7 +42,6 @@ export default {
   data: () => ({
     status: "Loading...",
     isPlaying: true,
-    us: userService,
     players: [],
     currentTick: 0,
     currentSpeed: 4,
@@ -71,9 +62,6 @@ export default {
         this.totalTicks =player.total;
         this.players = player.players;
         this.theme = player.theme;
-
-        console.log('here users')
-        console.log(this.players)
       });
       player.on(AnthivePlayer.onFrameRendered, () => {
         this.currentTick = player.currentIndex + 1;
