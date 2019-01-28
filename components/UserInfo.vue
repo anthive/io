@@ -8,8 +8,6 @@
         v-list-tile-content.user-info__lang
           v-list-tile-avatar(size="48" tile).user-info__lang-avatar
             v-img(:src="us.langUrl(lang)" class="lighten-2")
-        //- v-list-tile-content.user-info__skin.px-2.green.lighten-2(style="background: #000;")
-        //- v-list-tile-content.px-3.user-info__skin(:style="hiveStatic")
         v-list-tile-content.text-xs-center.user-info__skin(:style="'background: green url('+us.hiveUrl(skin)+');'")
           img.mx-auto(:src="us.antUrl(skin)" width="20")
           v-list-tile-sub-title.black--text.user-info__version v.{{ version }}
