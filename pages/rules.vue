@@ -1,7 +1,7 @@
 <template>
   <section>
   <v-parallax
-    src="/img/home_bg.png" 
+    src="/img/home_bg.png"
     align
     height="300">
   </v-parallax>
@@ -16,7 +16,7 @@
           <h1>Rules</h1>
         </v-card-title>
         <v-card-text>
-          <p>AntHIve.IO is a turn-based coding game. Command your ants to collect food and return it to your hive to grow your colony. A player with the biggest colony and less errors wins the game.</p>
+          <p>AntHIve.IO is a turn-based coding game. Command your ants to collect food and return it to your hive to grow your colony. A player with the biggest colony and least errors wins the game.</p>
 
 
           <p>Your bot starts the game with one ant and one hive on a two-dimensional map that consists of individual cells. The starting point (cell) of the game is called Span. Each cell might be occupied only by one ant or by one food with a value from 1 to 9. Cell also might be marked as “hive”.  If the hive ID matches your bot ID then your ants are allowed to walk into a hive cell. An ant with a “stranger” ID belongs to another bot and means other player on the map.

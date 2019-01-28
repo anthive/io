@@ -225,7 +225,7 @@
                         <v-card-text class="subheading">
                           <p>This is a turn-based strategy game for your Bot.</p>
                           <p>Compute, contemplate and plan each step of your ants. Send commands to your ants in order for them to collect food, bring it to your hive, and to grow your colony.</p>
-                          <p>A player with the biggest colony and less errors wins the game. To start the game please follow three steps below.</p>
+                          <p>A player with the biggest colony and least errors wins the game. To start the game please follow three steps below.</p>
                           <p>For detailed rules please visit link</p>
                         </v-card-text>
                         <v-btn class="mx-3 my-0" color="brown white--text">
