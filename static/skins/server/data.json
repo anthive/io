@@ -34,5 +34,14 @@
     "foodsmall": "https://anthive.io/skins/server/4/foodsmall.png",
     "foodmid": "https://anthive.io/skins/server/4/foodmid.png",
     "foodbig": "https://anthive.io/skins/server/4/foodbig.png"
+  },
+  {
+    "id": 5,
+    "name": "green-fodder",
+    "url": "https://anthive.io/skins/server/5/",
+    "background": "https://anthive.io/skins/server/5/background.png",
+    "foodsmall": "https://anthive.io/skins/server/5/foodsmall.png",
+    "foodmid": "https://anthive.io/skins/server/5/foodmid.png",
+    "foodbig": "https://anthive.io/skins/server/5/foodbig.png"
   }
 ]
