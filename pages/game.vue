@@ -1,6 +1,6 @@
 <template lang="pug">
   section
-    v-layout(column align-center)
+    v-layout(column align-center style="overflow: scroll;")
       v-flex.players.mx-4.px-5.text-xs-center(xs12 md8 lg8)
         template(v-for="(player, index) in players")
           userInfoFull(
@@ -13,24 +13,29 @@
             :stats="player.Stats"
           )
           span.game__vs-separator.mx-4(v-if="index+1<players.length") VS
-      v-flex(xs12 md8 lg8)
+
+      v-flex.player__section
+        v-layout.player__actions(wrap @mouseover="showActionsState = true" @mouseleave="showActionsState = false" ref="playerActions" v-show="showActionsState")
+          v-layout.player__progress
+            v-progress-linear.my-0(height="5" color="warning" :value="percentTick")
+          v-toolbar.transparent(v-if="players.length>0" flat)
+
+            v-toolbar-items
+              v-btn(@click="navigate('prev')" title="Previous" icon)
+                v-icon.white--text skip_previous
+              v-btn(@click="playPause()" :title="isPlaying ? 'pause':'play'" icon)
+                v-icon.white--text {{ isPlaying ? 'pause':'play_arrow' }}
+              v-btn(@click="navigate('next')" title="Next" icon)
+                v-icon.white--text skip_next
+            v-spacer
+            v-toolbar-title.body-2.white--text Speed:
+            v-toolbar-items
+              v-btn.white--text(@click="setSpeed(1)" title="Speed 1x" :disabled="currentSpeed == 1" icon) 1x
+              v-btn.white--text(@click="setSpeed(2)" title="Speed 2x" :disabled="currentSpeed == 2" icon) 2x
+              v-btn.white--text(active-class="btn-disabled" @click="setSpeed(4)" title="Speed 4x" :disabled="currentSpeed == 4" icon) 4x
+        v-layout.player__wrap(@click="playPause()" @mouseover="showActionsState = true" @mouseleave="showActionsState = false" ref="playerWrap")
         div(id="player" :style="{background: '#ccc url(/skins/server/'+theme+'/background.png)' }")
-          h2(class="loading") {{status}}
-      v-flex(xs12 md8 lg8)
-        v-toolbar(v-if="players.length>0" flat)
-          v-toolbar-items
-            v-btn(@click="navigate('prev')" title="Previous" icon)
-              v-icon skip_previous
-            v-btn(@click="playPause()" :title="isPlaying ? 'pause':'play'" icon)
-              v-icon {{ isPlaying ? 'pause':'play_arrow' }}
-            v-btn(@click="navigate('next')" title="Next" icon)
-              v-icon skip_next
-          v-toolbar-title(class="body-2 grey--text text--darken-2") Speed:
-          v-toolbar-items
-            v-btn(@click="setSpeed(1)" title="Speed 1x" :disabled="currentSpeed == 1" icon) 1x
-            v-btn(@click="setSpeed(2)" title="Speed 2x" :disabled="currentSpeed == 2" icon) 2x
-            v-btn(@click="setSpeed(4)" title="Speed 4x" :disabled="currentSpeed == 4" icon) 4x
-          v-toolbar-title(class="body-2 grey--text text--darken-2") Ticks: {{ this.currentTick }} out of {{ this.totalTicks }}
+          h2.px-2.white--text(class="loading") {{status}}
 </template>
 
 <script>
@@ -46,7 +51,9 @@ export default {
     currentTick: 0,
     currentSpeed: 4,
     totalTicks: 0,
+    percentTick: 0,
     theme: 1,
+    showActionsState: false
   }),
   components: {
     userInfoFull
@@ -62,15 +69,23 @@ export default {
         this.totalTicks =player.total;
         this.players = player.players;
         this.theme = player.theme;
+
+        var width = player.size.width * 20 + 'px'
+        this.$refs.playerWrap.style.minWidth = width
+        this.$refs.playerActions.style.width = width
       });
       player.on(AnthivePlayer.onFrameRendered, () => {
         this.currentTick = player.currentIndex + 1;
+        this.percentTick = (this.currentTick / this.totalTicks) * 100
       });
     } else {
       this.status = "Can't find game."
     }
   },
   methods: {
+    showActions() {
+      this.showActionsState = !this.showActionsState
+    },
     navigate(dir) {
       this.isPlaying = false;
       if(dir == "prev") {
@@ -83,9 +98,11 @@ export default {
       if (this.isPlaying){
         player.pause()
         this.isPlaying = false;
+        this.$refs.playerWrap.style.backgroundColor = 'rgba(0, 0, 0, .3)'
       }else {
         player.play()
         this.isPlaying = true;
+        this.$refs.playerWrap.style.backgroundColor = 'transparent'
       }
     },
     setSpeed(value) {
@@ -99,6 +116,7 @@ export default {
 #player {
   background-repeat: repeat;
 }
+
 .players {
   margin-top: 100px;
 }
@@ -106,5 +124,48 @@ export default {
 .game__vs-separator {
   position: relative;
   top: -80px;
+}
+
+.player__section {
+  position: relative;
+}
+
+.player__actions {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-width: 420px;
+  background: rgba(0, 0, 0, .3);
+  z-index: 10;
+}
+
+.player__progress {
+  width: 100%;
+}
+
+.v-btn--disabled {
+  background: rgba(255, 255, 255, .2);
+}
+
+.v-btn--disabled > .v-btn__content {
+  color: rgba(255, 255, 255, .8);
+}
+
+.player__wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bot-info__title {
+  width: 50px;
+}
+
+.bot-info__data {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
 }
 </style>
