@@ -28,11 +28,20 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-prettier": "2.6.2",
     "eslint-plugin-vue": "^4.0.0",
+    "jszip": "^3.1.5",
+    "local-storage": "^1.4.2",
+    "net": "^1.0.2",
     "nodemon": "^1.11.0",
+<<<<<<< HEAD
     "pug": "^2.0.3",
     "pug-loader": "^2.4.0",
     "pug-plain-loader": "^1.0.0",
+=======
+    "pixi.js": "^4.8.3",
+>>>>>>> 3e6edae94d9f23138344bada27b2151c8147befa
     "prettier": "1.14.3",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2"
   }

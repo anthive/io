@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template lang="pug">
   section
     v-layout(column align-center style="overflow: scroll;")
@@ -169,3 +170,20 @@ export default {
   text-align: center;
 }
 </style>
+=======
+<template>
+  <section class="section section-lg pt-lg-0">
+    <player></player>
+  </section>
+</template>
+
+<script>
+import player from '~/components/player.vue'
+
+export default {
+  components: {
+    player
+  }
+}
+</script>
+>>>>>>> 3e6edae94d9f23138344bada27b2151c8147befa
