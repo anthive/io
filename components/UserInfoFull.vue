@@ -1,23 +1,28 @@
 <template lang="pug">
-  .user-info-full.mr-3.mb-3.elevation-1
+  .user-info-full.mb-3.elevation-1
     v-card(:to="{ path: '/user/?username=' + username }")
       v-layout(row)
-        v-avatar(size="100" tile)
-          v-img(:src="us.photoUrl(username, 100)" class="grey lighten-4")
-            v-layout(fill-height align-end left)
-              v-flex(xs12 flexbox)
-                v-avatar(size="30" tile)
-                  v-img(:src="us.langUrl(lang)")
-            v-layout(fill-height align-end right)
-              v-flex(xs12 flexbox)
-                v-avatar.grey.lighten-4(size="30" tile)
-                  v-card-text.pa-0.lighten-4 v.{{ version }}
-        v-avatar(size="100" tile)
-          v-img(:src="us.hiveUrl(skin, true)")
-            v-layout(fill-height align-end)
-              v-flex(xs12 flexbox)
-                v-avatar(size="70" tile)
-                  v-img(:src="us.antUrl(skin, true)")
+        v-layout(column)
+          v-layout(row)
+            v-avatar(size="100" tile)
+              v-img(:src="us.photoUrl(username, 100)" class="grey lighten-4")
+                v-layout(fill-height align-end left)
+                  v-flex(xs12 flexbox)
+                    v-avatar(size="30" tile)
+                      v-img(:src="us.langUrl(lang)")
+                v-layout(fill-height align-end right)
+                  v-flex(xs12 flexbox)
+                    v-avatar.grey.lighten-4(size="30" tile)
+                      v-card-text.pa-0.lighten-4 v.{{ version }}
+            v-avatar(size="100" tile)
+              v-img(:src="us.hiveUrl(skin, true)")
+                v-layout(fill-height align-end)
+                  v-flex(xs12 flexbox)
+                    v-avatar(size="70" tile)
+                      v-img(:src="us.antUrl(skin, true)")
+          v-layout(row)
+            v-card-text.py-2.font-weight-bold {{ username }}
+
         v-flex.text-xs-left
           v-card-text.pt-1.pb-0.grey--text.text--darken-2.caption.text-xs-center Bot info
           v-card-text.py-0.caption
@@ -38,8 +43,6 @@
           v-card-text.py-0.caption
             span.user-info-full__meta-item-title Earned:
             span.font-weight-bold {{ score }}
-      v-layout(row)
-        v-card-text.font-weight-bold {{ username }}
 </template>
 
 <script>
