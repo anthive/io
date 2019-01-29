@@ -1,0 +1,54 @@
+/// <reference types="node" />
+import { EventEmitter } from "events";
+import "./resources/styles.css";
+import { IPlayer, ISkins } from "./interfaces";
+import { Stage } from "./Stage";
+import { Controls } from "./controls/Controls";
+declare class Player extends EventEmitter {
+    private _data;
+    private _target;
+    private _play;
+    private _speed;
+    static onReady: string;
+    static onFrameRendered: string;
+    static onPaused: string;
+    static onStarted: string;
+    static instance: Player;
+    private _playerContainer;
+    private _app;
+    private _dataService;
+    private _stages;
+    private _prevStage;
+    private _currentStage;
+    private _currentIndex;
+    private _total;
+    private _loaded;
+    private _playing;
+    private _interval;
+    controls: Controls;
+    constructor(_data: string | object, _target?: string, _play?: boolean, _speed?: number);
+    private init;
+    private createRenderer;
+    private createStages;
+    private render;
+    private resize;
+    private readonly intervalTime;
+    play(): void;
+    pause(): void;
+    prev(): void;
+    next(): void;
+    speed: number;
+    readonly currentIndex: number;
+    readonly total: number;
+    readonly isPlaying: boolean;
+    readonly players: Array<IPlayer>;
+    readonly skins: ISkins;
+    readonly size: {
+        width: number;
+        height: number;
+    };
+    readonly stage: Stage;
+    readonly currentUser: any;
+}
+export { Player };
+export { Player as AnthivePlayer };

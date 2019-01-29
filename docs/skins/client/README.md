@@ -80,3 +80,19 @@
 <img src="./5/collision.png">
 <img src="./5/error.png">
 <img src="./5/death.png">
+
+
+## 6. Ant man
+
+<img src="./6/hiveBig.png"><img src="./6/antBig.png">
+- In Game <img src="./6/hive.png"> <img src="./6/ant.png">
+- Events: <img src="./6/birth.png">
+<img src="./6/noaction.png">
+<img src="./6/slow.png">
+<img src="./6/badmove.png">
+<img src="./6/badload.png">
+<img src="./6/badunload.png">
+<img src="./6/badeat.png">
+<img src="./6/collision.png">
+<img src="./6/error.png">
+<img src="./6/death.png">
