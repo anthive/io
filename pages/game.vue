@@ -27,8 +27,9 @@
                 v-icon.white--text {{ isPlaying ? 'pause':'play_arrow' }}
               v-btn(@click="navigate('next')" title="Next" icon)
                 v-icon.white--text skip_next
+            v-toolbar-title.body-2.white--text {{ currentTick }} / {{ totalTicks }}
             v-spacer
-            v-toolbar-title.body-2.white--text Speed:
+            v-toolbar-title.body-2.white--text Speed
             v-toolbar-items
               v-btn.white--text(@click="setSpeed(1)" title="Speed 1x" :disabled="currentSpeed == 1" icon) 1x
               v-btn.white--text(@click="setSpeed(2)" title="Speed 2x" :disabled="currentSpeed == 2" icon) 2x
@@ -46,13 +47,13 @@ var player = null;
 export default {
   data: () => ({
     status: "Loading...",
-    isPlaying: true,
-    players: [],
-    currentTick: 0,
-    currentSpeed: 4,
-    totalTicks: 0,
-    percentTick: 0,
     theme: 1,
+    players: [],
+    totalTicks: 0,
+    currentTick: 0,
+    percentTick: 0,
+    currentSpeed: 4,
+    isPlaying: true,
     showActionsState: false
   }),
   components: {

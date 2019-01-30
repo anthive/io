@@ -3,23 +3,20 @@
   <v-app light>
     <v-content>
       <section>
-        <v-parallax src="/img/home_bg.png" min-height="600">
-          <v-container>
-            <v-layout align-center justify-start row wrap fill-height class="white--text">
-              <v-flex offset-sm2 sm8 offset-md2 md4 my-5>
-                <div
-                  class="white--text mb-2 mt-5 display-1 text-xs-left font-weight-bold"
+        <v-parallax src="/img/home_bg.png" height="700">
+          <v-container mt-4>
+            <v-layout row wrap justify-center align-start mt-5 class="white--text">
+              <v-flex sm12 md6 mb-4 text-xs-center>
+                <div class="white--text mb-5 mt-0 display-2 font-weight-thin"
                 >You are not playing a game</div>
 
-                <div
-                  class="subheading mb-3 text-xs-left font-weight-bold orange--text text--darken-1"
+                <div class="headline mb-2 font-weight-bold orange--text text--darken-1"
                 >Turn-based strategy game for your AI</div>
 
-                <div
-                  class="title font-weight-regular"
+                <div class="title font-weight-regular"
                 >Start your new coding adventure with 3 simple steps</div>
               </v-flex>
-              <v-flex>
+              <v-flex sm6 md6>
                 <div id="player" class="ant-player">
                   <h2 class="loading">Loading...</h2>
                 </div>
@@ -31,11 +28,12 @@
 
       <section>
         <v-layout column class="my-5" align-center>
-          <v-flex xs12 md8 lg8>
+          <v-flex xs12 md8 lg8 class="steps-section__flex">
             <v-container grid-list-xl>
-              <v-layout align-center justify-center row wrap fill-height>
-                <v-flex xs12 md4 lg3 pa-2 justify-left>
-                  <v-card class="elevation-6 white">
+              <v-layout justify-center row wrap fill-height>
+
+                <v-flex xs12 md4 lg4 pa-2 justify-left>
+                  <v-card class="elevation-6 white" height="100%">
                     <v-card-text class="text-xs-left px-3">
                       <v-icon x-large class="brown--text text--lighten-2">cloud_download</v-icon>
                     </v-card-text>
@@ -47,7 +45,7 @@
                       <a
                         href="https://github.com/new/import"
                         style="color: blue"
-                      >import</a> it.
+                      >import</a> it. You can choose sample from next languages.
                     </v-card-text>
                     <div class="text-xs-left px-3 py-3">
                       <v-chip class="brown lighten-2 white--text">
@@ -63,14 +61,14 @@
                         <a href="https://github.com/anthive/cpp" target="_blank">C++</a>
                       </v-chip>
 
-                      <v-chip class="brown lighten-2 white--text">
+                      <v-chip to="/" class="brown lighten-2 white--text">
                         <a href="https://github.com/anthive/php" target="_blank">PHP</a>
                       </v-chip>
                     </div>
                   </v-card>
                 </v-flex>
 
-                <v-flex xs12 md4 lg3 pa-2 justify-left>
+                <v-flex xs12 md4 lg4 pa-2 justify-left>
                   <v-card class="elevation-6 white" height="100%">
                     <v-card-text class="text-xs-left">
                       <v-icon x-large class="brown--text text--lighten-2">insert_link</v-icon>
@@ -81,28 +79,23 @@
                     <v-card-text
                       class="subheading"
                     >In your repository set your username in ANTHIVE file. Link your repository in profile settings page.</v-card-text>
-                    <v-btn class="ma-3" color="brown white--text">
-                      <a href="https://profile.anthive.io/login/" class="undeco">Profile</a>
-                    </v-btn>
+                    <v-btn href="https://profile.anthive.io/login/" class="ma-3" color="brown white--text">Profile</v-btn>
                   </v-card>
                 </v-flex>
 
-                <v-flex xs12 md4 lg3 pa-2 justify-left>
-                  <v-card class="elevation-6 white">
-                    <v-card-text class="text-xs-left px-3">
+                <v-flex xs12 md4 lg4 pa-2 justify-left>
+                  <v-card class="elevation-6 white" height="100%">
+                    <v-card-text class="text-xs-left">
                       <v-icon x-large class="brown--text text--lighten-2">flash_on</v-icon>
                     </v-card-text>
-                    <v-card-title primary-title class="layout justify-start">
+                    <v-card-title primary-title class="layout justify-left">
                       <div class="headline text-xs-left px-3">3. CODE STRATEGIES</div>
                     </v-card-title>
                     <v-card-text
                       class="subheading"
                     >Refactor code with your own strategies. Git push to origin. Start games, compete and climb the
-                      <a href="/leaderboard/" style="color: blue">leaderboard</a>.
-                    </v-card-text>
-                    <v-btn class="ma-3" color="brown">
-                      <nuxt-link to="/rules/" class="nuxt-link">Rules</nuxt-link>
-                    </v-btn>
+                      <a href="/leaderboard/" style="color: blue">leaderboard</a>.</v-card-text>
+                    <v-btn to="/rules/" class="ma-3" color="brown white--text">Rules</v-btn>
                   </v-card>
                 </v-flex>
               </v-layout>
@@ -112,90 +105,97 @@
       </section>
 
       <section>
-        <v-layout column wrap class="my-5 brown-bg-1" align-center>
-          <v-flex xs12>
-            <v-container grid-list-xl>
-              <v-layout align-center justify-center row wrap fill-height>
-                <v-flex xs12 lg8 my-5>
-                  <v-card class="elevation-6 white">
-                    <v-layout align-center justify-center row wrap fill-height>
-                      <v-flex xs12 sm4 md4 pa-5 justify-left>
-                        <v-img
-                          src="/img/ant_ml.svg"
-                          aspect-ratio="1"
-                          max-width="100%"
-                          contain
-                          class="elevation-6 rounded"
-                        ></v-img>
-                      </v-flex>
-                      <v-flex xs12 md8 pa-0 justify-right>
-                        <v-card-title primary-title class="layout justify-start">
-                          <div class="headline text-xs-left px-3">Learn</div>
-                        </v-card-title>
-                        <v-card-text class="subheading">
-                          Always wanted to learn coding but didn’t know what to start with? Start right here. This turn-based strategy game is the most engaging way to learn real code. PIck a language, read the rules link to
-                          the rules and start learning right now.
-                        </v-card-text>
-                        <div class="text-xs-left pa-3"></div>
-                      </v-flex>
-                    </v-layout>
-                  </v-card>
-                </v-flex>
+        <v-parallax src="/img/leaderboard_bg.png" align height="100%">
+        <!-- <v-parallax src="/img/leaderboard_bg.png" align height="800"> -->
+        <!-- <v-parallax src="/img/leaderboard_bg.png"> -->
+          
+        <v-layout column wrap class="my-5" align-center>
+            <v-flex xs12>
+              <v-container pa-0>
+                <v-layout align-center justify-center row wrap fill-height>
 
-                <v-flex xs12 lg8 my-5>
-                  <v-card class="elevation-6 white">
-                    <v-layout align-center justify-center row wrap fill-height>
-                      <v-flex xs12 sm4 md4 pa-5 justify-left>
-                        <v-img
-                          src="/img/ant_engineer_red.svg"
-                          aspect-ratio="1"
-                          max-width="100%"
-                          contain
-                          class="elevation-6 rounded"
-                        ></v-img>
-                      </v-flex>
-                      <v-flex xs12 md8 pa-0 justify-right>
-                        <v-card-title primary-title class="layout justify-start">
-                          <div class="headline text-xs-left px-3">Practice</div>
-                        </v-card-title>
-                        <v-card-text class="subheading">
-                          Keep practicing and improving your coding skills by playing this game. This game is a great way to advance your programming skills while having fun and getting noticed. Master your current language of
-                          choice; or expand your understanding of a new one. By completing the levels you get trophies and certificates which will benefit you not only in the game but in real life.
-                        </v-card-text>
-                      </v-flex>
-                    </v-layout>
-                  </v-card>
-                </v-flex>
+                  <v-flex xs12 lg8 my-5>
+                    <v-card class="elevation-6 white">
+                      <v-layout align-center justify-center row wrap fill-height pa-3>
+                        <v-flex xs4 sm4 md4 justify-left pa-2>
+                          <v-img
+                            src="/img/ant_ml.svg"
+                            aspect-ratio="1"
+                            max-width="100%"
+                            contain
+                            class="elevation-6 rounded"
+                          ></v-img>
+                        </v-flex>
+                        <v-flex xs12 sm8 md8 justify-right>
+                          <v-card-title primary-title class="layout justify-start">
+                            <div class="headline text-xs-left px-3">Learn</div>
+                          </v-card-title>
+                          <v-card-text class="subheading">
+                            Always wanted to learn coding but didn’t know what to start with? Start right here. This turn-based strategy game is the most engaging way to learn real code. PIck a language, read the rules link to
+                            the rules and start learning right now.
+                          </v-card-text>
+                        </v-flex>
+                      </v-layout>
+                    </v-card>
+                  </v-flex>
 
-                <v-flex xs12 lg8 my-5>
-                  <v-card class="elevation-6 white">
-                    <v-layout align-center justify-center row wrap fill-height>
-                      <v-flex xs12 sm4 md4 pa-5 justify-center>
-                        <v-img
-                          src="/img/ant_racing.svg"
-                          aspect-ratio="1"
-                          width="100%"
-                          contain
-                          class="elevation-6 rounded"
-                        ></v-img>
-                      </v-flex>
-                      <v-flex xs12 md8 pa-0 justify-right>
-                        <v-card-title primary-title class="layout justify-start">
-                          <div class="headline text-xs-left px-3">Compete</div>
-                        </v-card-title>
-                        <v-card-text class="subheading">
-                          Demonstrate your skills by competing with other developers in your language of choice. This platform allows you to battle not just against other software engineers around the world, but also against
-                          bots written in different languages on the same map and on your own time. Demonstrate to everyone that your strategy is superior, your code is the most efficient and has no errors. Climb the leaderboard,
-                          improving your strategy. Let your bot dominate the tournaments.
-                        </v-card-text>
-                      </v-flex>
-                    </v-layout>
-                  </v-card>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-flex>
+                  <v-flex xs12 lg8 my-5>
+                    <v-card class="elevation-6 white">
+                      <v-layout align-center justify-center row wrap fill-height pa-3>
+                        <v-flex xs4 sm4 md4 justify-left pa-2>
+                          <v-img
+                            src="/img/ant_engineer_red.svg"
+                            aspect-ratio="1"
+                            max-width="100%"
+                            contain
+                            class="elevation-6 rounded"
+                          ></v-img>
+                        </v-flex>
+                        <v-flex xs12 sm8 md8 justify-right>
+                          <v-card-title primary-title class="layout justify-start">
+                            <div class="headline text-xs-left px-3">Practice</div>
+                          </v-card-title>
+                          <v-card-text class="subheading">
+                            Keep practicing and improving your coding skills by playing this game. This game is a great way to advance your programming skills while having fun and getting noticed. Master your current language of
+                            choice; or expand your understanding of a new one. By completing the levels you get trophies and certificates which will benefit you not only in the game but in real life.
+                          </v-card-text>
+                        </v-flex>
+                      </v-layout>
+                    </v-card>
+                  </v-flex>
+
+                  <v-flex xs12 lg8 my-5>
+                    <v-card class="elevation-6 white">
+                      <v-layout align-center justify-center row wrap fill-height pa-3>
+                        <v-flex xs4 sm4 md4 justify-left pa-2>
+                          <v-img
+                            src="/img/ant_racing.svg"
+                            aspect-ratio="1"
+                            max-width="100%"
+                            contain
+                            class="elevation-6 rounded"
+                          ></v-img>
+                        </v-flex>
+                        <v-flex xs12 sm8 md8 justify-right>
+                          <v-card-title primary-title class="layout justify-start">
+                            <div class="headline text-xs-left px-3">Compete</div>
+                          </v-card-title>
+                          <v-card-text class="subheading">
+                            Demonstrate your skills by competing with other developers in your language of choice. This platform allows you to battle not just against other software engineers around the world, but also against
+                            bots written in different languages on the same map and on your own time. Demonstrate to everyone that your strategy is superior, your code is the most efficient and has no errors. Climb the leaderboard,
+                            improving your strategy. Let your bot dominate the tournaments.
+                          </v-card-text>
+                        </v-flex>
+                      </v-layout>
+                    </v-card>
+                  </v-flex>
+
+                </v-layout>
+              </v-container>
+            </v-flex>
+          
         </v-layout>
+        </v-parallax>
       </section>
 
       <section class="video_bg">
@@ -218,7 +218,7 @@
                     </v-flex>
 
                     <v-flex xs12 md12 lg6 my-0 class="align-center justify-center">
-                      <v-card class="elevation-0 transparent">
+                      <v-card class="pa-3 elevation-0 transparent">
                         <v-card-title primary-title class="layout justify-start">
                           <div class="headline brown--text text-xs-left px-2">Get Started!</div>
                         </v-card-title>
@@ -228,9 +228,7 @@
                           <p>A player with the biggest colony and least errors wins the game. To start the game please follow three steps below.</p>
                           <p>For detailed rules please visit link</p>
                         </v-card-text>
-                        <v-btn class="mx-3 my-0" color="brown white--text">
-                          <nuxt-link to="/rules" class="nuxt-link">Rules</nuxt-link>
-                        </v-btn>
+                        <v-btn to="/rules/" class="mx-3 my-0" color="brown white--text">Rules</v-btn>
                       </v-card>
                     </v-flex>
                   </v-layout>
@@ -248,18 +246,19 @@
               <v-layout align-center justify-center row wrap fill-height>
                 <v-flex xs12 md12 lg8 my-5>
                   <v-layout align-center justify-center row wrap fill-height>
-                    <v-flex xs12 md6 pa-5 justify-left>
+                    <v-flex xs10 sm5 md6 pa-5 justify-left>
                       <v-img src="/img/badges_trinity.png" aspect-ratio="1" contain></v-img>
                     </v-flex>
-                    <v-flex xs12 md6 justify-right>
+                    <v-flex xs12 sm7 md6 justify-right>
                       <v-card
                         class="elevation-6 white pl-5 ant-card-scientist"
-                        style="padding-left: 140px !important;"
                       >
                         <v-card-title primary-title class="layout justify-start">
                           <div class="headline text-xs-left px-3">Badges and Ranking</div>
                         </v-card-title>
-                        <v-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien velit, sodales in elementum sed, facilisis suscipit massa. Maecenas efficitur lectus non ligula accumsan euismod in a quam. Vivamus finibus tincidunt tellus vitae aliquet. Suspendisse justo ipsum, pharetra non pretium ut, scelerisque ac mi. Pellentesque hendrerit sodales tortor, in faucibus diam tempus ac. Donec convallis fringilla mauris vitae tristique.</v-card-text>
+                        <v-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien velit, sodales in elementum sed, facilisis suscipit massa.</v-card-text>
+                        <v-card-text>Maecenas efficitur lectus non ligula accumsan euismod in a quam. Vivamus finibus tincidunt tellus vitae aliquet. Suspendisse justo ipsum, pharetra non pretium ut, scelerisque ac mi.</v-card-text>
+                        <v-card-text>Pellentesque hendrerit sodales tortor, in faucibus diam tempus ac. Donec convallis fringilla mauris vitae tristique.</v-card-text>
                       </v-card>
                     </v-flex>
                   </v-layout>
@@ -275,30 +274,27 @@
           <v-layout column wrap class="my-5" align-center>
             <v-flex xs12 style="width:100%;">
               <v-container grid-list-xl class="my-5">
-                <v-layout align-center justify-center row wrap fill-height>
+                <v-layout justify-center row wrap fill-height>
                   <v-flex xs12 md6 lg4 xl3 pa-5>
                     <v-card
                       class="elevation-6 white px-0 pa-3 mail"
-                      style="padding-left: 100px !important;"
+                      style="padding-left: 70px !important;"
+                      height="100%"
                     >
                       <div class="headline text-xs-left px-0 brown--text text--lighten-2">Subscribe</div>
 
                       <v-card-text
                         class="body-1 text-xs-left px-0 grey--text"
                       >Stay in touch and get latest news first!</v-card-text>
-                      <v-btn color="brown white--text darken-2 mx-0">
-                        <a
-                          target="_blank"
-                          href="https://visitor.r20.constantcontact.com/d.jsp?llr=iei6rx6ab&amp;p=oi&amp;m=1131440677000&amp;sit=hmwc8c9mb&amp;f=c1095ec4-d2a5-4f31-85e6-9f5d16f7d72c"
-                        >Subscribe</a>
-                      </v-btn>
+                      <v-btn href="https://visitor.r20.constantcontact.com/d.jsp?llr=iei6rx6ab&amp;p=oi&amp;m=1131440677000&amp;sit=hmwc8c9mb&amp;f=c1095ec4-d2a5-4f31-85e6-9f5d16f7d72c" target="_blank" color="brown white--text darken-2 mx-0">Subscribe</v-btn>
                     </v-card>
                   </v-flex>
 
                   <v-flex xs12 md6 lg4 xl3 pa-5>
                     <v-card
                       class="elevation-6 white pa-3 bug"
-                      style="padding-left: 100px !important;"
+                      style="padding-left: 70px !important;"
+                      height="100%"
                     >
                       <div
                         class="headline text-xs-left px-0 brown--text text--lighten-2"
@@ -307,9 +303,7 @@
                       <v-card-text
                         class="body-1 text-xs-left px-0 grey--text"
                       >Tell us on our github repo and we wil fix it!</v-card-text>
-                      <v-btn color="brown white--text darken-2 mx-0">
-                        <a href="https://github.com/anthive/io/issues">Report issue</a>
-                      </v-btn>
+                      <v-btn href="https://github.com/anthive/io/issues" color="brown white--text darken-2 mx-0">Report issue</v-btn>
                     </v-card>
                   </v-flex>
                 </v-layout>
@@ -335,6 +329,10 @@ export default {
 <style>
 .ant-player {
   background-image: url('https://anthive.io/skins/server/1/background.png');
+}
+
+.steps-section__flex {
+  margin-top: -180px;
 }
 
 .brown a {
