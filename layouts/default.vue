@@ -1,8 +1,9 @@
 <template lang="pug">
-  v-app()
-    defaultHeader
-    defaultContent
-    defaultFooter
+  div(id="app")
+    v-app(id="inspire")
+      defaultHeader
+      defaultContent
+      defaultFooter
 </template>
 
 <script>
