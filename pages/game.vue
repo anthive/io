@@ -29,7 +29,8 @@
                 v-icon.white--text skip_next
             v-toolbar-title.body-2.white--text {{ currentTick }} / {{ totalTicks }}
             v-spacer
-            v-toolbar-title.body-2.white--text Speed
+            v-toolbar-title.body-2
+              v-icon.white--text fast_forward
             v-toolbar-items
               v-btn.white--text(@click="setSpeed(1)" title="Speed 1x" :disabled="currentSpeed == 1" icon) 1x
               v-btn.white--text(@click="setSpeed(2)" title="Speed 2x" :disabled="currentSpeed == 2" icon) 2x
@@ -67,7 +68,7 @@ export default {
     if (dataUrl != null){
       player = new AnthivePlayer(dataUrl,"#player");
       player.on(AnthivePlayer.onReady, () => {
-        this.totalTicks =player.total;
+        this.totalTicks = player.total;
         this.players = player.players;
         this.theme = player.theme;
 
@@ -135,7 +136,7 @@ export default {
   position: absolute;
   bottom: 0;
   width: 100%;
-  min-width: 420px;
+  min-width: 480px;
   background: rgba(0, 0, 0, .3);
   z-index: 10;
 }
