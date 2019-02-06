@@ -16,11 +16,12 @@
                 <div class="hidden-sm-and-down mt-2 title font-weight-regular"
                 >Start your new coding adventure with 3 simple steps</div>
               </v-flex>
-              <v-flex sm10 md6>
+              <v-layout column align-center text-xs-center>
                 <div @click="playPausePlayer()" id="player" class="ant-player">
                   <h2 class="loading">Loading...</h2>
                 </div>
-              </v-flex>
+                <v-btn to="/game/?id=K7wbjAx5VYlgx0MdEuyR&v=3.0" small class="white--text elevation-0" color="transparent">Open this game</v-btn>
+              </v-layout>
             </v-layout>
           </v-container>
         </v-parallax>
@@ -227,8 +228,12 @@
       <section>
         <v-container mt-4>
           <v-layout row wrap justify-center align-start mt-5 class="white--text">
-            <v-flex sm10 md6>
-              <div @click="playPausePlayer()" id="player-for-big-game" class="ant-player">
+            <v-flex sm12 md12 text-xs-center class="ant-player-section">
+              <div class="ant-player-wrap"></div>
+              <div id="player-for-big-game" class="ant-player ant-player-big hidden-sm-and-down">
+                <h2 class="loading">Loading...</h2>
+              </div>
+              <div id="player-for-small-game" class="ant-player ant-player-small hidden-md-and-up">
                 <h2 class="loading">Loading...</h2>
               </div>
             </v-flex>
@@ -239,7 +244,7 @@
       <section class="video_bg">
         <v-layout column wrap align-center pa-0>
           <v-flex xs12 class="md8 video_filter">
-            <v-container grid-list-xl mt-5>
+            <v-container grid-list-xl>
               <v-layout align-center justify-center row wrap fill-height>
                 <v-flex xs12 md12 lg8 ma-0 pa-0>
                   <v-layout align-center justify-space-around row wrap fill-height ma-0 pa-0>
@@ -360,8 +365,9 @@
   </v-app>
 </template>
 <script>
-var homepagePlayer = null;
+var playerForTopGame = null;
 var playerForBigGame = null;
+var playerForSmallGame = null;
 
 export default {
   data: () => ({
@@ -369,15 +375,31 @@ export default {
     dialog: false
   }),
   mounted() {
-    const dataUrl = 'https://storage.googleapis.com/anthive-dev-games/Kj5A2SydOFlqgLIu35Br.zip';
-    const dataUrlForBigGame = 'https://storage.googleapis.com/anthive-prod-games/3.0/LyJ6Lfq3FG8sbE0KO3bp.zip';
+    // const dataUrl = 'https://storage.googleapis.com/anthive-dev-games/Kj5A2SydOFlqgLIu35Br.zip'; // old
+    const dataUrlForTopGame = 'https://storage.googleapis.com/anthive-prod-games/3.0/K7wbjAx5VYlgx0MdEuyR.zip';
+    const dataUrlForBigGame = 'https://storage.googleapis.com/anthive-prod-games/3.0/Zy8aLyjC7bbs4o2ZocHE.zip';
+    const dataUrlForSmallGame = 'https://storage.googleapis.com/anthive-prod-games/3.0/Di7ltk4qP3611VTySLyG.zip';
 
-    homepagePlayer = new AnthivePlayer(dataUrl, '#player');
-    playerForBigGame = new AnthivePlayer(dataUrlForBigGame, '#player-for-big-game');
+    playerForTopGame = new AnthivePlayer(dataUrlForTopGame, '#player');
+    
+    playerForTopGame.on(AnthivePlayer.onReady, () => {
+      playerForTopGame.speed = 2
 
-    // homepagePlayer.on(AnthivePlayer.onFrameRendered, () => {
-    //   var total = homepagePlayer.total;
-    //   var current = homepagePlayer.currentIndex + 1;
+      playerForBigGame = new AnthivePlayer(dataUrlForBigGame, '#player-for-big-game')
+      playerForBigGame.on(AnthivePlayer.onReady, () => {
+        playerForBigGame.speed = 2
+
+        playerForSmallGame = new AnthivePlayer(dataUrlForSmallGame, '#player-for-small-game')
+        playerForSmallGame.on(AnthivePlayer.onReady, () => {
+          playerForSmallGame.speed = 2
+        })
+        
+      })
+    })
+
+    // playerForTopGame.on(AnthivePlayer.onFrameRendered, () => {
+    //   var total = playerForTopGame.total;
+    //   var current = playerForTopGame.currentIndex + 1;
 
     //   if(current == total) {
     //     // TO DO:
@@ -388,10 +410,10 @@ export default {
   methods: {
     playPausePlayer() {
       if (this.isPlaying){
-        homepagePlayer.pause();
+        playerForTopGame.pause();
         this.isPlaying = false;
       }else {
-        homepagePlayer.play();
+        playerForTopGame.play();
         this.isPlaying = true;
       }
     },
@@ -401,7 +423,8 @@ export default {
 
 <style>
 .ant-player {
-  background-image: url('https://anthive.io/skins/server/1/background.png');
+  display: inline-block;
+  background-image: url('https://anthive.io/skins/server/2/background.png');
 }
 
 .steps-section__flex {
@@ -437,6 +460,18 @@ export default {
   z-index: -1;
 }
 
+.ant-player-section {
+  position: relative;
+}
+
+.ant-player-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .brown a {
   color: #fff !important;
 }
@@ -456,7 +491,8 @@ export default {
 
 .video_bg {
   background-image: url(/img/howto_bg.png);
-  background-size: 90% 90%;
+  background-size: 90% 90%;  
+  background-position: 0 1px;
 }
 
 .video_filter {
