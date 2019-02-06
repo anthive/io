@@ -136,96 +136,104 @@
 
       <section class="feature-section">
         <v-parallax src="/img/leaderboard_bg.png" align height="100%">
-        <!-- <v-parallax src="/img/leaderboard_bg.png" align height="800"> -->
-        <!-- <v-parallax src="/img/leaderboard_bg.png"> -->
-          
-        <v-layout column wrap class="feature-section__layout my-5" align-center>
-            <v-flex xs12>
-              <v-container pa-0>
-                <v-layout align-center justify-center row wrap fill-height>
+          <v-layout column wrap class="feature-section__layout my-5" align-center>
+              <v-flex xs12>
+                <v-container pa-0>
+                  <v-layout align-center justify-center row wrap fill-height>
 
-                  <v-flex xs12 lg8 my-5>
-                    <v-card class="elevation-6 white">
-                      <v-layout align-center justify-center row wrap fill-height pa-3>
-                        <v-flex xs4 sm4 md4 justify-left pa-2>
-                          <v-img
-                            src="/img/ant_ml.svg"
-                            aspect-ratio="1"
-                            max-width="100%"
-                            contain
-                            class="elevation-6 rounded"
-                          ></v-img>
-                        </v-flex>
-                        <v-flex xs12 sm8 md8 justify-right>
-                          <v-card-title primary-title class="layout justify-start">
-                            <div class="headline brown--text text-xs-left px-3">Learn</div>
-                          </v-card-title>
-                          <v-card-text class="subheading">
-                            Always wanted to learn coding but didn’t know what to start with? Start right here. This turn-based strategy game is the most engaging way to learn real code. PIck a language, read the rules link to
-                            the rules and start learning right now.
-                          </v-card-text>
-                        </v-flex>
-                      </v-layout>
-                    </v-card>
-                  </v-flex>
+                    <v-flex xs12 lg8 my-5>
+                      <v-card class="elevation-6 white">
+                        <v-layout align-center justify-center row wrap fill-height pa-3>
+                          <v-flex xs4 sm4 md4 justify-left pa-2>
+                            <v-img
+                              src="/img/ant_ml.svg"
+                              aspect-ratio="1"
+                              max-width="100%"
+                              contain
+                              class="elevation-6 rounded"
+                            ></v-img>
+                          </v-flex>
+                          <v-flex xs12 sm8 md8 justify-right>
+                            <v-card-title primary-title class="layout justify-start">
+                              <div class="headline brown--text text-xs-left px-3">Learn</div>
+                            </v-card-title>
+                            <v-card-text class="subheading">
+                              Always wanted to learn coding but didn’t know what to start with? Start right here. This turn-based strategy game is the most engaging way to learn real code. PIck a language, read the rules link to
+                              the rules and start learning right now.
+                            </v-card-text>
+                          </v-flex>
+                        </v-layout>
+                      </v-card>
+                    </v-flex>
 
-                  <v-flex xs12 lg8 my-5>
-                    <v-card class="elevation-6 white">
-                      <v-layout align-center justify-center row wrap fill-height pa-3>
-                        <v-flex xs4 sm4 md4 justify-left pa-2>
-                          <v-img
-                            src="/img/ant_engineer_red.svg"
-                            aspect-ratio="1"
-                            max-width="100%"
-                            contain
-                            class="elevation-6 rounded"
-                          ></v-img>
-                        </v-flex>
-                        <v-flex xs12 sm8 md8 justify-right>
-                          <v-card-title primary-title class="layout justify-start">
-                            <div class="headline brown--text text-xs-left px-3">Practice</div>
-                          </v-card-title>
-                          <v-card-text class="subheading">
-                            Keep practicing and improving your coding skills by playing this game. This game is a great way to advance your programming skills while having fun and getting noticed. Master your current language of
-                            choice; or expand your understanding of a new one. By completing the levels you get trophies and certificates which will benefit you not only in the game but in real life.
-                          </v-card-text>
-                        </v-flex>
-                      </v-layout>
-                    </v-card>
-                  </v-flex>
+                    <v-flex xs12 lg8 my-5>
+                      <v-card class="elevation-6 white">
+                        <v-layout align-center justify-center row wrap fill-height pa-3>
+                          <v-flex xs4 sm4 md4 justify-left pa-2>
+                            <v-img
+                              src="/img/ant_engineer_red.svg"
+                              aspect-ratio="1"
+                              max-width="100%"
+                              contain
+                              class="elevation-6 rounded"
+                            ></v-img>
+                          </v-flex>
+                          <v-flex xs12 sm8 md8 justify-right>
+                            <v-card-title primary-title class="layout justify-start">
+                              <div class="headline brown--text text-xs-left px-3">Practice</div>
+                            </v-card-title>
+                            <v-card-text class="subheading">
+                              Keep practicing and improving your coding skills by playing this game. This game is a great way to advance your programming skills while having fun and getting noticed. Master your current language of
+                              choice; or expand your understanding of a new one. By completing the levels you get trophies and certificates which will benefit you not only in the game but in real life.
+                            </v-card-text>
+                          </v-flex>
+                        </v-layout>
+                      </v-card>
+                    </v-flex>
 
-                  <v-flex xs12 lg8 my-5>
-                    <v-card class="elevation-6 white">
-                      <v-layout align-center justify-center row wrap fill-height pa-3>
-                        <v-flex xs4 sm4 md4 justify-left pa-2>
-                          <v-img
-                            src="/img/ant_racing.svg"
-                            aspect-ratio="1"
-                            max-width="100%"
-                            contain
-                            class="elevation-6 rounded"
-                          ></v-img>
-                        </v-flex>
-                        <v-flex xs12 sm8 md8 justify-right>
-                          <v-card-title primary-title class="layout justify-start">
-                            <div class="headline brown--text text-xs-left px-3">Compete</div>
-                          </v-card-title>
-                          <v-card-text class="subheading">
-                            Demonstrate your skills by competing with other developers in your language of choice. This platform allows you to battle not just against other software engineers around the world, but also against
-                            bots written in different languages on the same map and on your own time. Demonstrate to everyone that your strategy is superior, your code is the most efficient and has no errors. Climb the leaderboard,
-                            improving your strategy. Let your bot dominate the tournaments.
-                          </v-card-text>
-                        </v-flex>
-                      </v-layout>
-                    </v-card>
-                  </v-flex>
+                    <v-flex xs12 lg8 my-5>
+                      <v-card class="elevation-6 white">
+                        <v-layout align-center justify-center row wrap fill-height pa-3>
+                          <v-flex xs4 sm4 md4 justify-left pa-2>
+                            <v-img
+                              src="/img/ant_racing.svg"
+                              aspect-ratio="1"
+                              max-width="100%"
+                              contain
+                              class="elevation-6 rounded"
+                            ></v-img>
+                          </v-flex>
+                          <v-flex xs12 sm8 md8 justify-right>
+                            <v-card-title primary-title class="layout justify-start">
+                              <div class="headline brown--text text-xs-left px-3">Compete</div>
+                            </v-card-title>
+                            <v-card-text class="subheading">
+                              Demonstrate your skills by competing with other developers in your language of choice. This platform allows you to battle not just against other software engineers around the world, but also against
+                              bots written in different languages on the same map and on your own time. Demonstrate to everyone that your strategy is superior, your code is the most efficient and has no errors. Climb the leaderboard,
+                              improving your strategy. Let your bot dominate the tournaments.
+                            </v-card-text>
+                          </v-flex>
+                        </v-layout>
+                      </v-card>
+                    </v-flex>
 
-                </v-layout>
-              </v-container>
-            </v-flex>
-          
-        </v-layout>
+                  </v-layout>
+                </v-container>
+              </v-flex>
+          </v-layout>
         </v-parallax>
+      </section>
+
+      <section>
+        <v-container mt-4>
+          <v-layout row wrap justify-center align-start mt-5 class="white--text">
+            <v-flex sm10 md6>
+              <div @click="playPausePlayer()" id="player-for-big-game" class="ant-player">
+                <h2 class="loading">Loading...</h2>
+              </div>
+            </v-flex>
+          </v-layout>
+        </v-container>
       </section>
 
       <section class="video_bg">
@@ -353,6 +361,7 @@
 </template>
 <script>
 var homepagePlayer = null;
+var playerForBigGame = null;
 
 export default {
   data: () => ({
@@ -361,9 +370,10 @@ export default {
   }),
   mounted() {
     const dataUrl = 'https://storage.googleapis.com/anthive-dev-games/Kj5A2SydOFlqgLIu35Br.zip';
-    // const dataUrl = 'https://storage.googleapis.com/anthive-dev-games/LyJ6Lfq3FG8sbE0KO3bp.zip'
+    const dataUrlForBigGame = 'https://storage.googleapis.com/anthive-prod-games/3.0/LyJ6Lfq3FG8sbE0KO3bp.zip';
 
     homepagePlayer = new AnthivePlayer(dataUrl, '#player');
+    playerForBigGame = new AnthivePlayer(dataUrlForBigGame, '#player-for-big-game');
 
     // homepagePlayer.on(AnthivePlayer.onFrameRendered, () => {
     //   var total = homepagePlayer.total;
