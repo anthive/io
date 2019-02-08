@@ -25,8 +25,8 @@
           ) arrow_downward
 
       template(slot="items" slot-scope="props")
-        tr(@click="openGame(props.item)" style="cursor: pointer;")
-          td.py-1.text-xs-left
+        tr(style="cursor: pointer;")
+          td.py-1.text-xs-left(@click.self="openGame(props.item)")
             userInfo.my-1.mr-3(
               v-for="(player, pIndex) in props.item._source.Players"
               :key="player.id"
@@ -37,6 +37,7 @@
               :score="player.Wealth"
             )
           td.games-table__meta.subheading(
+            @click="openGame(props.item)"
             v-for="(column, index) in columns"
             :key="index"
             v-html="getColumnData(props.item, column)"
