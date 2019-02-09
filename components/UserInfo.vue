@@ -13,7 +13,7 @@
           v-list-tile-sub-title.black--text.user-info__version v.{{ version }}
         v-list-tile-content.px-3
           v-list-tile-title.font-weight-bold
-            nuxt-link.user-info__link(:to="{ path: '/user/?username=' + username }") {{ username }}
+            a.user-info__link(:href="'/user/?username='+username") {{ username }}
         v-list-tile-content.px-3.orange.lighten-5
           v-list-tile-sub-title.orange--text.title.font-weight-bold {{ score }}
             v-avatar(size="20")
