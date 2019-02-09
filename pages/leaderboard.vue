@@ -12,11 +12,16 @@
                     span(class='title orange--text text--darken-3') {{index+1}}
                   v-list-tile-avatar(class='mt-0' :size=70)
                     v-img(:src="us.photoUrl(player.Username,70)")
+                  v-list-tile-avatar(:size=30)
+                    v-img(:src="us.langUrl(player.Lang)")
+                  v-list-tile-avatar(class='mt-0')
+                    span v.{{player.Version}}
                   v-list-tile-content
                     v-list-tile-title(class='title px-3') {{player.Username}}
                     v-list-tile-sub-title(class='px-3') {{player.Games}} games
+                    v-list-tile-sub-title(class='px-3') {{us.scoreString(player.Wealth)}} wealth
                   v-list-tile-action.pr-3
-                    span(class='title') {{us.scoreString(player.Wealth)}}
+                    span(class='title') {{player.Wg}}
                       v-icon.orange--text.text--lighten-2(class="ml-1") bubble_chart
                 v-divider
             v-list.pb-0(two-line subheader)
@@ -26,11 +31,16 @@
                     span {{index+4}}
                   v-list-tile-avatar(:size=40)
                     v-img(:src="us.photoUrl(player.Username,40)")
+                  v-list-tile-avatar(:size=20)
+                    v-img(:src="us.langUrl(player.Lang)")
+                  v-list-tile-avatar(class='mt-0')
+                    span v.{{player.Version}}
                   v-list-tile-content
                     v-list-tile-title {{player.Username}}
                     v-list-tile-sub-title {{player.Games}} games
+                    v-list-tile-sub-title {{us.scoreString(player.Wealth)}} wealth
                   v-list-tile-action.pr-3
-                    span(class='subtitle') {{us.scoreString(player.Wealth)}}
+                    span(class='subtitle') {{player.Wg}}
                       v-icon.orange--text.text--lighten-2(class="ml-1") bubble_chart
                 v-divider
 </template>
@@ -56,36 +66,18 @@ export default {
       console.log("loading best players");
 
       const query = {
-        "size": 0,
-        "aggs": {
-          "by_player": {
-            "terms": {
-              "size" : 100,
-              "field": "Username.keyword",
-              "order" : { "total_wealth" : "desc" }
-            },
-            "aggs": {
-              "total_wealth": {
-                "sum": {
-                  "field": "Wealth"
-                }
-              },
-              "total_games": {
-                "sum": {
-                  "field": "Games"
-                }
-              }
+        "size": 100,
+        "sort": [
+          {
+            "Wg": {
+              "order": "desc"
             }
           }
-        }
+        ]
       };
-      const resp = await this.elastic.get("/players-prod/_search", this.wrap(query));
-      this.players = resp.data.aggregations.by_player.buckets.map(p => {
-        return {
-          Username:p.key,
-          Wealth:p.total_wealth.value,
-          Games:p.total_games.value
-        };
+      const resp = await this.elastic.get("/bots-prod/_search", this.wrap(query));
+      this.players = resp.data.hits.hits.map(b => {
+        return b._source;
       });
     },
     wrap(query){
