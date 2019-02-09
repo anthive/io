@@ -12,6 +12,10 @@
                     span(class='title orange--text text--darken-3') {{index+1}}
                   v-list-tile-avatar(class='mt-0' :size=70)
                     v-img(:src="us.photoUrl(player.Username,70)")
+                  v-list-tile-avatar(:size=30)
+                    v-img(:src="us.langUrl(player.Lang)")
+                  v-list-tile-avatar(class='mt-0')
+                    span v.{{player.Version}}
                   v-list-tile-content
                     v-list-tile-title(class='title px-3') {{player.Username}}
                     v-list-tile-sub-title(class='px-3') {{player.Games}} games
@@ -27,9 +31,14 @@
                     span {{index+4}}
                   v-list-tile-avatar(:size=40)
                     v-img(:src="us.photoUrl(player.Username,40)")
+                  v-list-tile-avatar(:size=20)
+                    v-img(:src="us.langUrl(player.Lang)")
+                  v-list-tile-avatar(class='mt-0')
+                    span v.{{player.Version}}
                   v-list-tile-content
                     v-list-tile-title {{player.Username}}
                     v-list-tile-sub-title {{player.Games}} games
+                    v-list-tile-sub-title {{us.scoreString(player.Wealth)}} wealth
                   v-list-tile-action.pr-3
                     span(class='subtitle') {{player.Wg}}
                       v-icon.orange--text.text--lighten-2(class="ml-1") bubble_chart
@@ -70,9 +79,6 @@ export default {
       this.players = resp.data.hits.hits.map(b => {
         return b._source;
       });
-
-      console.log(this.players);
-
     },
     wrap(query){
       return { params: {
