@@ -7,37 +7,47 @@
           v-card.leaderboard__card
             v-list.pb-0(three-line subheader)
               template(v-for="(player, index) in players.slice(0, 3)")
-                v-list-tile(:to="{ path: '/user/?username=' + player.Username}")
+                v-list-tile.orange.lighten-5(:to="{ path: '/user/?username=' + player.Username}")
                   v-list-tile-avatar(class='mt-0')
                     span(class='title orange--text text--darken-3') {{index+1}}
-                  v-list-tile-avatar(class='mt-0' :size=70)
-                    v-img(:src="us.photoUrl(player.Username,70)")
-                  v-list-tile-avatar(:size=30)
-                    v-img(:src="us.langUrl(player.Lang)")
-                  v-list-tile-avatar(class='mt-0')
-                    span v.{{player.Version}}
-                  v-list-tile-content
-                    v-list-tile-title(class='title px-3') {{player.Username}}
-                    v-list-tile-sub-title(class='px-3') {{player.Games}} games
-                    v-list-tile-sub-title(class='px-3') {{us.scoreString(player.Wealth)}} wealth
+                  v-avatar(size="70" tile)
+                    v-img(:src="us.photoUrl(player.Username, 70)" class="grey lighten-4")
+                      v-layout(fill-height align-end left)
+                        v-flex(xs12 flexbox)
+                          v-avatar(size="30" tile)
+                            v-img(:src="us.langUrl(player.Lang)")
+                      v-layout(fill-height align-end right)
+                        v-flex(xs12 flexbox)
+                          v-avatar.grey.lighten-4(size="30" tile)
+                            v-card-text.pa-0.lighten-4 v.{{ player.Version }}
+                  v-list-tile-content.px-3
+                    v-list-tile-title(class='title') {{player.Username}}
+                    v-list-tile-sub-title {{player.Games}} games
+                  v-list-tile-action.pr-3
+                    v-list-tile-sub-title {{us.scoreString(player.Wealth)}} wealth
                   v-list-tile-action.pr-3
                     span(class='title') {{player.Wg}}
                       v-icon.orange--text.text--lighten-2(class="ml-1") bubble_chart
                 v-divider
-            v-list.pb-0(two-line subheader)
+            v-list.pb-0(three-line subheader)
               template(v-for="(player, index) in players.slice(3)")
                 v-list-tile(:to="{ path: '/user/?username=' + player.Username}")
                   v-list-tile-avatar
                     span {{index+4}}
-                  v-list-tile-avatar(:size=40)
-                    v-img(:src="us.photoUrl(player.Username,40)")
-                  v-list-tile-avatar(:size=20)
-                    v-img(:src="us.langUrl(player.Lang)")
-                  v-list-tile-avatar(class='mt-0')
-                    span v.{{player.Version}}
-                  v-list-tile-content
+                  v-avatar(size="70" tile)
+                    v-img(:src="us.photoUrl(player.Username, 70)" class="grey lighten-4")
+                      v-layout(fill-height align-end left)
+                        v-flex(xs12 flexbox)
+                          v-avatar.grey.lighten-3(size="30" tile)
+                            v-img(:src="us.langUrl(player.Lang)")
+                      v-layout(fill-height align-end right)
+                        v-flex(xs12 flexbox)
+                          v-avatar.grey.lighten-4(size="30" tile)
+                            v-card-text.pa-0.lighten-4 v.{{ player.Version }}
+                  v-list-tile-content.px-3
                     v-list-tile-title {{player.Username}}
                     v-list-tile-sub-title {{player.Games}} games
+                  v-list-tile-action.pr-3
                     v-list-tile-sub-title {{us.scoreString(player.Wealth)}} wealth
                   v-list-tile-action.pr-3
                     span(class='subtitle') {{player.Wg}}
