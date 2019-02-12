@@ -10,17 +10,24 @@
                 v-list-tile.orange.lighten-5(:to="{ path: '/user/?username=' + player.Username}")
                   v-list-tile-avatar(class='mt-0')
                     span(class='title orange--text text--darken-3') {{index+1}}
-                  v-avatar(size="70" tile)
+                  v-avatar(size="70")
                     v-img(:src="us.photoUrl(player.Username, 70)" class="grey lighten-4")
-                      v-layout(fill-height align-end left)
-                        v-flex(xs12 flexbox)
-                          v-avatar(size="30" tile)
-                            v-img(:src="us.langUrl(player.Lang)")
-                      v-layout(fill-height align-end right)
-                        v-flex(xs12 flexbox)
-                          v-avatar.grey.lighten-4(size="30" tile)
-                            v-card-text.pa-0.lighten-4 v.{{ player.Version }}
-                  v-list-tile-content.px-3
+                    v-flex(column style="margin-left: -15px;")
+                      v-avatar.grey.lighten-3.overflow-hidden(size="30")
+                        v-img(:src="us.langUrl(player.Lang)")
+                      v-avatar.grey.lighten-4(size="30")
+                        v-card-text.pa-0.lighten-4.caption v.{{ player.Version }}
+                      //- v-layout(fill-height align-end right)
+
+                      //- v-layout(fill-height align-end left)
+                      //-   v-flex(xs12 flexbox)
+                      //-     v-avatar.grey.lighten-3.overflow-hidden(size="30")
+                      //-       v-img(:src="us.langUrl(player.Lang)")
+                      //- v-layout(fill-height align-end right)
+                      //-   v-flex(xs12 flexbox)
+                      //-     v-avatar.grey.lighten-4(size="30")
+                      //-       v-card-text.pa-0.lighten-4 v.{{ player.Version }}
+                  v-list-tile-content.ml-1.px-3
                     v-list-tile-title(class='title') {{player.Username}}
                     v-list-tile-sub-title {{player.Games}} games
                   v-list-tile-action.pr-3
@@ -34,17 +41,14 @@
                 v-list-tile(:to="{ path: '/user/?username=' + player.Username}")
                   v-list-tile-avatar
                     span {{index+4}}
-                  v-avatar(size="70" tile)
+                  v-avatar(size="70")
                     v-img(:src="us.photoUrl(player.Username, 70)" class="grey lighten-4")
-                      v-layout(fill-height align-end left)
-                        v-flex(xs12 flexbox)
-                          v-avatar.grey.lighten-3(size="30" tile)
-                            v-img(:src="us.langUrl(player.Lang)")
-                      v-layout(fill-height align-end right)
-                        v-flex(xs12 flexbox)
-                          v-avatar.grey.lighten-4(size="30" tile)
-                            v-card-text.pa-0.lighten-4 v.{{ player.Version }}
-                  v-list-tile-content.px-3
+                    v-flex(column style="margin-left: -15px;")
+                      v-avatar.grey.lighten-3.overflow-hidden(size="30")
+                        v-img(:src="us.langUrl(player.Lang)")
+                      v-avatar.grey.lighten-4(size="30")
+                        v-card-text.pa-0.lighten-4.caption v.{{ player.Version }}
+                  v-list-tile-content.ml-1.px-3
                     v-list-tile-title {{player.Username}}
                     v-list-tile-sub-title {{player.Games}} games
                   v-list-tile-action.pr-3
