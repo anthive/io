@@ -17,16 +17,6 @@
                         v-img(:src="us.langUrl(player.Lang)")
                       v-avatar.grey.lighten-4(size="30")
                         v-card-text.pa-0.lighten-4.caption v.{{ player.Version }}
-                      //- v-layout(fill-height align-end right)
-
-                      //- v-layout(fill-height align-end left)
-                      //-   v-flex(xs12 flexbox)
-                      //-     v-avatar.grey.lighten-3.overflow-hidden(size="30")
-                      //-       v-img(:src="us.langUrl(player.Lang)")
-                      //- v-layout(fill-height align-end right)
-                      //-   v-flex(xs12 flexbox)
-                      //-     v-avatar.grey.lighten-4(size="30")
-                      //-       v-card-text.pa-0.lighten-4 v.{{ player.Version }}
                   v-list-tile-content.ml-1.px-3
                     v-list-tile-title(class='title') {{player.Username}}
                     v-list-tile-sub-title {{player.Games}} games
