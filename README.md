@@ -11,10 +11,15 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 See also the list of [contributors](https://github.com/anthive/io/contributors) who participated in this project.
 
+## Dependencies
+node 10.16.3
+vuejs 2.6.6
+nuxt 2.0.0
+
 ## Run locally
 ```
-yarn install
-yarn run dev
+npm install
+npm run dev
 ```
 
 ## License
