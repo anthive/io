@@ -1,16 +1,16 @@
 {
   "name": "AntHive.IO",
   "version": "1.0.0",
+  "private": true,
   "description": "Turn-based codding game",
   "author": "Vitaly Kezlya",
-  "private": true,
   "scripts": {
-    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "dev": "nuxt",
+    "generate": "nuxt generate",
+    "precommit": "npm run lint",
+    "start": "nuxt start"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
@@ -19,9 +19,10 @@
     "nuxt": "^2.0.0",
     "vue-google-charts": "^0.3.2",
     "vue-resource": "^1.5.1",
-    "vuetify": "^1.2.4"
+    "vuetify": "^2.0.18"
   },
   "devDependencies": {
+    "@mdi/font": "^4.4.95",
     "babel-eslint": "^8.2.1",
     "eslint": "^5.0.1",
     "eslint-config-prettier": "^3.1.0",
@@ -29,11 +30,15 @@
     "eslint-plugin-prettier": "2.6.2",
     "eslint-plugin-vue": "^4.0.0",
     "nodemon": "^1.11.0",
+    "prettier": "1.14.3",
     "pug": "^2.0.3",
     "pug-loader": "^2.4.0",
     "pug-plain-loader": "^1.0.0",
-    "prettier": "1.14.3",
+    "sass": "^1.17.4",
+    "sass-loader": "^7.1.0",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2"
+    "stylus-loader": "^3.0.2",
+    "vue-cli-plugin-vuetify": "^0.6.3",
+    "vuetify-loader": "^1.2.2"
   }
 }
