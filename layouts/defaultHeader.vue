@@ -1,5 +1,5 @@
 <template  lang="pug">
-	v-app-bar.defaultHeader( hide-on-scroll app)
+	v-app-bar( hide-on-scroll app fixed)
 		v-menu.hidden-md-and-up(offset-y transition="scale-transition")
 			template(v-slot:activator="{ on }")
 				v-app-bar-nav-icon.hidden-md-and-up(v-on="on")
@@ -54,7 +54,4 @@ export default {
 	a{ 
 		text-decoration: none;
 	} 
-	.defaultHeader {
-		z-index: 10;
-	}
 </style>
