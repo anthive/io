@@ -17,23 +17,47 @@
  * @license  MIT
  */
 
+/*!
+ * vue-no-ssr v1.1.1
+ * (c) 2018-present egoist <0x142857@gmail.com>
+ * Released under the MIT License.
+ */
+
+/*!
+ * vue-client-only v2.0.0
+ * (c) 2019-present egoist <0x142857@gmail.com>
+ * Released under the MIT License.
+ */
+
+/*!*******************************************!*\
+  !*** ./src/components/VAlert/VAlert.sass ***!
+  \*******************************************/
+
+/*! no static exports found */
+
 /*!*****************************************!*\
   !*** ./src/components/VAlert/VAlert.ts ***!
   \*****************************************/
 
 /*! exports provided: default */
 
-/*! ../../stylus/components/_alerts.styl */
+/*! ./VAlert.sass */
+
+/*! ../VSheet */
+
+/*! ../VBtn */
 
 /*! ../VIcon */
 
-/*! ../../mixins/colorable */
-
 /*! ../../mixins/toggleable */
+
+/*! ../../mixins/themeable */
 
 /*! ../../mixins/transitionable */
 
 /*! ../../util/mixins */
+
+/*! ../../util/console */
 
 /*!****************************************!*\
   !*** ./src/components/VAlert/index.ts ***!
@@ -43,57 +67,99 @@
 
 /*! ./VAlert */
 
+/*!***************************************!*\
+  !*** ./src/components/VApp/VApp.sass ***!
+  \***************************************/
+
 /*!*************************************!*\
-  !*** ./src/components/VApp/VApp.js ***!
+  !*** ./src/components/VApp/VApp.ts ***!
   \*************************************/
 
-/*! ../../stylus/components/_app.styl */
-
-/*! ./mixins/app-theme */
-
-/*! ../../mixins/themeable */
-
-/*! ../../directives/resize */
+/*! ./VApp.sass */
 
 /*!**************************************!*\
-  !*** ./src/components/VApp/index.js ***!
+  !*** ./src/components/VApp/index.ts ***!
   \**************************************/
 
 /*! exports provided: VApp, default */
 
 /*! ./VApp */
 
-/*!*************************************************!*\
-  !*** ./src/components/VApp/mixins/app-theme.js ***!
-  \*************************************************/
+/*!*********************************************!*\
+  !*** ./src/components/VAppBar/VAppBar.sass ***!
+  \*********************************************/
 
-/*! ../../../util/theme */
+/*!*******************************************!*\
+  !*** ./src/components/VAppBar/VAppBar.ts ***!
+  \*******************************************/
+
+/*! ./VAppBar.sass */
+
+/*! ../VToolbar/VToolbar */
+
+/*! ../../directives/scroll */
+
+/*! ../../mixins/applicationable */
+
+/*! ../../mixins/scrollable */
+
+/*! ../../mixins/ssr-bootable */
+
+/*! ../../util/helpers */
+
+/*!**************************************************!*\
+  !*** ./src/components/VAppBar/VAppBarNavIcon.ts ***!
+  \**************************************************/
+
+/*! ../VBtn/VBtn */
+
+/*! vue */
+
+/*!*****************************************!*\
+  !*** ./src/components/VAppBar/index.ts ***!
+  \*****************************************/
+
+/*! exports provided: VAppBar, VAppBarNavIcon, default */
+
+/*! ./VAppBar */
+
+/*! ./VAppBarNavIcon */
+
+/*!*********************************************************!*\
+  !*** ./src/components/VAutocomplete/VAutocomplete.sass ***!
+  \*********************************************************/
 
 /*!*******************************************************!*\
-  !*** ./src/components/VAutocomplete/VAutocomplete.js ***!
+  !*** ./src/components/VAutocomplete/VAutocomplete.ts ***!
   \*******************************************************/
 
-/*! ../../stylus/components/_autocompletes.styl */
+/*! ./VAutocomplete.sass */
 
 /*! ../VSelect/VSelect */
 
 /*! ../VTextField/VTextField */
 
-/*! ../../util/helpers */
-
 /*!***********************************************!*\
-  !*** ./src/components/VAutocomplete/index.js ***!
+  !*** ./src/components/VAutocomplete/index.ts ***!
   \***********************************************/
 
 /*! exports provided: VAutocomplete, default */
 
 /*! ./VAutocomplete */
 
+/*!*********************************************!*\
+  !*** ./src/components/VAvatar/VAvatar.sass ***!
+  \*********************************************/
+
 /*!*******************************************!*\
   !*** ./src/components/VAvatar/VAvatar.ts ***!
   \*******************************************/
 
-/*! ../../stylus/components/_avatars.styl */
+/*! ./VAvatar.sass */
+
+/*! ../../mixins/colorable */
+
+/*! ../../mixins/measurable */
 
 /*!*****************************************!*\
   !*** ./src/components/VAvatar/index.ts ***!
@@ -103,11 +169,15 @@
 
 /*! ./VAvatar */
 
+/*!*******************************************!*\
+  !*** ./src/components/VBadge/VBadge.sass ***!
+  \*******************************************/
+
 /*!*****************************************!*\
   !*** ./src/components/VBadge/VBadge.ts ***!
   \*****************************************/
 
-/*! ../../stylus/components/_badges.styl */
+/*! ./VBadge.sass */
 
 /*! ../../mixins/positionable */
 
@@ -119,49 +189,81 @@
 
 /*! ./VBadge */
 
-/*!*************************************************!*\
-  !*** ./src/components/VBottomNav/VBottomNav.ts ***!
-  \*************************************************/
+/*!*********************************************!*\
+  !*** ./src/components/VBanner/VBanner.sass ***!
+  \*********************************************/
 
-/*! ../../stylus/components/_bottom-navs.styl */
+/*!*******************************************!*\
+  !*** ./src/components/VBanner/VBanner.ts ***!
+  \*******************************************/
 
-/*! ../../mixins/applicationable */
+/*! ./VBanner.sass */
+
+/*! ../VAvatar */
+
+/*! ../transitions */
+
+/*!*****************************************!*\
+  !*** ./src/components/VBanner/index.ts ***!
+  \*****************************************/
+
+/*! exports provided: VBanner, default */
+
+/*! ./VBanner */
+
+/*!*****************************************************************!*\
+  !*** ./src/components/VBottomNavigation/VBottomNavigation.sass ***!
+  \*****************************************************************/
+
+/*!***************************************************************!*\
+  !*** ./src/components/VBottomNavigation/VBottomNavigation.ts ***!
+  \***************************************************************/
+
+/*! ./VBottomNavigation.sass */
 
 /*! ../../mixins/button-group */
 
-/*!********************************************!*\
-  !*** ./src/components/VBottomNav/index.ts ***!
-  \********************************************/
+/*! ../../mixins/proxyable */
 
-/*! exports provided: VBottomNav, default */
+/*!***************************************************!*\
+  !*** ./src/components/VBottomNavigation/index.ts ***!
+  \***************************************************/
 
-/*! ./VBottomNav */
+/*! exports provided: VBottomNavigation, default */
+
+/*! ./VBottomNavigation */
+
+/*!*******************************************************!*\
+  !*** ./src/components/VBottomSheet/VBottomSheet.sass ***!
+  \*******************************************************/
 
 /*!*****************************************************!*\
-  !*** ./src/components/VBottomSheet/VBottomSheet.js ***!
+  !*** ./src/components/VBottomSheet/VBottomSheet.ts ***!
   \*****************************************************/
 
-/*! ../../stylus/components/_bottom-sheets.styl */
+/*! ./VBottomSheet.sass */
 
 /*! ../VDialog/VDialog */
 
 /*!**********************************************!*\
-  !*** ./src/components/VBottomSheet/index.js ***!
+  !*** ./src/components/VBottomSheet/index.ts ***!
   \**********************************************/
 
 /*! exports provided: VBottomSheet, default */
 
 /*! ./VBottomSheet */
 
+/*!*******************************************************!*\
+  !*** ./src/components/VBreadcrumbs/VBreadcrumbs.sass ***!
+  \*******************************************************/
+
 /*!*****************************************************!*\
   !*** ./src/components/VBreadcrumbs/VBreadcrumbs.ts ***!
   \*****************************************************/
 
-/*! ../../stylus/components/_breadcrumbs.styl */
+/*! ./VBreadcrumbs.sass */
 
 /*! . */
-
-/*! ../../util/console */
 
 /*!*********************************************************!*\
   !*** ./src/components/VBreadcrumbs/VBreadcrumbsItem.ts ***!
@@ -179,15 +281,21 @@
 
 /*! ./VBreadcrumbsItem */
 
+/*!***************************************!*\
+  !*** ./src/components/VBtn/VBtn.sass ***!
+  \***************************************/
+
 /*!*************************************!*\
   !*** ./src/components/VBtn/VBtn.ts ***!
   \*************************************/
 
-/*! ../../stylus/components/_buttons.styl */
+/*! ./VBtn.sass */
 
 /*! ../VProgressCircular */
 
 /*! ../../mixins/groupable */
+
+/*! ../../mixins/sizeable */
 
 /*!**************************************!*\
   !*** ./src/components/VBtn/index.ts ***!
@@ -197,11 +305,15 @@
 
 /*! ./VBtn */
 
+/*!***************************************************!*\
+  !*** ./src/components/VBtnToggle/VBtnToggle.sass ***!
+  \***************************************************/
+
 /*!*************************************************!*\
   !*** ./src/components/VBtnToggle/VBtnToggle.ts ***!
   \*************************************************/
 
-/*! ../../stylus/components/_button-toggle.styl */
+/*! ./VBtnToggle.sass */
 
 /*!********************************************!*\
   !*** ./src/components/VBtnToggle/index.ts ***!
@@ -215,7 +327,7 @@
   !*** ./src/components/VCalendar/VCalendar.ts ***!
   \***********************************************/
 
-/*! ./mixins/calendar-base */
+/*! ./mixins/calendar-with-events */
 
 /*! ./util/props */
 
@@ -227,11 +339,17 @@
 
 /*! ./VCalendarWeekly */
 
+/*!******************************************************!*\
+  !*** ./src/components/VCalendar/VCalendarDaily.sass ***!
+  \******************************************************/
+
 /*!****************************************************!*\
   !*** ./src/components/VCalendar/VCalendarDaily.ts ***!
   \****************************************************/
 
-/*! ../../stylus/components/_calendar-daily.styl */
+/*! ./VCalendarDaily.sass */
+
+/*! ../../directives/resize */
 
 /*! ./mixins/calendar-with-intervals */
 
@@ -239,11 +357,17 @@
   !*** ./src/components/VCalendar/VCalendarMonthly.ts ***!
   \******************************************************/
 
-/*! ../../stylus/components/_calendar-weekly.styl */
+/*! ./VCalendarWeekly.sass */
+
+/*!*******************************************************!*\
+  !*** ./src/components/VCalendar/VCalendarWeekly.sass ***!
+  \*******************************************************/
 
 /*!*****************************************************!*\
   !*** ./src/components/VCalendar/VCalendarWeekly.ts ***!
   \*****************************************************/
+
+/*! ./mixins/calendar-base */
 
 /*!*******************************************!*\
   !*** ./src/components/VCalendar/index.ts ***!
@@ -259,85 +383,103 @@
 
 /*! ../../../util/mixins */
 
-/*! ../../../mixins/themeable */
-
 /*! ../../../mixins/colorable */
+
+/*! ../../../mixins/localable */
+
+/*! ./mouse */
+
+/*! ../../../mixins/themeable */
 
 /*! ./times */
 
-/*! ./mouse */
+/*! ../../../directives/resize */
 
 /*! ../util/props */
 
 /*! ../util/timestamp */
 
+/*!*******************************************************************!*\
+  !*** ./src/components/VCalendar/mixins/calendar-with-events.sass ***!
+  \*******************************************************************/
+
+/*!*****************************************************************!*\
+  !*** ./src/components/VCalendar/mixins/calendar-with-events.ts ***!
+  \*****************************************************************/
+
+/*! ./calendar-with-events.sass */
+
+/*! ../../../directives/ripple */
+
+/*! ./calendar-base */
+
+/*! ../util/events */
+
 /*!********************************************************************!*\
   !*** ./src/components/VCalendar/mixins/calendar-with-intervals.ts ***!
   \********************************************************************/
-
-/*! ./calendar-base */
 
 /*!**************************************************!*\
   !*** ./src/components/VCalendar/mixins/mouse.ts ***!
   \**************************************************/
 
-/*! vue */
-
 /*!**************************************************!*\
   !*** ./src/components/VCalendar/mixins/times.ts ***!
   \**************************************************/
+
+/*!*************************************************!*\
+  !*** ./src/components/VCalendar/util/events.ts ***!
+  \*************************************************/
+
+/*! exports provided: parseEvent, isEventOn, isEventOverlapping */
+
+/*! ./timestamp */
 
 /*!************************************************!*\
   !*** ./src/components/VCalendar/util/props.ts ***!
   \************************************************/
 
-/*! ./timestamp */
+/*! exports provided: default, validateNumber */
 
 /*!****************************************************!*\
   !*** ./src/components/VCalendar/util/timestamp.ts ***!
   \****************************************************/
 
-/*! exports provided: PARSE_REGEX, PARSE_TIME, DAYS_IN_MONTH, DAYS_IN_MONTH_LEAP, DAYS_IN_MONTH_MIN, DAYS_IN_MONTH_MAX, MONTH_MAX, MONTH_MIN, DAY_MIN, DAYS_IN_WEEK, MINUTES_IN_HOUR, HOURS_IN_DAY, FIRST_HOUR, getStartOfWeek, getEndOfWeek, getStartOfMonth, getEndOfMonth, parseTime, validateTimestamp, parseTimestamp, parseDate, getDayIdentifier, getTimeIdentifier, updateRelative, updateMinutes, updateWeekday, updateFormatted, getWeekday, isLeapYear, daysInMonth, copyTimestamp, padNumber, getDate, getTime, nextMinutes, nextDay, prevDay, relativeDays, findWeekday, getWeekdaySkips, createDayList, createIntervalList, createNativeLocaleFormatter */
+/*! exports provided: PARSE_REGEX, PARSE_TIME, DAYS_IN_MONTH, DAYS_IN_MONTH_LEAP, DAYS_IN_MONTH_MIN, DAYS_IN_MONTH_MAX, MONTH_MAX, MONTH_MIN, DAY_MIN, DAYS_IN_WEEK, MINUTES_IN_HOUR, HOURS_IN_DAY, FIRST_HOUR, getStartOfWeek, getEndOfWeek, getStartOfMonth, getEndOfMonth, parseTime, validateTimestamp, parseTimestamp, parseDate, getDayIdentifier, getTimeIdentifier, getTimestampIdentifier, updateRelative, updateMinutes, updateWeekday, updateFormatted, getWeekday, isLeapYear, daysInMonth, copyTimestamp, padNumber, getDate, getTime, nextMinutes, nextDay, prevDay, relativeDays, findWeekday, getWeekdaySkips, createDayList, createIntervalList, createNativeLocaleFormatter */
+
+/*!*****************************************!*\
+  !*** ./src/components/VCard/VCard.sass ***!
+  \*****************************************/
 
 /*!***************************************!*\
   !*** ./src/components/VCard/VCard.ts ***!
   \***************************************/
 
-/*! ../../stylus/components/_cards.styl */
+/*! ./VCard.sass */
 
-/*! ../VSheet */
-
-/*!********************************************!*\
-  !*** ./src/components/VCard/VCardMedia.ts ***!
-  \********************************************/
-
-/*! ../VImg/VImg */
-
-/*!********************************************!*\
-  !*** ./src/components/VCard/VCardTitle.ts ***!
-  \********************************************/
+/*! ../../mixins/loadable */
 
 /*!***************************************!*\
   !*** ./src/components/VCard/index.ts ***!
   \***************************************/
 
-/*! exports provided: VCard, VCardMedia, VCardTitle, VCardActions, VCardText, default */
+/*! exports provided: VCard, VCardTitle, VCardActions, VCardText, default */
 
 /*! ./VCard */
 
-/*! ./VCardMedia */
-
-/*! ./VCardTitle */
+/*!*************************************************!*\
+  !*** ./src/components/VCarousel/VCarousel.sass ***!
+  \*************************************************/
 
 /*!***********************************************!*\
   !*** ./src/components/VCarousel/VCarousel.ts ***!
   \***********************************************/
 
-/*! ../../stylus/components/_carousel.styl */
+/*! ./VCarousel.sass */
 
 /*! ../VWindow/VWindow */
 
-/*! ../VBtn */
+/*! ../VProgressLinear */
 
 /*!***************************************************!*\
   !*** ./src/components/VCarousel/VCarouselItem.ts ***!
@@ -357,27 +499,53 @@
 
 /*! ./VCarouselItem */
 
+/*!*************************************************!*\
+  !*** ./src/components/VCheckbox/VCheckbox.sass ***!
+  \*************************************************/
+
 /*!***********************************************!*\
-  !*** ./src/components/VCheckbox/VCheckbox.js ***!
+  !*** ./src/components/VCheckbox/VCheckbox.ts ***!
   \***********************************************/
 
-/*! ../../stylus/components/_selection-controls.styl */
+/*! ./VCheckbox.sass */
+
+/*! ../../styles/components/_selection-controls.sass */
+
+/*! ../VInput */
 
 /*! ../../mixins/selectable */
 
+/*!*******************************************************!*\
+  !*** ./src/components/VCheckbox/VSimpleCheckbox.sass ***!
+  \*******************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/VCheckbox/VSimpleCheckbox.ts ***!
+  \*****************************************************/
+
+/*! ./VSimpleCheckbox.sass */
+
+/*! ../../directives/ripple */
+
 /*!*******************************************!*\
-  !*** ./src/components/VCheckbox/index.js ***!
+  !*** ./src/components/VCheckbox/index.ts ***!
   \*******************************************/
 
-/*! exports provided: VCheckbox, default */
+/*! exports provided: VCheckbox, VSimpleCheckbox, default */
 
 /*! ./VCheckbox */
+
+/*! ./VSimpleCheckbox */
+
+/*!*****************************************!*\
+  !*** ./src/components/VChip/VChip.sass ***!
+  \*****************************************/
 
 /*!***************************************!*\
   !*** ./src/components/VChip/VChip.ts ***!
   \***************************************/
 
-/*! ../../stylus/components/_chips.styl */
+/*! ./VChip.sass */
 
 /*!***************************************!*\
   !*** ./src/components/VChip/index.ts ***!
@@ -387,25 +555,155 @@
 
 /*! ./VChip */
 
+/*!***************************************************!*\
+  !*** ./src/components/VChipGroup/VChipGroup.sass ***!
+  \***************************************************/
+
+/*!*************************************************!*\
+  !*** ./src/components/VChipGroup/VChipGroup.ts ***!
+  \*************************************************/
+
+/*! ./VChipGroup.sass */
+
+/*! ../VSlideGroup/VSlideGroup */
+
+/*!********************************************!*\
+  !*** ./src/components/VChipGroup/index.ts ***!
+  \********************************************/
+
+/*! exports provided: VChipGroup, default */
+
+/*! ./VChipGroup */
+
+/*!*******************************************************!*\
+  !*** ./src/components/VColorPicker/VColorPicker.sass ***!
+  \*******************************************************/
+
+/*!*****************************************************!*\
+  !*** ./src/components/VColorPicker/VColorPicker.ts ***!
+  \*****************************************************/
+
+/*! ./VColorPicker.sass */
+
+/*! ../VSheet/VSheet */
+
+/*! ./VColorPickerPreview */
+
+/*! ./VColorPickerCanvas */
+
+/*! ./VColorPickerEdit */
+
+/*! ./VColorPickerSwatches */
+
+/*! ./util */
+
+/*!*************************************************************!*\
+  !*** ./src/components/VColorPicker/VColorPickerCanvas.sass ***!
+  \*************************************************************/
+
+/*!***********************************************************!*\
+  !*** ./src/components/VColorPicker/VColorPickerCanvas.ts ***!
+  \***********************************************************/
+
+/*! ./VColorPickerCanvas.sass */
+
+/*!***********************************************************!*\
+  !*** ./src/components/VColorPicker/VColorPickerEdit.sass ***!
+  \***********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./src/components/VColorPicker/VColorPickerEdit.ts ***!
+  \*********************************************************/
+
+/*! exports provided: modes, default */
+
+/*! ./VColorPickerEdit.sass */
+
+/*! ../../util/colorUtils */
+
+/*!**************************************************************!*\
+  !*** ./src/components/VColorPicker/VColorPickerPreview.sass ***!
+  \**************************************************************/
+
+/*!************************************************************!*\
+  !*** ./src/components/VColorPicker/VColorPickerPreview.ts ***!
+  \************************************************************/
+
+/*! ./VColorPickerPreview.sass */
+
+/*! ../VSlider/VSlider */
+
+/*!***************************************************************!*\
+  !*** ./src/components/VColorPicker/VColorPickerSwatches.sass ***!
+  \***************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./src/components/VColorPicker/VColorPickerSwatches.ts ***!
+  \*************************************************************/
+
+/*! ./VColorPickerSwatches.sass */
+
+/*! ../../util/colors */
+
+/*!**********************************************!*\
+  !*** ./src/components/VColorPicker/index.ts ***!
+  \**********************************************/
+
+/*! exports provided: VColorPicker, VColorPickerSwatches, VColorPickerCanvas, default */
+
+/*! ./VColorPicker */
+
+/*!***************************************************!*\
+  !*** ./src/components/VColorPicker/util/index.ts ***!
+  \***************************************************/
+
+/*! exports provided: fromHSVA, fromHSLA, fromRGBA, fromHexa, fromHex, parseColor, extractColor, hasAlpha */
+
+/*! ../../../util/colorUtils */
+
 /*!***********************************************!*\
-  !*** ./src/components/VCombobox/VCombobox.js ***!
+  !*** ./src/components/VCombobox/VCombobox.ts ***!
   \***********************************************/
+
+/*! ../VAutocomplete/VAutocomplete.sass */
 
 /*! ../VAutocomplete/VAutocomplete */
 
 /*!*******************************************!*\
-  !*** ./src/components/VCombobox/index.js ***!
+  !*** ./src/components/VCombobox/index.ts ***!
   \*******************************************/
 
 /*! exports provided: VCombobox, default */
 
 /*! ./VCombobox */
 
+/*!***********************************************!*\
+  !*** ./src/components/VContent/VContent.sass ***!
+  \***********************************************/
+
+/*!*********************************************!*\
+  !*** ./src/components/VContent/VContent.ts ***!
+  \*********************************************/
+
+/*! ./VContent.sass */
+
+/*!******************************************!*\
+  !*** ./src/components/VContent/index.ts ***!
+  \******************************************/
+
+/*! exports provided: VContent, default */
+
+/*! ./VContent */
+
+/*!***********************************************!*\
+  !*** ./src/components/VCounter/VCounter.sass ***!
+  \***********************************************/
+
 /*!*********************************************!*\
   !*** ./src/components/VCounter/VCounter.ts ***!
   \*********************************************/
 
-/*! ../../stylus/components/_counters.styl */
+/*! ./VCounter.sass */
 
 /*!******************************************!*\
   !*** ./src/components/VCounter/index.ts ***!
@@ -415,83 +713,163 @@
 
 /*! ./VCounter */
 
+/*!***************************************!*\
+  !*** ./src/components/VData/VData.ts ***!
+  \***************************************/
+
+/*!***************************************!*\
+  !*** ./src/components/VData/index.ts ***!
+  \***************************************/
+
+/*! exports provided: VData, default */
+
+/*! ./VData */
+
 /*!*******************************************************!*\
-  !*** ./src/components/VDataIterator/VDataIterator.js ***!
+  !*** ./src/components/VDataIterator/VDataFooter.sass ***!
   \*******************************************************/
 
-/*! ../../stylus/components/_data-iterator.styl */
+/*!*****************************************************!*\
+  !*** ./src/components/VDataIterator/VDataFooter.ts ***!
+  \*****************************************************/
 
-/*! ../../mixins/data-iterable */
+/*! ./VDataFooter.sass */
+
+/*!*******************************************************!*\
+  !*** ./src/components/VDataIterator/VDataIterator.ts ***!
+  \*******************************************************/
+
+/*! ../VData */
+
+/*! ./VDataFooter */
 
 /*!***********************************************!*\
-  !*** ./src/components/VDataIterator/index.js ***!
+  !*** ./src/components/VDataIterator/index.ts ***!
   \***********************************************/
 
-/*! exports provided: VDataIterator, default */
+/*! exports provided: VDataIterator, VDataFooter, default */
 
 /*! ./VDataIterator */
 
+/*!************************************************!*\
+  !*** ./src/components/VDataTable/MobileRow.ts ***!
+  \************************************************/
+
+/*!******************************************!*\
+  !*** ./src/components/VDataTable/Row.ts ***!
+  \******************************************/
+
+/*!***********************************************!*\
+  !*** ./src/components/VDataTable/RowGroup.ts ***!
+  \***********************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/VDataTable/VDataTable.sass ***!
+  \***************************************************/
+
 /*!*************************************************!*\
-  !*** ./src/components/VDataTable/VDataTable.js ***!
+  !*** ./src/components/VDataTable/VDataTable.ts ***!
   \*************************************************/
 
-/*! ../../stylus/components/_tables.styl */
+/*! ./VDataTable.sass */
 
-/*! ../../stylus/components/_data-table.styl */
+/*! ../VDataIterator */
 
-/*! ./mixins/head */
+/*! ./VDataTableHeader */
 
-/*! ./mixins/body */
+/*! ./Row */
 
-/*! ./mixins/foot */
+/*! ./RowGroup */
 
-/*! ./mixins/progress */
+/*! ../VCheckbox/VSimpleCheckbox */
+
+/*! ./VSimpleTable */
+
+/*! ./MobileRow */
+
+/*!*********************************************************!*\
+  !*** ./src/components/VDataTable/VDataTableHeader.sass ***!
+  \*********************************************************/
+
+/*!*******************************************************!*\
+  !*** ./src/components/VDataTable/VDataTableHeader.ts ***!
+  \*******************************************************/
+
+/*! ./VDataTableHeader.sass */
+
+/*! ../../util/dedupeModelListeners */
+
+/*! ../../util/rebuildFunctionalSlots */
+
+/*! ./VDataTableHeaderMobile */
+
+/*! ./VDataTableHeaderDesktop */
+
+/*!**************************************************************!*\
+  !*** ./src/components/VDataTable/VDataTableHeaderDesktop.ts ***!
+  \**************************************************************/
+
+/*! ./mixins/header */
+
+/*!*************************************************************!*\
+  !*** ./src/components/VDataTable/VDataTableHeaderMobile.ts ***!
+  \*************************************************************/
+
+/*! ../VChip */
+
+/*!****************************************************!*\
+  !*** ./src/components/VDataTable/VEditDialog.sass ***!
+  \****************************************************/
 
 /*!**************************************************!*\
-  !*** ./src/components/VDataTable/VEditDialog.js ***!
+  !*** ./src/components/VDataTable/VEditDialog.ts ***!
   \**************************************************/
 
-/*! ../../stylus/components/_small-dialog.styl */
+/*! ./VEditDialog.sass */
 
 /*! ../../mixins/returnable */
 
 /*! ../VMenu */
 
+/*!*****************************************************!*\
+  !*** ./src/components/VDataTable/VSimpleTable.sass ***!
+  \*****************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/VDataTable/VSimpleTable.ts ***!
+  \***************************************************/
+
+/*! ./VSimpleTable.sass */
+
+/*!******************************************************!*\
+  !*** ./src/components/VDataTable/VVirtualTable.sass ***!
+  \******************************************************/
+
+/*!****************************************************!*\
+  !*** ./src/components/VDataTable/VVirtualTable.ts ***!
+  \****************************************************/
+
+/*! ./VVirtualTable.sass */
+
 /*!********************************************!*\
-  !*** ./src/components/VDataTable/index.js ***!
+  !*** ./src/components/VDataTable/index.ts ***!
   \********************************************/
 
-/*! exports provided: VDataTable, VEditDialog, VTableOverflow, default */
+/*! exports provided: VDataTable, VEditDialog, VTableOverflow, VDataTableHeader, VSimpleTable, VVirtualTable, default */
 
 /*! ./VDataTable */
 
 /*! ./VEditDialog */
 
-/*!**************************************************!*\
-  !*** ./src/components/VDataTable/mixins/body.js ***!
-  \**************************************************/
+/*! ./VVirtualTable */
 
-/*! ../../transitions/expand-transition */
-
-/*! ../../../util/helpers */
-
-/*!**************************************************!*\
-  !*** ./src/components/VDataTable/mixins/foot.js ***!
-  \**************************************************/
-
-/*!**************************************************!*\
-  !*** ./src/components/VDataTable/mixins/head.js ***!
-  \**************************************************/
-
-/*! ../../../util/console */
-
-/*! ../../VCheckbox */
+/*!****************************************************!*\
+  !*** ./src/components/VDataTable/mixins/header.ts ***!
+  \****************************************************/
 
 /*! ../../VIcon */
 
-/*!******************************************************!*\
-  !*** ./src/components/VDataTable/mixins/progress.js ***!
-  \******************************************************/
+/*! ../../VCheckbox/VSimpleCheckbox */
 
 /*!***************************************************!*\
   !*** ./src/components/VDatePicker/VDatePicker.ts ***!
@@ -507,9 +885,9 @@
 
 /*! ./VDatePickerYears */
 
-/*! ../../mixins/picker */
+/*! ../../mixins/localable */
 
-/*! ./util */
+/*! ../../mixins/picker */
 
 /*! ./util/isDateAllowed */
 
@@ -521,32 +899,48 @@
 
 /*! ./mixins/date-picker-table */
 
+/*!***********************************************************!*\
+  !*** ./src/components/VDatePicker/VDatePickerHeader.sass ***!
+  \***********************************************************/
+
 /*!*********************************************************!*\
   !*** ./src/components/VDatePicker/VDatePickerHeader.ts ***!
   \*********************************************************/
 
-/*! ../../stylus/components/_date-picker-header.styl */
+/*! ./VDatePickerHeader.sass */
 
 /*!*************************************************************!*\
   !*** ./src/components/VDatePicker/VDatePickerMonthTable.ts ***!
   \*************************************************************/
 
+/*!**********************************************************!*\
+  !*** ./src/components/VDatePicker/VDatePickerTable.sass ***!
+  \**********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./src/components/VDatePicker/VDatePickerTitle.sass ***!
+  \**********************************************************/
+
 /*!********************************************************!*\
   !*** ./src/components/VDatePicker/VDatePickerTitle.ts ***!
   \********************************************************/
 
-/*! ../../stylus/components/_date-picker-title.styl */
+/*! ./VDatePickerTitle.sass */
 
 /*! ../../mixins/picker-button */
+
+/*!**********************************************************!*\
+  !*** ./src/components/VDatePicker/VDatePickerYears.sass ***!
+  \**********************************************************/
 
 /*!********************************************************!*\
   !*** ./src/components/VDatePicker/VDatePickerYears.ts ***!
   \********************************************************/
 
-/*! ../../stylus/components/_date-picker-years.styl */
+/*! ./VDatePickerYears.sass */
 
 /*!*********************************************!*\
-  !*** ./src/components/VDatePicker/index.js ***!
+  !*** ./src/components/VDatePicker/index.ts ***!
   \*********************************************/
 
 /*! exports provided: VDatePicker, VDatePickerTitle, VDatePickerHeader, VDatePickerDateTable, VDatePickerMonthTable, VDatePickerYears, default */
@@ -557,7 +951,7 @@
   !*** ./src/components/VDatePicker/mixins/date-picker-table.ts ***!
   \****************************************************************/
 
-/*! ../../../stylus/components/_date-picker-table.styl */
+/*! ../VDatePickerTable.sass */
 
 /*! ../../../directives/touch */
 
@@ -591,11 +985,17 @@
   !*** ./src/components/VDatePicker/util/pad.ts ***!
   \************************************************/
 
+/*!*********************************************!*\
+  !*** ./src/components/VDialog/VDialog.sass ***!
+  \*********************************************/
+
 /*!*******************************************!*\
-  !*** ./src/components/VDialog/VDialog.js ***!
+  !*** ./src/components/VDialog/VDialog.ts ***!
   \*******************************************/
 
-/*! ../../stylus/components/_dialogs.styl */
+/*! ./VDialog.sass */
+
+/*! ../../mixins/activatable */
 
 /*! ../../mixins/dependent */
 
@@ -610,18 +1010,22 @@
 /*! ../../util/ThemeProvider */
 
 /*!*****************************************!*\
-  !*** ./src/components/VDialog/index.js ***!
+  !*** ./src/components/VDialog/index.ts ***!
   \*****************************************/
 
 /*! exports provided: VDialog, default */
 
 /*! ./VDialog */
 
+/*!***********************************************!*\
+  !*** ./src/components/VDivider/VDivider.sass ***!
+  \***********************************************/
+
 /*!*********************************************!*\
   !*** ./src/components/VDivider/VDivider.ts ***!
   \*********************************************/
 
-/*! ../../stylus/components/_dividers.styl */
+/*! ./VDivider.sass */
 
 /*!******************************************!*\
   !*** ./src/components/VDivider/index.ts ***!
@@ -631,11 +1035,13 @@
 
 /*! ./VDivider */
 
+/*!*************************************************************!*\
+  !*** ./src/components/VExpansionPanel/VExpansionPanel.sass ***!
+  \*************************************************************/
+
 /*!***********************************************************!*\
   !*** ./src/components/VExpansionPanel/VExpansionPanel.ts ***!
   \***********************************************************/
-
-/*! ../../stylus/components/_expansion-panel.styl */
 
 /*! ../../mixins/registrable */
 
@@ -643,30 +1049,66 @@
   !*** ./src/components/VExpansionPanel/VExpansionPanelContent.ts ***!
   \******************************************************************/
 
-/*! ../transitions */
-
 /*! ../../mixins/bootable */
 
-/*! ../../mixins/rippleable */
+/*!*****************************************************************!*\
+  !*** ./src/components/VExpansionPanel/VExpansionPanelHeader.ts ***!
+  \*****************************************************************/
+
+/*!************************************************************!*\
+  !*** ./src/components/VExpansionPanel/VExpansionPanels.ts ***!
+  \************************************************************/
+
+/*! ./VExpansionPanel.sass */
+
+/*! ../VItemGroup/VItemGroup */
 
 /*!*************************************************!*\
   !*** ./src/components/VExpansionPanel/index.ts ***!
   \*************************************************/
 
-/*! exports provided: VExpansionPanel, VExpansionPanelContent, default */
+/*! exports provided: VExpansionPanels, VExpansionPanel, VExpansionPanelHeader, VExpansionPanelContent, default */
+
+/*! ./VExpansionPanels */
 
 /*! ./VExpansionPanel */
 
 /*! ./VExpansionPanelContent */
 
+/*! ./VExpansionPanelHeader */
+
+/*!***************************************************!*\
+  !*** ./src/components/VFileInput/VFileInput.sass ***!
+  \***************************************************/
+
+/*!*************************************************!*\
+  !*** ./src/components/VFileInput/VFileInput.ts ***!
+  \*************************************************/
+
+/*! ./VFileInput.sass */
+
+/*! ../VTextField */
+
+/*!********************************************!*\
+  !*** ./src/components/VFileInput/index.ts ***!
+  \********************************************/
+
+/*! exports provided: VFileInput, default */
+
+/*! ./VFileInput */
+
+/*!*********************************************!*\
+  !*** ./src/components/VFooter/VFooter.sass ***!
+  \*********************************************/
+
 /*!*******************************************!*\
-  !*** ./src/components/VFooter/VFooter.js ***!
+  !*** ./src/components/VFooter/VFooter.ts ***!
   \*******************************************/
 
-/*! ../../stylus/components/_footer.styl */
+/*! ./VFooter.sass */
 
 /*!*****************************************!*\
-  !*** ./src/components/VFooter/index.js ***!
+  !*** ./src/components/VFooter/index.ts ***!
   \*****************************************/
 
 /*! exports provided: VFooter, default */
@@ -674,60 +1116,78 @@
 /*! ./VFooter */
 
 /*!***************************************!*\
-  !*** ./src/components/VForm/VForm.js ***!
+  !*** ./src/components/VForm/VForm.ts ***!
   \***************************************/
 
-/*! ../../stylus/components/_forms.styl */
-
 /*!***************************************!*\
-  !*** ./src/components/VForm/index.js ***!
+  !*** ./src/components/VForm/index.ts ***!
   \***************************************/
 
 /*! exports provided: VForm, default */
 
 /*! ./VForm */
 
+/*!**************************************!*\
+  !*** ./src/components/VGrid/VCol.ts ***!
+  \**************************************/
+
+/*! ./VGrid.sass */
+
+/*! ../../util/mergeData */
+
 /*!********************************************!*\
-  !*** ./src/components/VGrid/VContainer.js ***!
+  !*** ./src/components/VGrid/VContainer.ts ***!
   \********************************************/
 
-/*! ../../stylus/components/_grid.styl */
+/*! ./_grid.sass */
 
 /*! ./grid */
 
-/*!******************************************!*\
-  !*** ./src/components/VGrid/VContent.js ***!
-  \******************************************/
-
-/*! ../../stylus/components/_content.styl */
-
-/*! ../../mixins/ssr-bootable */
-
 /*!***************************************!*\
-  !*** ./src/components/VGrid/VFlex.js ***!
+  !*** ./src/components/VGrid/VFlex.ts ***!
   \***************************************/
 
 /*!*****************************************!*\
-  !*** ./src/components/VGrid/VLayout.js ***!
+  !*** ./src/components/VGrid/VGrid.sass ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/components/VGrid/VLayout.ts ***!
   \*****************************************/
 
 /*!**************************************!*\
-  !*** ./src/components/VGrid/grid.js ***!
+  !*** ./src/components/VGrid/VRow.ts ***!
+  \**************************************/
+
+/*!*****************************************!*\
+  !*** ./src/components/VGrid/VSpacer.ts ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/components/VGrid/_grid.sass ***!
+  \*****************************************/
+
+/*!**************************************!*\
+  !*** ./src/components/VGrid/grid.ts ***!
   \**************************************/
 
 /*!***************************************!*\
-  !*** ./src/components/VGrid/index.js ***!
+  !*** ./src/components/VGrid/index.ts ***!
   \***************************************/
 
-/*! exports provided: VContainer, VContent, VFlex, VLayout, VSpacer, default */
+/*! exports provided: VContainer, VCol, VRow, VSpacer, VLayout, VFlex, default */
 
 /*! ./VContainer */
 
-/*! ./VContent */
+/*! ./VCol */
 
-/*! ./VFlex */
+/*! ./VRow */
+
+/*! ./VSpacer */
 
 /*! ./VLayout */
+
+/*! ./VFlex */
 
 /*!*****************************************!*\
   !*** ./src/components/VHover/VHover.ts ***!
@@ -743,13 +1203,15 @@
 
 /*! ./VHover */
 
+/*!*****************************************!*\
+  !*** ./src/components/VIcon/VIcon.sass ***!
+  \*****************************************/
+
 /*!***************************************!*\
   !*** ./src/components/VIcon/VIcon.ts ***!
   \***************************************/
 
-/*! ../../stylus/components/_icons.styl */
-
-/*! ../../mixins/sizeable */
+/*! ./VIcon.sass */
 
 /*!***************************************!*\
   !*** ./src/components/VIcon/index.ts ***!
@@ -759,11 +1221,15 @@
 
 /*! ./VIcon */
 
+/*!***************************************!*\
+  !*** ./src/components/VImg/VImg.sass ***!
+  \***************************************/
+
 /*!*************************************!*\
   !*** ./src/components/VImg/VImg.ts ***!
   \*************************************/
 
-/*! ../../stylus/components/_images.styl */
+/*! ./VImg.sass */
 
 /*! ../VResponsive */
 
@@ -775,11 +1241,15 @@
 
 /*! ./VImg */
 
+/*!*******************************************!*\
+  !*** ./src/components/VInput/VInput.sass ***!
+  \*******************************************/
+
 /*!*****************************************!*\
   !*** ./src/components/VInput/VInput.ts ***!
   \*****************************************/
 
-/*! ../../stylus/components/_inputs.styl */
+/*! ./VInput.sass */
 
 /*! ../VLabel */
 
@@ -799,15 +1269,19 @@
   !*** ./src/components/VItemGroup/VItem.ts ***!
   \********************************************/
 
+/*! exports provided: BaseItem, default */
+
+/*!***************************************************!*\
+  !*** ./src/components/VItemGroup/VItemGroup.sass ***!
+  \***************************************************/
+
 /*!*************************************************!*\
   !*** ./src/components/VItemGroup/VItemGroup.ts ***!
   \*************************************************/
 
 /*! exports provided: BaseItemGroup, default */
 
-/*! ../../stylus/components/_item-group.styl */
-
-/*! ../../mixins/proxyable */
+/*! ./VItemGroup.sass */
 
 /*!********************************************!*\
   !*** ./src/components/VItemGroup/index.ts ***!
@@ -819,25 +1293,15 @@
 
 /*! ./VItemGroup */
 
-/*!*************************************************!*\
-  !*** ./src/components/VJumbotron/VJumbotron.js ***!
-  \*************************************************/
-
-/*! ../../stylus/components/_jumbotrons.styl */
-
-/*!********************************************!*\
-  !*** ./src/components/VJumbotron/index.js ***!
-  \********************************************/
-
-/*! exports provided: VJumbotron, default */
-
-/*! ./VJumbotron */
+/*!*******************************************!*\
+  !*** ./src/components/VLabel/VLabel.sass ***!
+  \*******************************************/
 
 /*!*****************************************!*\
   !*** ./src/components/VLabel/VLabel.ts ***!
   \*****************************************/
 
-/*! ../../stylus/components/_labels.styl */
+/*! ./VLabel.sass */
 
 /*!****************************************!*\
   !*** ./src/components/VLabel/index.ts ***!
@@ -847,93 +1311,109 @@
 
 /*! ./VLabel */
 
+/*!*****************************************!*\
+  !*** ./src/components/VList/VList.sass ***!
+  \*****************************************/
+
 /*!***************************************!*\
   !*** ./src/components/VList/VList.ts ***!
   \***************************************/
 
-/*! ../../stylus/components/_lists.styl */
+/*! ./VList.sass */
+
+/*!**********************************************!*\
+  !*** ./src/components/VList/VListGroup.sass ***!
+  \**********************************************/
 
 /*!********************************************!*\
   !*** ./src/components/VList/VListGroup.ts ***!
   \********************************************/
 
+/*! ./VListGroup.sass */
+
+/*! ./VListItem */
+
+/*! ./VListItemIcon */
+
+/*!*********************************************!*\
+  !*** ./src/components/VList/VListItem.sass ***!
+  \*********************************************/
+
 /*!*******************************************!*\
-  !*** ./src/components/VList/VListTile.ts ***!
+  !*** ./src/components/VList/VListItem.ts ***!
   \*******************************************/
 
-/*! ../../directives/ripple */
+/*! ./VListItem.sass */
+
+/*! ./../../util/helpers */
 
 /*!*************************************************!*\
-  !*** ./src/components/VList/VListTileAction.ts ***!
+  !*** ./src/components/VList/VListItemAction.ts ***!
   \*************************************************/
 
 /*!*************************************************!*\
-  !*** ./src/components/VList/VListTileAvatar.ts ***!
+  !*** ./src/components/VList/VListItemAvatar.ts ***!
   \*************************************************/
 
-/*! ../VAvatar */
+/*!**************************************************!*\
+  !*** ./src/components/VList/VListItemGroup.sass ***!
+  \**************************************************/
+
+/*!************************************************!*\
+  !*** ./src/components/VList/VListItemGroup.ts ***!
+  \************************************************/
+
+/*! ./VListItemGroup.sass */
+
+/*!***********************************************!*\
+  !*** ./src/components/VList/VListItemIcon.ts ***!
+  \***********************************************/
 
 /*!***************************************!*\
   !*** ./src/components/VList/index.ts ***!
   \***************************************/
 
-/*! exports provided: VList, VListGroup, VListTile, VListTileAction, VListTileAvatar, VListTileActionText, VListTileContent, VListTileTitle, VListTileSubTitle, default */
+/*! exports provided: VListItemActionText, VListItemContent, VListItemTitle, VListItemSubtitle, VList, VListGroup, VListItem, VListItemAction, VListItemAvatar, VListItemIcon, VListItemGroup, default */
 
 /*! ./VList */
 
 /*! ./VListGroup */
 
-/*! ./VListTile */
+/*! ./VListItemGroup */
 
-/*! ./VListTileAction */
+/*! ./VListItemAction */
 
-/*! ./VListTileAvatar */
+/*! ./VListItemAvatar */
+
+/*!*****************************************!*\
+  !*** ./src/components/VMenu/VMenu.sass ***!
+  \*****************************************/
 
 /*!***************************************!*\
-  !*** ./src/components/VMenu/VMenu.js ***!
+  !*** ./src/components/VMenu/VMenu.ts ***!
   \***************************************/
 
-/*! ../../stylus/components/_menus.styl */
+/*! ./VMenu.sass */
 
-/*! ../../mixins/menuable.js */
-
-/*! ./mixins/menu-activator */
-
-/*! ./mixins/menu-generators */
-
-/*! ./mixins/menu-keyable */
-
-/*! ./mixins/menu-position */
+/*! ../../mixins/menuable */
 
 /*!***************************************!*\
-  !*** ./src/components/VMenu/index.js ***!
+  !*** ./src/components/VMenu/index.ts ***!
   \***************************************/
 
 /*! exports provided: VMenu, default */
 
 /*! ./VMenu */
 
-/*!*******************************************************!*\
-  !*** ./src/components/VMenu/mixins/menu-activator.js ***!
-  \*******************************************************/
-
-/*!********************************************************!*\
-  !*** ./src/components/VMenu/mixins/menu-generators.js ***!
-  \********************************************************/
-
-/*!*****************************************************!*\
-  !*** ./src/components/VMenu/mixins/menu-keyable.js ***!
-  \*****************************************************/
-
-/*!******************************************************!*\
-  !*** ./src/components/VMenu/mixins/menu-position.js ***!
-  \******************************************************/
+/*!*************************************************!*\
+  !*** ./src/components/VMessages/VMessages.sass ***!
+  \*************************************************/
 
 /*!***********************************************!*\
   !*** ./src/components/VMessages/VMessages.ts ***!
   \***********************************************/
 
-/*! ../../stylus/components/_messages.styl */
+/*! ./VMessages.sass */
 
 /*!*******************************************!*\
   !*** ./src/components/VMessages/index.ts ***!
@@ -943,11 +1423,17 @@
 
 /*! ./VMessages */
 
+/*!*****************************************************************!*\
+  !*** ./src/components/VNavigationDrawer/VNavigationDrawer.sass ***!
+  \*****************************************************************/
+
 /*!***************************************************************!*\
   !*** ./src/components/VNavigationDrawer/VNavigationDrawer.ts ***!
   \***************************************************************/
 
-/*! ../../stylus/components/_navigation-drawer.styl */
+/*! ./VNavigationDrawer.sass */
+
+/*! ../VImg/VImg */
 
 /*! ../../directives/touch */
 
@@ -959,27 +1445,57 @@
 
 /*! ./VNavigationDrawer */
 
+/*!*******************************************************!*\
+  !*** ./src/components/VOverflowBtn/VOverflowBtn.sass ***!
+  \*******************************************************/
+
 /*!*****************************************************!*\
-  !*** ./src/components/VOverflowBtn/VOverflowBtn.js ***!
+  !*** ./src/components/VOverflowBtn/VOverflowBtn.ts ***!
   \*****************************************************/
 
-/*! ../../stylus/components/_overflow-buttons.styl */
+/*! ./VOverflowBtn.sass */
 
 /*! ../VAutocomplete */
 
 /*!**********************************************!*\
-  !*** ./src/components/VOverflowBtn/index.js ***!
+  !*** ./src/components/VOverflowBtn/index.ts ***!
   \**********************************************/
 
 /*! exports provided: VOverflowBtn, default */
 
 /*! ./VOverflowBtn */
 
+/*!***********************************************!*\
+  !*** ./src/components/VOverlay/VOverlay.sass ***!
+  \***********************************************/
+
+/*!*********************************************!*\
+  !*** ./src/components/VOverlay/VOverlay.ts ***!
+  \*********************************************/
+
+/*! ./VOverlay.sass */
+
+/*! ./../../mixins/colorable */
+
+/*! ./../../mixins/toggleable */
+
+/*!******************************************!*\
+  !*** ./src/components/VOverlay/index.ts ***!
+  \******************************************/
+
+/*! exports provided: VOverlay, default */
+
+/*! ./VOverlay */
+
+/*!*****************************************************!*\
+  !*** ./src/components/VPagination/VPagination.sass ***!
+  \*****************************************************/
+
 /*!***************************************************!*\
   !*** ./src/components/VPagination/VPagination.ts ***!
   \***************************************************/
 
-/*! ../../stylus/components/_pagination.styl */
+/*! ./VPagination.sass */
 
 /*!*********************************************!*\
   !*** ./src/components/VPagination/index.ts ***!
@@ -989,11 +1505,15 @@
 
 /*! ./VPagination */
 
+/*!*************************************************!*\
+  !*** ./src/components/VParallax/VParallax.sass ***!
+  \*************************************************/
+
 /*!***********************************************!*\
   !*** ./src/components/VParallax/VParallax.ts ***!
   \***********************************************/
 
-/*! ../../stylus/components/_parallax.styl */
+/*! ./VParallax.sass */
 
 /*! ../../mixins/translatable */
 
@@ -1005,11 +1525,17 @@
 
 /*! ./VParallax */
 
+/*!*********************************************!*\
+  !*** ./src/components/VPicker/VPicker.sass ***!
+  \*********************************************/
+
 /*!*******************************************!*\
   !*** ./src/components/VPicker/VPicker.ts ***!
   \*******************************************/
 
-/*! ../../stylus/components/_pickers.styl */
+/*! ./VPicker.sass */
+
+/*! ../VCard/VCard.sass */
 
 /*!*****************************************!*\
   !*** ./src/components/VPicker/index.ts ***!
@@ -1019,11 +1545,15 @@
 
 /*! ./VPicker */
 
+/*!*****************************************************************!*\
+  !*** ./src/components/VProgressCircular/VProgressCircular.sass ***!
+  \*****************************************************************/
+
 /*!***************************************************************!*\
   !*** ./src/components/VProgressCircular/VProgressCircular.ts ***!
   \***************************************************************/
 
-/*! ../../stylus/components/_progress-circular.styl */
+/*! ./VProgressCircular.sass */
 
 /*!***************************************************!*\
   !*** ./src/components/VProgressCircular/index.ts ***!
@@ -1033,11 +1563,15 @@
 
 /*! ./VProgressCircular */
 
+/*!*************************************************************!*\
+  !*** ./src/components/VProgressLinear/VProgressLinear.sass ***!
+  \*************************************************************/
+
 /*!***********************************************************!*\
   !*** ./src/components/VProgressLinear/VProgressLinear.ts ***!
   \***********************************************************/
 
-/*! ../../stylus/components/_progress-linear.styl */
+/*! ./VProgressLinear.sass */
 
 /*!*************************************************!*\
   !*** ./src/components/VProgressLinear/index.ts ***!
@@ -1047,24 +1581,32 @@
 
 /*! ./VProgressLinear */
 
+/*!************************************************!*\
+  !*** ./src/components/VRadioGroup/VRadio.sass ***!
+  \************************************************/
+
 /*!**********************************************!*\
-  !*** ./src/components/VRadioGroup/VRadio.js ***!
+  !*** ./src/components/VRadioGroup/VRadio.ts ***!
   \**********************************************/
 
-/*! ../../stylus/components/_radios.styl */
+/*! ./VRadio.sass */
+
+/*! ../../mixins/rippleable */
+
+/*!*****************************************************!*\
+  !*** ./src/components/VRadioGroup/VRadioGroup.sass ***!
+  \*****************************************************/
 
 /*!***************************************************!*\
-  !*** ./src/components/VRadioGroup/VRadioGroup.js ***!
+  !*** ./src/components/VRadioGroup/VRadioGroup.ts ***!
   \***************************************************/
 
-/*! ../../stylus/components/_radio-group.styl */
-
-/*! ../VInput */
+/*! ./VRadioGroup.sass */
 
 /*! ../../mixins/comparable */
 
 /*!*********************************************!*\
-  !*** ./src/components/VRadioGroup/index.js ***!
+  !*** ./src/components/VRadioGroup/index.ts ***!
   \*********************************************/
 
 /*! exports provided: VRadioGroup, VRadio, default */
@@ -1073,27 +1615,35 @@
 
 /*! ./VRadio */
 
+/*!*******************************************************!*\
+  !*** ./src/components/VRangeSlider/VRangeSlider.sass ***!
+  \*******************************************************/
+
 /*!*****************************************************!*\
-  !*** ./src/components/VRangeSlider/VRangeSlider.js ***!
+  !*** ./src/components/VRangeSlider/VRangeSlider.ts ***!
   \*****************************************************/
 
-/*! ../../stylus/components/_range-sliders.styl */
+/*! ./VRangeSlider.sass */
 
 /*! ../VSlider */
 
 /*!**********************************************!*\
-  !*** ./src/components/VRangeSlider/index.js ***!
+  !*** ./src/components/VRangeSlider/index.ts ***!
   \**********************************************/
 
 /*! exports provided: VRangeSlider, default */
 
 /*! ./VRangeSlider */
 
+/*!*********************************************!*\
+  !*** ./src/components/VRating/VRating.sass ***!
+  \*********************************************/
+
 /*!*******************************************!*\
   !*** ./src/components/VRating/VRating.ts ***!
   \*******************************************/
 
-/*! ../../stylus/components/_rating.styl */
+/*! ./VRating.sass */
 
 /*!*****************************************!*\
   !*** ./src/components/VRating/index.ts ***!
@@ -1103,13 +1653,15 @@
 
 /*! ./VRating */
 
+/*!*****************************************************!*\
+  !*** ./src/components/VResponsive/VResponsive.sass ***!
+  \*****************************************************/
+
 /*!***************************************************!*\
   !*** ./src/components/VResponsive/VResponsive.ts ***!
   \***************************************************/
 
-/*! ../../stylus/components/_responsive.styl */
-
-/*! ../../mixins/measurable */
+/*! ./VResponsive.sass */
 
 /*!*********************************************!*\
   !*** ./src/components/VResponsive/index.ts ***!
@@ -1119,27 +1671,27 @@
 
 /*! ./VResponsive */
 
+/*!*********************************************!*\
+  !*** ./src/components/VSelect/VSelect.sass ***!
+  \*********************************************/
+
 /*!*******************************************!*\
-  !*** ./src/components/VSelect/VSelect.js ***!
+  !*** ./src/components/VSelect/VSelect.ts ***!
   \*******************************************/
 
 /*! exports provided: defaultMenuProps, default */
 
-/*! ../../stylus/components/_text-fields.styl */
+/*! ../VTextField/VTextField.sass */
 
-/*! ../../stylus/components/_select.styl */
-
-/*! ../VChip */
+/*! ./VSelect.sass */
 
 /*! ./VSelectList */
 
 /*! ../../mixins/filterable */
 
 /*!***********************************************!*\
-  !*** ./src/components/VSelect/VSelectList.js ***!
+  !*** ./src/components/VSelect/VSelectList.ts ***!
   \***********************************************/
-
-/*! ../VCheckbox */
 
 /*! ../VDivider */
 
@@ -1148,26 +1700,22 @@
 /*! ../VList */
 
 /*!*****************************************!*\
-  !*** ./src/components/VSelect/index.js ***!
+  !*** ./src/components/VSelect/index.ts ***!
   \*****************************************/
 
 /*! exports provided: VSelect, default */
 
 /*! ./VSelect */
 
-/*! ../VOverflowBtn */
-
-/*! ../VCombobox */
-
-/*! ../../util/rebuildFunctionalSlots */
-
-/*! ../../util/dedupeModelListeners */
+/*!*******************************************!*\
+  !*** ./src/components/VSheet/VSheet.sass ***!
+  \*******************************************/
 
 /*!*****************************************!*\
   !*** ./src/components/VSheet/VSheet.ts ***!
   \*****************************************/
 
-/*! ../../stylus/components/_sheet.styl */
+/*! ./VSheet.sass */
 
 /*! ../../mixins/elevatable */
 
@@ -1179,27 +1727,61 @@
 
 /*! ./VSheet */
 
+/*!*****************************************************!*\
+  !*** ./src/components/VSlideGroup/VSlideGroup.sass ***!
+  \*****************************************************/
+
+/*!***************************************************!*\
+  !*** ./src/components/VSlideGroup/VSlideGroup.ts ***!
+  \***************************************************/
+
+/*! exports provided: BaseSlideGroup, default */
+
+/*! ./VSlideGroup.sass */
+
+/*!**************************************************!*\
+  !*** ./src/components/VSlideGroup/VSlideItem.ts ***!
+  \**************************************************/
+
+/*! ../VItemGroup/VItem */
+
+/*!*********************************************!*\
+  !*** ./src/components/VSlideGroup/index.ts ***!
+  \*********************************************/
+
+/*! exports provided: VSlideGroup, VSlideItem, default */
+
+/*! ./VSlideGroup */
+
+/*! ./VSlideItem */
+
+/*!*********************************************!*\
+  !*** ./src/components/VSlider/VSlider.sass ***!
+  \*********************************************/
+
 /*!*******************************************!*\
-  !*** ./src/components/VSlider/VSlider.js ***!
+  !*** ./src/components/VSlider/VSlider.ts ***!
   \*******************************************/
 
-/*! ../../stylus/components/_sliders.styl */
-
-/*! ../../mixins/loadable */
+/*! ./VSlider.sass */
 
 /*!*****************************************!*\
-  !*** ./src/components/VSlider/index.js ***!
+  !*** ./src/components/VSlider/index.ts ***!
   \*****************************************/
 
 /*! exports provided: VSlider, default */
 
 /*! ./VSlider */
 
+/*!*************************************************!*\
+  !*** ./src/components/VSnackbar/VSnackbar.sass ***!
+  \*************************************************/
+
 /*!***********************************************!*\
   !*** ./src/components/VSnackbar/VSnackbar.ts ***!
   \***********************************************/
 
-/*! ../../stylus/components/_snackbars.styl */
+/*! ./VSnackbar.sass */
 
 /*!*******************************************!*\
   !*** ./src/components/VSnackbar/index.ts ***!
@@ -1221,7 +1803,7 @@
   !*** ./src/components/VSparkline/helpers/core.ts ***!
   \***************************************************/
 
-/*! exports provided: genPoints */
+/*! exports provided: genPoints, genBars */
 
 /*!***************************************************!*\
   !*** ./src/components/VSparkline/helpers/math.ts ***!
@@ -1245,25 +1827,33 @@
 
 /*! ./VSparkline */
 
+/*!***************************************************!*\
+  !*** ./src/components/VSpeedDial/VSpeedDial.sass ***!
+  \***************************************************/
+
 /*!*************************************************!*\
-  !*** ./src/components/VSpeedDial/VSpeedDial.js ***!
+  !*** ./src/components/VSpeedDial/VSpeedDial.ts ***!
   \*************************************************/
 
-/*! ../../stylus/components/_speed-dial.styl */
+/*! ./VSpeedDial.sass */
 
 /*!********************************************!*\
-  !*** ./src/components/VSpeedDial/index.js ***!
+  !*** ./src/components/VSpeedDial/index.ts ***!
   \********************************************/
 
 /*! exports provided: VSpeedDial, default */
 
 /*! ./VSpeedDial */
 
+/*!***********************************************!*\
+  !*** ./src/components/VStepper/VStepper.sass ***!
+  \***********************************************/
+
 /*!*********************************************!*\
   !*** ./src/components/VStepper/VStepper.ts ***!
   \*********************************************/
 
-/*! ../../stylus/components/_steppers.styl */
+/*! ./VStepper.sass */
 
 /*!****************************************************!*\
   !*** ./src/components/VStepper/VStepperContent.ts ***!
@@ -1285,11 +1875,15 @@
 
 /*! ./VStepperContent */
 
+/*!***************************************************!*\
+  !*** ./src/components/VSubheader/VSubheader.sass ***!
+  \***************************************************/
+
 /*!*************************************************!*\
   !*** ./src/components/VSubheader/VSubheader.ts ***!
   \*************************************************/
 
-/*! ../../stylus/components/_subheaders.styl */
+/*! ./VSubheader.sass */
 
 /*!********************************************!*\
   !*** ./src/components/VSubheader/index.ts ***!
@@ -1299,27 +1893,35 @@
 
 /*! ./VSubheader */
 
+/*!*********************************************!*\
+  !*** ./src/components/VSwitch/VSwitch.sass ***!
+  \*********************************************/
+
 /*!*******************************************!*\
-  !*** ./src/components/VSwitch/VSwitch.js ***!
+  !*** ./src/components/VSwitch/VSwitch.ts ***!
   \*******************************************/
 
-/*! ../../stylus/components/_switch.styl */
+/*! ./VSwitch.sass */
 
 /*! ../VProgressCircular/VProgressCircular */
 
 /*!*****************************************!*\
-  !*** ./src/components/VSwitch/index.js ***!
+  !*** ./src/components/VSwitch/index.ts ***!
   \*****************************************/
 
 /*! exports provided: VSwitch, default */
 
 /*! ./VSwitch */
 
+/*!***************************************************!*\
+  !*** ./src/components/VSystemBar/VSystemBar.sass ***!
+  \***************************************************/
+
 /*!*************************************************!*\
   !*** ./src/components/VSystemBar/VSystemBar.ts ***!
   \*************************************************/
 
-/*! ../../stylus/components/_system-bars.styl */
+/*! ./VSystemBar.sass */
 
 /*!********************************************!*\
   !*** ./src/components/VSystemBar/index.ts ***!
@@ -1330,41 +1932,45 @@
 /*! ./VSystemBar */
 
 /*!**************************************!*\
-  !*** ./src/components/VTabs/VTab.js ***!
+  !*** ./src/components/VTabs/VTab.ts ***!
   \**************************************/
 
 /*!******************************************!*\
-  !*** ./src/components/VTabs/VTabItem.js ***!
+  !*** ./src/components/VTabs/VTabItem.ts ***!
   \******************************************/
 
+/*!*****************************************!*\
+  !*** ./src/components/VTabs/VTabs.sass ***!
+  \*****************************************/
+
 /*!***************************************!*\
-  !*** ./src/components/VTabs/VTabs.js ***!
+  !*** ./src/components/VTabs/VTabs.ts ***!
   \***************************************/
 
-/*! ../../stylus/components/_tabs.styl */
+/*! ./VTabs.sass */
 
-/*! ../VItemGroup/VItemGroup */
+/*! ./VTabsBar */
 
-/*! ./mixins/tabs-computed */
+/*! ./VTabsItems */
 
-/*! ./mixins/tabs-generators */
+/*! ./VTabsSlider */
 
-/*! ./mixins/tabs-props */
-
-/*! ./mixins/tabs-touch */
-
-/*! ./mixins/tabs-watchers */
+/*!******************************************!*\
+  !*** ./src/components/VTabs/VTabsBar.ts ***!
+  \******************************************/
 
 /*!********************************************!*\
-  !*** ./src/components/VTabs/VTabsItems.js ***!
+  !*** ./src/components/VTabs/VTabsItems.ts ***!
   \********************************************/
 
+/*! ./../VItemGroup/VItemGroup */
+
 /*!*********************************************!*\
-  !*** ./src/components/VTabs/VTabsSlider.js ***!
+  !*** ./src/components/VTabs/VTabsSlider.ts ***!
   \*********************************************/
 
 /*!***************************************!*\
-  !*** ./src/components/VTabs/index.js ***!
+  !*** ./src/components/VTabs/index.ts ***!
   \***************************************/
 
 /*! exports provided: VTabs, VTab, VTabItem, VTabsItems, VTabsSlider, default */
@@ -1373,62 +1979,40 @@
 
 /*! ./VTab */
 
-/*! ./VTabsItems */
-
 /*! ./VTabItem */
 
-/*! ./VTabsSlider */
-
-/*!******************************************************!*\
-  !*** ./src/components/VTabs/mixins/tabs-computed.js ***!
-  \******************************************************/
-
-/*!********************************************************!*\
-  !*** ./src/components/VTabs/mixins/tabs-generators.js ***!
-  \********************************************************/
-
-/*! ../VTabsItems */
-
-/*! ../VTabsSlider */
-
 /*!***************************************************!*\
-  !*** ./src/components/VTabs/mixins/tabs-props.js ***!
+  !*** ./src/components/VTextField/VTextField.sass ***!
   \***************************************************/
-
-/*!***************************************************!*\
-  !*** ./src/components/VTabs/mixins/tabs-touch.js ***!
-  \***************************************************/
-
-/*!******************************************************!*\
-  !*** ./src/components/VTabs/mixins/tabs-watchers.js ***!
-  \******************************************************/
 
 /*!*************************************************!*\
-  !*** ./src/components/VTextField/VTextField.js ***!
+  !*** ./src/components/VTextField/VTextField.ts ***!
   \*************************************************/
+
+/*! ./VTextField.sass */
 
 /*! ../VCounter */
 
-/*! ../../mixins/maskable */
-
 /*!********************************************!*\
-  !*** ./src/components/VTextField/index.js ***!
+  !*** ./src/components/VTextField/index.ts ***!
   \********************************************/
 
 /*! exports provided: VTextField, default */
 
 /*! ./VTextField */
 
-/*! ../VTextarea/VTextarea */
+/*!*************************************************!*\
+  !*** ./src/components/VTextarea/VTextarea.sass ***!
+  \*************************************************/
 
 /*!***********************************************!*\
-  !*** ./src/components/VTextarea/VTextarea.js ***!
+  !*** ./src/components/VTextarea/VTextarea.ts ***!
   \***********************************************/
 
-/*! ../../stylus/components/_textarea.styl */
+/*! ./VTextarea.sass */
 
 /*!*******************************************!*\
-  !*** ./src/components/VTextarea/index.js ***!
+  !*** ./src/components/VTextarea/index.ts ***!
   \*******************************************/
 
 /*! exports provided: VTextarea, default */
@@ -1439,7 +2023,7 @@
   !*** ./src/components/VTimePicker/VTimePicker.ts ***!
   \***************************************************/
 
-/*! exports provided: selectingTimes, default */
+/*! exports provided: SelectingTimes, default */
 
 /*! ./VTimePickerTitle */
 
@@ -1447,17 +2031,25 @@
 
 /*! ../VDatePicker/util/pad */
 
+/*!**********************************************************!*\
+  !*** ./src/components/VTimePicker/VTimePickerClock.sass ***!
+  \**********************************************************/
+
 /*!********************************************************!*\
   !*** ./src/components/VTimePicker/VTimePickerClock.ts ***!
   \********************************************************/
 
-/*! ../../stylus/components/_time-picker-clock.styl */
+/*! ./VTimePickerClock.sass */
+
+/*!**********************************************************!*\
+  !*** ./src/components/VTimePicker/VTimePickerTitle.sass ***!
+  \**********************************************************/
 
 /*!********************************************************!*\
   !*** ./src/components/VTimePicker/VTimePickerTitle.ts ***!
   \********************************************************/
 
-/*! ../../stylus/components/_time-picker-title.styl */
+/*! ./VTimePickerTitle.sass */
 
 /*! ../VDatePicker/util */
 
@@ -1469,11 +2061,15 @@
 
 /*! exports provided: VTimePicker, VTimePickerClock, VTimePickerTitle, default */
 
+/*!*************************************************!*\
+  !*** ./src/components/VTimeline/VTimeline.sass ***!
+  \*************************************************/
+
 /*!***********************************************!*\
   !*** ./src/components/VTimeline/VTimeline.ts ***!
   \***********************************************/
 
-/*! ../../stylus/components/_timeline.styl */
+/*! ./VTimeline.sass */
 
 /*!***************************************************!*\
   !*** ./src/components/VTimeline/VTimelineItem.ts ***!
@@ -1489,49 +2085,51 @@
 
 /*! ./VTimelineItem */
 
+/*!***********************************************!*\
+  !*** ./src/components/VToolbar/VToolbar.sass ***!
+  \***********************************************/
+
 /*!*********************************************!*\
   !*** ./src/components/VToolbar/VToolbar.ts ***!
   \*********************************************/
 
-/*! ../../stylus/components/_toolbar.styl */
-
-/*! ../../directives/scroll */
-
-/*!*****************************************************!*\
-  !*** ./src/components/VToolbar/VToolbarSideIcon.ts ***!
-  \*****************************************************/
+/*! ./VToolbar.sass */
 
 /*!******************************************!*\
   !*** ./src/components/VToolbar/index.ts ***!
   \******************************************/
 
-/*! exports provided: VToolbar, VToolbarSideIcon, VToolbarTitle, VToolbarItems, default */
+/*! exports provided: VToolbar, VToolbarItems, VToolbarTitle, default */
 
 /*! ./VToolbar */
 
-/*! ./VToolbarSideIcon */
+/*!***********************************************!*\
+  !*** ./src/components/VTooltip/VTooltip.sass ***!
+  \***********************************************/
 
 /*!*********************************************!*\
-  !*** ./src/components/VTooltip/VTooltip.js ***!
+  !*** ./src/components/VTooltip/VTooltip.ts ***!
   \*********************************************/
 
-/*! ../../stylus/components/_tooltips.styl */
-
-/*! ../../mixins/menuable */
+/*! ./VTooltip.sass */
 
 /*!******************************************!*\
-  !*** ./src/components/VTooltip/index.js ***!
+  !*** ./src/components/VTooltip/index.ts ***!
   \******************************************/
 
 /*! exports provided: VTooltip, default */
 
 /*! ./VTooltip */
 
+/*!*************************************************!*\
+  !*** ./src/components/VTreeview/VTreeview.sass ***!
+  \*************************************************/
+
 /*!***********************************************!*\
   !*** ./src/components/VTreeview/VTreeview.ts ***!
   \***********************************************/
 
-/*! ../../stylus/components/_treeview.styl */
+/*! ./VTreeview.sass */
 
 /*! ./VTreeviewNode */
 
@@ -1557,11 +2155,17 @@
 
 /*! exports provided: filterTreeItem, filterTreeItems */
 
+/*! ../../../util/helpers */
+
+/*!*********************************************!*\
+  !*** ./src/components/VWindow/VWindow.sass ***!
+  \*********************************************/
+
 /*!*******************************************!*\
   !*** ./src/components/VWindow/VWindow.ts ***!
   \*******************************************/
 
-/*! ../../stylus/components/_windows.styl */
+/*! ./VWindow.sass */
 
 /*!***********************************************!*\
   !*** ./src/components/VWindow/VWindowItem.ts ***!
@@ -1577,103 +2181,39 @@
 
 /*! ./VWindowItem */
 
-/*!********************************************************!*\
-  !*** ./src/components/Vuetify/goTo/easing-patterns.ts ***!
-  \********************************************************/
-
-/*! exports provided: linear, easeInQuad, easeOutQuad, easeInOutQuad, easeInCubic, easeOutCubic, easeInOutCubic, easeInQuart, easeOutQuart, easeInOutQuart, easeInQuint, easeOutQuint, easeInOutQuint */
-
-/*!**********************************************!*\
-  !*** ./src/components/Vuetify/goTo/index.ts ***!
-  \**********************************************/
-
-/*! ./easing-patterns */
-
-/*!*********************************************!*\
-  !*** ./src/components/Vuetify/goTo/util.ts ***!
-  \*********************************************/
-
-/*! exports provided: getOffset, getContainer */
-
-/*!*****************************************!*\
-  !*** ./src/components/Vuetify/index.ts ***!
-  \*****************************************/
-
-/*! exports provided: checkVueVersion, default */
-
-/*! ./mixins/application */
-
-/*! ./mixins/breakpoint */
-
-/*! ./mixins/theme */
-
-/*! ./mixins/icons */
-
-/*! ./mixins/options */
-
-/*! ./mixins/lang */
-
-/*! ./goTo */
-
-/*!******************************************************!*\
-  !*** ./src/components/Vuetify/mixins/application.ts ***!
-  \******************************************************/
-
-/*!*****************************************************!*\
-  !*** ./src/components/Vuetify/mixins/breakpoint.ts ***!
-  \*****************************************************/
-
-/*!************************************************!*\
-  !*** ./src/components/Vuetify/mixins/icons.ts ***!
-  \************************************************/
-
-/*! exports provided: convertToComponentDeclarations, default */
-
-/*!***********************************************!*\
-  !*** ./src/components/Vuetify/mixins/lang.ts ***!
-  \***********************************************/
-
-/*! ../../../locale/en */
-
-/*!**************************************************!*\
-  !*** ./src/components/Vuetify/mixins/options.ts ***!
-  \**************************************************/
-
-/*!************************************************!*\
-  !*** ./src/components/Vuetify/mixins/theme.ts ***!
-  \************************************************/
-
 /*!*********************************!*\
   !*** ./src/components/index.ts ***!
   \*********************************/
 
-/*! exports provided: VApp, VAlert, VAutocomplete, VAvatar, VBadge, VBottomNav, VBottomSheet, VBreadcrumbs, VBreadcrumbsItem, VBreadcrumbsDivider, VBtn, VBtnToggle, VCalendar, VCalendarDaily, VCalendarWeekly, VCalendarMonthly, VCard, VCardMedia, VCardTitle, VCardActions, VCardText, VCarousel, VCarouselItem, VCheckbox, VChip, VCombobox, VCounter, VDataIterator, VDataTable, VEditDialog, VTableOverflow, VDatePicker, VDatePickerTitle, VDatePickerHeader, VDatePickerDateTable, VDatePickerMonthTable, VDatePickerYears, VDialog, VDivider, VExpansionPanel, VExpansionPanelContent, VFooter, VForm, VContainer, VContent, VFlex, VLayout, VSpacer, VHover, VIcon, VImg, VInput, VItem, VItemGroup, VJumbotron, VLabel, VList, VListGroup, VListTile, VListTileAction, VListTileAvatar, VListTileActionText, VListTileContent, VListTileTitle, VListTileSubTitle, VMenu, VMessages, VNavigationDrawer, VOverflowBtn, VPagination, VSheet, VParallax, VPicker, VProgressCircular, VProgressLinear, VRadioGroup, VRadio, VRangeSlider, VRating, VResponsive, VSelect, VSlider, VSnackbar, VSparkline, VSpeedDial, VStepper, VStepperContent, VStepperStep, VStepperHeader, VStepperItems, VSubheader, VSwitch, VSystemBar, VTabs, VTab, VTabItem, VTabsItems, VTabsSlider, VTextarea, VTextField, VTimeline, VTimelineItem, VTimePicker, VTimePickerClock, VTimePickerTitle, VToolbar, VToolbarSideIcon, VToolbarTitle, VToolbarItems, VTooltip, VTreeview, VTreeviewNode, VWindow, VWindowItem, VBottomSheetTransition, VCarouselTransition, VCarouselReverseTransition, VTabTransition, VTabReverseTransition, VMenuTransition, VFabTransition, VDialogTransition, VDialogBottomTransition, VFadeTransition, VScaleTransition, VScrollXTransition, VScrollXReverseTransition, VScrollYTransition, VScrollYReverseTransition, VSlideXTransition, VSlideXReverseTransition, VSlideYTransition, VSlideYReverseTransition, VExpandTransition, VExpandXTransition, VRowExpandTransition */
+/*! exports provided: VApp, VAppBar, VAppBarNavIcon, VAlert, VAutocomplete, VAvatar, VBadge, VBanner, VBottomNavigation, VBottomSheet, VBreadcrumbs, VBreadcrumbsItem, VBreadcrumbsDivider, VBtn, VBtnToggle, VCalendar, VCalendarDaily, VCalendarWeekly, VCalendarMonthly, VCard, VCardTitle, VCardActions, VCardText, VCarousel, VCarouselItem, VCheckbox, VSimpleCheckbox, VChip, VChipGroup, VColorPicker, VColorPickerSwatches, VColorPickerCanvas, VContent, VCombobox, VCounter, VData, VDataIterator, VDataFooter, VDataTable, VEditDialog, VTableOverflow, VDataTableHeader, VSimpleTable, VVirtualTable, VDatePicker, VDatePickerTitle, VDatePickerHeader, VDatePickerDateTable, VDatePickerMonthTable, VDatePickerYears, VDialog, VDivider, VExpansionPanels, VExpansionPanel, VExpansionPanelHeader, VExpansionPanelContent, VFileInput, VFooter, VForm, VContainer, VCol, VRow, VSpacer, VLayout, VFlex, VHover, VIcon, VImg, VInput, VItem, VItemGroup, VLabel, VListItemActionText, VListItemContent, VListItemTitle, VListItemSubtitle, VList, VListGroup, VListItem, VListItemAction, VListItemAvatar, VListItemIcon, VListItemGroup, VMenu, VMessages, VNavigationDrawer, VOverflowBtn, VOverlay, VPagination, VSheet, VParallax, VPicker, VProgressCircular, VProgressLinear, VRadioGroup, VRadio, VRangeSlider, VRating, VResponsive, VSelect, VSlider, VSlideGroup, VSlideItem, VSnackbar, VSparkline, VSpeedDial, VStepper, VStepperContent, VStepperStep, VStepperHeader, VStepperItems, VSubheader, VSwitch, VSystemBar, VTabs, VTab, VTabItem, VTabsItems, VTabsSlider, VTextarea, VTextField, VTimeline, VTimelineItem, VTimePicker, VTimePickerClock, VTimePickerTitle, VToolbar, VToolbarItems, VToolbarTitle, VTooltip, VTreeview, VTreeviewNode, VWindow, VWindowItem, VCarouselTransition, VCarouselReverseTransition, VTabTransition, VTabReverseTransition, VMenuTransition, VFabTransition, VDialogTransition, VDialogBottomTransition, VFadeTransition, VScaleTransition, VScrollXTransition, VScrollXReverseTransition, VScrollYTransition, VScrollYReverseTransition, VSlideXTransition, VSlideXReverseTransition, VSlideYTransition, VSlideYReverseTransition, VExpandTransition, VExpandXTransition */
 
 /*! ./VGrid */
 
 /*! ./transitions */
 
 /*!*********************************************************!*\
-  !*** ./src/components/transitions/expand-transition.js ***!
+  !*** ./src/components/transitions/expand-transition.ts ***!
   \*********************************************************/
 
 /*!*********************************************!*\
-  !*** ./src/components/transitions/index.js ***!
+  !*** ./src/components/transitions/index.ts ***!
   \*********************************************/
 
-/*! exports provided: VBottomSheetTransition, VCarouselTransition, VCarouselReverseTransition, VTabTransition, VTabReverseTransition, VMenuTransition, VFabTransition, VDialogTransition, VDialogBottomTransition, VFadeTransition, VScaleTransition, VScrollXTransition, VScrollXReverseTransition, VScrollYTransition, VScrollYReverseTransition, VSlideXTransition, VSlideXReverseTransition, VSlideYTransition, VSlideYReverseTransition, VExpandTransition, VExpandXTransition, VRowExpandTransition, default */
+/*! exports provided: VCarouselTransition, VCarouselReverseTransition, VTabTransition, VTabReverseTransition, VMenuTransition, VFabTransition, VDialogTransition, VDialogBottomTransition, VFadeTransition, VScaleTransition, VScrollXTransition, VScrollXReverseTransition, VScrollYTransition, VScrollYReverseTransition, VSlideXTransition, VSlideXReverseTransition, VSlideYTransition, VSlideYReverseTransition, VExpandTransition, VExpandXTransition, default */
 
 /*! ./expand-transition */
 
-/*!*****************************************!*\
-  !*** ./src/directives/click-outside.ts ***!
-  \*****************************************/
+/*!***********************************************!*\
+  !*** ./src/directives/click-outside/index.ts ***!
+  \***********************************************/
+
+/*! exports provided: ClickOutside, default */
 
 /*!*********************************!*\
   !*** ./src/directives/index.ts ***!
   \*********************************/
 
-/*! exports provided: ClickOutside, Ripple, Resize, Scroll, Touch, default */
+/*! exports provided: ClickOutside, Resize, Ripple, Scroll, Touch */
 
 /*! ./click-outside */
 
@@ -1685,523 +2225,381 @@
 
 /*! ./touch */
 
-/*!**********************************!*\
-  !*** ./src/directives/resize.ts ***!
-  \**********************************/
+/*!****************************************!*\
+  !*** ./src/directives/resize/index.ts ***!
+  \****************************************/
 
-/*!**********************************!*\
-  !*** ./src/directives/ripple.ts ***!
-  \**********************************/
+/*! exports provided: Resize, default */
 
-/*! ../util/console */
+/*!********************************************!*\
+  !*** ./src/directives/ripple/VRipple.sass ***!
+  \********************************************/
 
-/*!**********************************!*\
-  !*** ./src/directives/scroll.ts ***!
-  \**********************************/
+/*!****************************************!*\
+  !*** ./src/directives/ripple/index.ts ***!
+  \****************************************/
 
-/*!*********************************!*\
-  !*** ./src/directives/touch.ts ***!
-  \*********************************/
+/*! exports provided: Ripple, default */
 
-/*! ../util/helpers */
+/*! ./VRipple.sass */
+
+/*!****************************************!*\
+  !*** ./src/directives/scroll/index.ts ***!
+  \****************************************/
+
+/*! exports provided: Scroll, default */
+
+/*!***************************************!*\
+  !*** ./src/directives/touch/index.ts ***!
+  \***************************************/
+
+/*! exports provided: Touch, default */
+
+/*!**************************!*\
+  !*** ./src/framework.ts ***!
+  \**************************/
+
+/*! ./install */
+
+/*! ./services */
+
+/*! ./styles/main.sass */
 
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
 
-/*! ./stylus/app.styl */
-
-/*! ./components/Vuetify */
-
 /*! ./components */
 
 /*! ./directives */
+
+/*! ./framework */
+
+/*!************************!*\
+  !*** ./src/install.ts ***!
+  \************************/
+
+/*! exports provided: install */
+
+/*! ./util/console */
 
 /*!**************************!*\
   !*** ./src/locale/en.ts ***!
   \**************************/
 
+/*!*****************************************!*\
+  !*** ./src/mixins/activatable/index.ts ***!
+  \*****************************************/
+
+/*! ../delayable */
+
+/*! ../toggleable */
+
+/*!*********************************************!*\
+  !*** ./src/mixins/applicationable/index.ts ***!
+  \*********************************************/
+
+/*! ../positionable */
+
+/*!**************************************!*\
+  !*** ./src/mixins/bootable/index.ts ***!
+  \**************************************/
+
+/*!******************************************!*\
+  !*** ./src/mixins/button-group/index.ts ***!
+  \******************************************/
+
+/*! ../../components/VItemGroup/VItemGroup */
+
 /*!***************************************!*\
-  !*** ./src/mixins/applicationable.ts ***!
+  !*** ./src/mixins/colorable/index.ts ***!
   \***************************************/
 
-/*! ./positionable */
+/*!****************************************!*\
+  !*** ./src/mixins/comparable/index.ts ***!
+  \****************************************/
 
-/*! ../util/mixins */
+/*!***************************************!*\
+  !*** ./src/mixins/delayable/index.ts ***!
+  \***************************************/
 
-/*!********************************!*\
-  !*** ./src/mixins/bootable.ts ***!
-  \********************************/
+/*!***************************************!*\
+  !*** ./src/mixins/dependent/index.ts ***!
+  \***************************************/
 
-/*!************************************!*\
-  !*** ./src/mixins/button-group.ts ***!
-  \************************************/
+/*!****************************************!*\
+  !*** ./src/mixins/detachable/index.ts ***!
+  \****************************************/
 
-/*! ../components/VItemGroup/VItemGroup */
+/*! ../bootable */
 
-/*!*********************************!*\
-  !*** ./src/mixins/colorable.ts ***!
-  \*********************************/
+/*!****************************************!*\
+  !*** ./src/mixins/elevatable/index.ts ***!
+  \****************************************/
 
-/*!**********************************!*\
-  !*** ./src/mixins/comparable.ts ***!
-  \**********************************/
+/*!****************************************!*\
+  !*** ./src/mixins/filterable/index.ts ***!
+  \****************************************/
 
-/*!*************************************!*\
-  !*** ./src/mixins/data-iterable.js ***!
-  \*************************************/
-
-/*! ../components/VBtn */
-
-/*! ../components/VIcon */
-
-/*! ../components/VSelect */
-
-/*! ./filterable */
-
-/*! ./themeable */
-
-/*! ./loadable */
-
-/*!*********************************!*\
-  !*** ./src/mixins/delayable.ts ***!
-  \*********************************/
-
-/*!*********************************!*\
-  !*** ./src/mixins/dependent.ts ***!
-  \*********************************/
-
-/*!**********************************!*\
-  !*** ./src/mixins/detachable.js ***!
-  \**********************************/
-
-/*! ./bootable */
-
-/*!**********************************!*\
-  !*** ./src/mixins/elevatable.ts ***!
-  \**********************************/
-
-/*!**********************************!*\
-  !*** ./src/mixins/filterable.ts ***!
-  \**********************************/
-
-/*!*********************************!*\
-  !*** ./src/mixins/groupable.ts ***!
-  \*********************************/
+/*!***************************************!*\
+  !*** ./src/mixins/groupable/index.ts ***!
+  \***************************************/
 
 /*! exports provided: factory, default */
 
-/*! ./registrable */
+/*! ../registrable */
 
-/*!********************************!*\
-  !*** ./src/mixins/loadable.ts ***!
-  \********************************/
+/*!**************************************!*\
+  !*** ./src/mixins/loadable/index.ts ***!
+  \**************************************/
 
-/*! ../components/VProgressLinear */
+/*! ../../components/VProgressLinear */
 
-/*!********************************!*\
-  !*** ./src/mixins/maskable.js ***!
-  \********************************/
+/*!***************************************!*\
+  !*** ./src/mixins/localable/index.ts ***!
+  \***************************************/
 
-/*! ../util/mask */
+/*!****************************************!*\
+  !*** ./src/mixins/measurable/index.ts ***!
+  \****************************************/
 
-/*!**********************************!*\
-  !*** ./src/mixins/measurable.ts ***!
-  \**********************************/
+/*!**************************************!*\
+  !*** ./src/mixins/menuable/index.ts ***!
+  \**************************************/
 
-/*!********************************!*\
-  !*** ./src/mixins/menuable.js ***!
-  \********************************/
+/*! ../stackable */
 
-/*! ./stackable */
+/*! ../activatable */
 
-/*!***********************************!*\
-  !*** ./src/mixins/overlayable.ts ***!
-  \***********************************/
+/*!*****************************************!*\
+  !*** ./src/mixins/overlayable/index.ts ***!
+  \*****************************************/
 
-/*! ../stylus/components/_overlay.styl */
+/*! ../../components/VOverlay */
 
-/*!*************************************!*\
-  !*** ./src/mixins/picker-button.ts ***!
-  \*************************************/
+/*!*******************************************!*\
+  !*** ./src/mixins/picker-button/index.ts ***!
+  \*******************************************/
 
-/*! ./colorable */
-
-/*!******************************!*\
-  !*** ./src/mixins/picker.ts ***!
-  \******************************/
-
-/*! ../components/VPicker */
+/*! ../colorable */
 
 /*!************************************!*\
-  !*** ./src/mixins/positionable.ts ***!
+  !*** ./src/mixins/picker/index.ts ***!
   \************************************/
 
-/*!*********************************!*\
-  !*** ./src/mixins/proxyable.ts ***!
-  \*********************************/
+/*! ../../components/VPicker */
 
-/*!***********************************!*\
-  !*** ./src/mixins/registrable.ts ***!
-  \***********************************/
+/*! ../themeable */
+
+/*!******************************************!*\
+  !*** ./src/mixins/positionable/index.ts ***!
+  \******************************************/
+
+/*!***************************************!*\
+  !*** ./src/mixins/proxyable/index.ts ***!
+  \***************************************/
+
+/*!*****************************************!*\
+  !*** ./src/mixins/registrable/index.ts ***!
+  \*****************************************/
 
 /*! exports provided: inject, provide */
 
-/*!**********************************!*\
-  !*** ./src/mixins/returnable.ts ***!
-  \**********************************/
+/*!****************************************!*\
+  !*** ./src/mixins/returnable/index.ts ***!
+  \****************************************/
 
-/*!**********************************!*\
-  !*** ./src/mixins/rippleable.ts ***!
-  \**********************************/
+/*!****************************************!*\
+  !*** ./src/mixins/rippleable/index.ts ***!
+  \****************************************/
 
-/*! ../directives/ripple */
+/*!**************************************!*\
+  !*** ./src/mixins/routable/index.ts ***!
+  \**************************************/
 
-/*!********************************!*\
-  !*** ./src/mixins/routable.ts ***!
-  \********************************/
+/*!****************************************!*\
+  !*** ./src/mixins/scrollable/index.ts ***!
+  \****************************************/
 
-/*!**********************************!*\
-  !*** ./src/mixins/selectable.js ***!
-  \**********************************/
+/*! ../../directives */
 
-/*! ../components/VInput */
+/*!****************************************!*\
+  !*** ./src/mixins/selectable/index.ts ***!
+  \****************************************/
 
-/*! ./rippleable */
+/*! ../../components/VInput */
 
-/*! ./comparable */
+/*! ../rippleable */
 
-/*!********************************!*\
-  !*** ./src/mixins/sizeable.ts ***!
-  \********************************/
+/*! ../comparable */
 
-/*!************************************!*\
-  !*** ./src/mixins/ssr-bootable.ts ***!
-  \************************************/
+/*!**************************************!*\
+  !*** ./src/mixins/sizeable/index.ts ***!
+  \**************************************/
 
-/*!*********************************!*\
-  !*** ./src/mixins/stackable.ts ***!
-  \*********************************/
+/*!******************************************!*\
+  !*** ./src/mixins/ssr-bootable/index.ts ***!
+  \******************************************/
 
-/*!*********************************!*\
-  !*** ./src/mixins/themeable.ts ***!
-  \*********************************/
+/*!***************************************!*\
+  !*** ./src/mixins/stackable/index.ts ***!
+  \***************************************/
+
+/*!***************************************!*\
+  !*** ./src/mixins/themeable/index.ts ***!
+  \***************************************/
 
 /*! exports provided: functionalThemeClasses, default */
 
-/*!**********************************!*\
-  !*** ./src/mixins/toggleable.ts ***!
-  \**********************************/
-
-/*!**************************************!*\
-  !*** ./src/mixins/transitionable.ts ***!
-  \**************************************/
-
-/*!************************************!*\
-  !*** ./src/mixins/translatable.ts ***!
-  \************************************/
-
-/*!***********************************!*\
-  !*** ./src/mixins/validatable.ts ***!
-  \***********************************/
-
-/*!*****************************!*\
-  !*** ./src/stylus/app.styl ***!
-  \*****************************/
-
-/*! no static exports found */
+/*!****************************************!*\
+  !*** ./src/mixins/toggleable/index.ts ***!
+  \****************************************/
 
 /*!********************************************!*\
-  !*** ./src/stylus/components/_alerts.styl ***!
+  !*** ./src/mixins/transitionable/index.ts ***!
   \********************************************/
+
+/*!******************************************!*\
+  !*** ./src/mixins/translatable/index.ts ***!
+  \******************************************/
 
 /*!*****************************************!*\
-  !*** ./src/stylus/components/_app.styl ***!
+  !*** ./src/mixins/validatable/index.ts ***!
   \*****************************************/
 
-/*!***************************************************!*\
-  !*** ./src/stylus/components/_autocompletes.styl ***!
-  \***************************************************/
-
-/*!*********************************************!*\
-  !*** ./src/stylus/components/_avatars.styl ***!
-  \*********************************************/
-
-/*!********************************************!*\
-  !*** ./src/stylus/components/_badges.styl ***!
-  \********************************************/
-
-/*!*************************************************!*\
-  !*** ./src/stylus/components/_bottom-navs.styl ***!
-  \*************************************************/
-
-/*!***************************************************!*\
-  !*** ./src/stylus/components/_bottom-sheets.styl ***!
-  \***************************************************/
-
-/*!*************************************************!*\
-  !*** ./src/stylus/components/_breadcrumbs.styl ***!
-  \*************************************************/
-
-/*!***************************************************!*\
-  !*** ./src/stylus/components/_button-toggle.styl ***!
-  \***************************************************/
-
-/*!*********************************************!*\
-  !*** ./src/stylus/components/_buttons.styl ***!
-  \*********************************************/
-
-/*!****************************************************!*\
-  !*** ./src/stylus/components/_calendar-daily.styl ***!
-  \****************************************************/
-
-/*!*****************************************************!*\
-  !*** ./src/stylus/components/_calendar-weekly.styl ***!
-  \*****************************************************/
-
 /*!*******************************************!*\
-  !*** ./src/stylus/components/_cards.styl ***!
+  !*** ./src/services/application/index.ts ***!
   \*******************************************/
 
-/*!**********************************************!*\
-  !*** ./src/stylus/components/_carousel.styl ***!
-  \**********************************************/
+/*! exports provided: Application */
 
-/*!*******************************************!*\
-  !*** ./src/stylus/components/_chips.styl ***!
-  \*******************************************/
-
-/*!*********************************************!*\
-  !*** ./src/stylus/components/_content.styl ***!
-  \*********************************************/
-
-/*!**********************************************!*\
-  !*** ./src/stylus/components/_counters.styl ***!
-  \**********************************************/
-
-/*!***************************************************!*\
-  !*** ./src/stylus/components/_data-iterator.styl ***!
-  \***************************************************/
-
-/*!************************************************!*\
-  !*** ./src/stylus/components/_data-table.styl ***!
-  \************************************************/
-
-/*!********************************************************!*\
-  !*** ./src/stylus/components/_date-picker-header.styl ***!
-  \********************************************************/
-
-/*!*******************************************************!*\
-  !*** ./src/stylus/components/_date-picker-table.styl ***!
-  \*******************************************************/
-
-/*!*******************************************************!*\
-  !*** ./src/stylus/components/_date-picker-title.styl ***!
-  \*******************************************************/
-
-/*!*******************************************************!*\
-  !*** ./src/stylus/components/_date-picker-years.styl ***!
-  \*******************************************************/
-
-/*!*********************************************!*\
-  !*** ./src/stylus/components/_dialogs.styl ***!
-  \*********************************************/
-
-/*!**********************************************!*\
-  !*** ./src/stylus/components/_dividers.styl ***!
-  \**********************************************/
-
-/*!*****************************************************!*\
-  !*** ./src/stylus/components/_expansion-panel.styl ***!
-  \*****************************************************/
-
-/*!********************************************!*\
-  !*** ./src/stylus/components/_footer.styl ***!
-  \********************************************/
-
-/*!*******************************************!*\
-  !*** ./src/stylus/components/_forms.styl ***!
-  \*******************************************/
+/*! ../service */
 
 /*!******************************************!*\
-  !*** ./src/stylus/components/_grid.styl ***!
+  !*** ./src/services/breakpoint/index.ts ***!
+  \******************************************/
+
+/*! exports provided: Breakpoint */
+
+/*!**********************************************!*\
+  !*** ./src/services/goto/easing-patterns.ts ***!
+  \**********************************************/
+
+/*! exports provided: linear, easeInQuad, easeOutQuad, easeInOutQuad, easeInCubic, easeOutCubic, easeInOutCubic, easeInQuart, easeOutQuart, easeInOutQuart, easeInQuint, easeOutQuint, easeInOutQuint */
+
+/*!************************************!*\
+  !*** ./src/services/goto/index.ts ***!
+  \************************************/
+
+/*! exports provided: default, Goto */
+
+/*! ./easing-patterns */
+
+/*!***********************************!*\
+  !*** ./src/services/goto/util.ts ***!
+  \***********************************/
+
+/*! exports provided: getOffset, getContainer */
+
+/*!*************************************!*\
+  !*** ./src/services/icons/index.ts ***!
+  \*************************************/
+
+/*! exports provided: Icons */
+
+/*! ./presets */
+
+/*!******************************************!*\
+  !*** ./src/services/icons/presets/fa.ts ***!
   \******************************************/
 
 /*!*******************************************!*\
-  !*** ./src/stylus/components/_icons.styl ***!
-  \*******************************************/
-
-/*!********************************************!*\
-  !*** ./src/stylus/components/_images.styl ***!
-  \********************************************/
-
-/*!********************************************!*\
-  !*** ./src/stylus/components/_inputs.styl ***!
-  \********************************************/
-
-/*!************************************************!*\
-  !*** ./src/stylus/components/_item-group.styl ***!
-  \************************************************/
-
-/*!************************************************!*\
-  !*** ./src/stylus/components/_jumbotrons.styl ***!
-  \************************************************/
-
-/*!********************************************!*\
-  !*** ./src/stylus/components/_labels.styl ***!
-  \********************************************/
-
-/*!*******************************************!*\
-  !*** ./src/stylus/components/_lists.styl ***!
-  \*******************************************/
-
-/*!*******************************************!*\
-  !*** ./src/stylus/components/_menus.styl ***!
-  \*******************************************/
-
-/*!**********************************************!*\
-  !*** ./src/stylus/components/_messages.styl ***!
-  \**********************************************/
-
-/*!*******************************************************!*\
-  !*** ./src/stylus/components/_navigation-drawer.styl ***!
-  \*******************************************************/
-
-/*!******************************************************!*\
-  !*** ./src/stylus/components/_overflow-buttons.styl ***!
-  \******************************************************/
-
-/*!*********************************************!*\
-  !*** ./src/stylus/components/_overlay.styl ***!
-  \*********************************************/
-
-/*!************************************************!*\
-  !*** ./src/stylus/components/_pagination.styl ***!
-  \************************************************/
-
-/*!**********************************************!*\
-  !*** ./src/stylus/components/_parallax.styl ***!
-  \**********************************************/
-
-/*!*********************************************!*\
-  !*** ./src/stylus/components/_pickers.styl ***!
-  \*********************************************/
-
-/*!*******************************************************!*\
-  !*** ./src/stylus/components/_progress-circular.styl ***!
-  \*******************************************************/
-
-/*!*****************************************************!*\
-  !*** ./src/stylus/components/_progress-linear.styl ***!
-  \*****************************************************/
-
-/*!*************************************************!*\
-  !*** ./src/stylus/components/_radio-group.styl ***!
-  \*************************************************/
-
-/*!********************************************!*\
-  !*** ./src/stylus/components/_radios.styl ***!
-  \********************************************/
-
-/*!***************************************************!*\
-  !*** ./src/stylus/components/_range-sliders.styl ***!
-  \***************************************************/
-
-/*!********************************************!*\
-  !*** ./src/stylus/components/_rating.styl ***!
-  \********************************************/
-
-/*!************************************************!*\
-  !*** ./src/stylus/components/_responsive.styl ***!
-  \************************************************/
-
-/*!********************************************!*\
-  !*** ./src/stylus/components/_select.styl ***!
-  \********************************************/
-
-/*!********************************************************!*\
-  !*** ./src/stylus/components/_selection-controls.styl ***!
-  \********************************************************/
-
-/*!*******************************************!*\
-  !*** ./src/stylus/components/_sheet.styl ***!
+  !*** ./src/services/icons/presets/fa4.ts ***!
   \*******************************************/
 
 /*!*********************************************!*\
-  !*** ./src/stylus/components/_sliders.styl ***!
+  !*** ./src/services/icons/presets/index.ts ***!
   \*********************************************/
 
-/*!**************************************************!*\
-  !*** ./src/stylus/components/_small-dialog.styl ***!
-  \**************************************************/
+/*! ./mdi-svg */
+
+/*! ./md */
+
+/*! ./mdi */
+
+/*! ./fa */
+
+/*! ./fa4 */
+
+/*!******************************************!*\
+  !*** ./src/services/icons/presets/md.ts ***!
+  \******************************************/
 
 /*!***********************************************!*\
-  !*** ./src/stylus/components/_snackbars.styl ***!
+  !*** ./src/services/icons/presets/mdi-svg.ts ***!
   \***********************************************/
 
-/*!************************************************!*\
-  !*** ./src/stylus/components/_speed-dial.styl ***!
-  \************************************************/
+/*!*******************************************!*\
+  !*** ./src/services/icons/presets/mdi.ts ***!
+  \*******************************************/
 
-/*!**********************************************!*\
-  !*** ./src/stylus/components/_steppers.styl ***!
-  \**********************************************/
+/*!*******************************!*\
+  !*** ./src/services/index.ts ***!
+  \*******************************/
 
-/*!************************************************!*\
-  !*** ./src/stylus/components/_subheaders.styl ***!
-  \************************************************/
+/*! exports provided: Application, Breakpoint, Goto, Icons, Lang, Theme */
 
-/*!********************************************!*\
-  !*** ./src/stylus/components/_switch.styl ***!
-  \********************************************/
+/*! ./application */
 
-/*!*************************************************!*\
-  !*** ./src/stylus/components/_system-bars.styl ***!
-  \*************************************************/
+/*! ./breakpoint */
 
-/*!********************************************!*\
-  !*** ./src/stylus/components/_tables.styl ***!
-  \********************************************/
+/*! ./goto */
 
-/*!******************************************!*\
-  !*** ./src/stylus/components/_tabs.styl ***!
-  \******************************************/
+/*! ./icons */
 
-/*!*************************************************!*\
-  !*** ./src/stylus/components/_text-fields.styl ***!
-  \*************************************************/
+/*! ./lang */
 
-/*!**********************************************!*\
-  !*** ./src/stylus/components/_textarea.styl ***!
-  \**********************************************/
+/*! ./theme */
 
-/*!*******************************************************!*\
-  !*** ./src/stylus/components/_time-picker-clock.styl ***!
-  \*******************************************************/
+/*!************************************!*\
+  !*** ./src/services/lang/index.ts ***!
+  \************************************/
 
-/*!*******************************************************!*\
-  !*** ./src/stylus/components/_time-picker-title.styl ***!
-  \*******************************************************/
+/*! exports provided: Lang */
 
-/*!**********************************************!*\
-  !*** ./src/stylus/components/_timeline.styl ***!
-  \**********************************************/
+/*! ../../locale/en */
 
-/*!*********************************************!*\
-  !*** ./src/stylus/components/_toolbar.styl ***!
-  \*********************************************/
+/*!***************************************!*\
+  !*** ./src/services/service/index.ts ***!
+  \***************************************/
 
-/*!**********************************************!*\
-  !*** ./src/stylus/components/_tooltips.styl ***!
-  \**********************************************/
+/*! exports provided: Service */
 
-/*!**********************************************!*\
-  !*** ./src/stylus/components/_treeview.styl ***!
-  \**********************************************/
+/*!*************************************!*\
+  !*** ./src/services/theme/index.ts ***!
+  \*************************************/
 
-/*!*********************************************!*\
-  !*** ./src/stylus/components/_windows.styl ***!
-  \*********************************************/
+/*! exports provided: Theme */
+
+/*! ./utils */
+
+/*!*************************************!*\
+  !*** ./src/services/theme/utils.ts ***!
+  \*************************************/
+
+/*! exports provided: parse, genStyles, genVariations */
+
+/*! ../../util/color/transformSRGB */
+
+/*! ../../util/color/transformCIELAB */
+
+/*!********************************************************!*\
+  !*** ./src/styles/components/_selection-controls.sass ***!
+  \********************************************************/
+
+/*!******************************!*\
+  !*** ./src/styles/main.sass ***!
+  \******************************/
 
 /*!***********************************!*\
   !*** ./src/util/ThemeProvider.ts ***!
@@ -2225,15 +2623,23 @@
   !*** ./src/util/colorUtils.ts ***!
   \********************************/
 
-/*! exports provided: colorToInt, intToHex, colorToHex */
+/*! exports provided: colorToInt, intToHex, colorToHex, HSVAtoRGBA, RGBAtoHSVA, HSVAtoHSLA, HSLAtoHSVA, RGBAtoCSS, RGBtoCSS, RGBAtoHex, HexToRGBA, HexToHSVA, HSVAtoHex, parseHex, RGBtoInt, contrastRatio */
 
 /*! ./console */
+
+/*! ./helpers */
+
+/*! ./color/transformSRGB */
+
+/*!****************************!*\
+  !*** ./src/util/colors.ts ***!
+  \****************************/
 
 /*!*****************************!*\
   !*** ./src/util/console.ts ***!
   \*****************************/
 
-/*! exports provided: consoleInfo, consoleWarn, consoleError, deprecate */
+/*! exports provided: consoleInfo, consoleWarn, consoleError, deprecate, breaking, removed */
 
 /*!******************************************!*\
   !*** ./src/util/dedupeModelListeners.ts ***!
@@ -2243,13 +2649,17 @@
   !*** ./src/util/helpers.ts ***!
   \*****************************/
 
-/*! exports provided: createSimpleFunctional, createSimpleTransition, createJavaScriptTransition, directiveConfig, addOnceEventListener, passiveSupported, addPassiveEventListener, getNestedValue, deepEqual, getObjectValueByPath, getPropertyFromItem, createRange, getZIndex, escapeHTML, filterObjectOnKeys, filterChildren, convertToUnit, kebabCase, isObject, keyCodes, remapInternalIcon, keys, camelize, arrayDiff, upperFirst, getSlotType */
+/*! exports provided: createSimpleFunctional, createSimpleTransition, createJavaScriptTransition, directiveConfig, addOnceEventListener, passiveSupported, addPassiveEventListener, getNestedValue, deepEqual, getObjectValueByPath, getPropertyFromItem, createRange, getZIndex, escapeHTML, filterObjectOnKeys, convertToUnit, kebabCase, isObject, keyCodes, remapInternalIcon, keys, camelize, arrayDiff, upperFirst, groupByProperty, wrapInArray, sortItems, defaultFilter, searchItems, getSlotType, debounce, getPrefixedScopedSlots, getSlot, clamp, padEnd, chunk, humanReadableFileSize, camelizeObjectKeys */
 
-/*!**************************!*\
-  !*** ./src/util/mask.ts ***!
-  \**************************/
+/*!*******************************!*\
+  !*** ./src/util/mergeData.ts ***!
+  \*******************************/
 
-/*! exports provided: defaultDelimiters, isMaskDelimiter, maskText, unmaskText */
+/**
+ * @copyright 2017 Alex Regan
+ * @license MIT
+ * @see https://github.com/alexsasharegan/vue-functional-data-merge
+ */
 
 /*!****************************!*\
   !*** ./src/util/mixins.ts ***!
@@ -2259,30 +2669,6 @@
   !*** ./src/util/rebuildFunctionalSlots.ts ***!
   \********************************************/
 
-/*!***************************!*\
-  !*** ./src/util/theme.ts ***!
-  \***************************/
-
-/*! exports provided: parse, genStyles, genVariations */
-
-/*! ./colorUtils */
-
-/*! ./color/transformSRGB */
-
-/*! ./color/transformCIELAB */
-
 /*!******************************************************************************!*\
   !*** external {"commonjs":"vue","commonjs2":"vue","amd":"vue","root":"Vue"} ***!
   \******************************************************************************/
-
-/*!
- * vue-no-ssr v1.1.1
- * (c) 2018-present egoist <0x142857@gmail.com>
- * Released under the MIT License.
- */
-
-/*!
- * vue-client-only v2.0.0
- * (c) 2019-present egoist <0x142857@gmail.com>
- * Released under the MIT License.
- */
