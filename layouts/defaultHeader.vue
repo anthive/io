@@ -25,7 +25,7 @@
 					v-list-item-content
 						v-list-item-title Login
 		v-toolbar-title
-			v-btn(to="/") 
+			router-link(to="/") 
 				Logo
 		v-spacer
 		v-toolbar-items.hidden-sm-and-down.mr-2
@@ -51,6 +51,9 @@ export default {
 </script>
 
 <style>
+	a{ 
+		text-decoration: none;
+	} 
 	.defaultHeader {
 		z-index: 10;
 	}
