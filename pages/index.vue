@@ -1,33 +1,9 @@
 /* eslint-disable */
 <template>
-  <v-app light>
-    <v-content>
+     <div>
+      <parallaxSection></parallaxSection>
       <section>
-        <v-parallax src="/img/home_bg.png" height="700">
-          <v-container mt-4>
-            <v-layout row wrap justify-center align-start mt-5 class="white--text">
-              <v-flex sm12 md6 mb-4 text-xs-center>
-                <div class="white--text mb-5 mt-0 display-2 font-weight-thin"
-                >You are not playing a game</div>
-
-                <div class="headline font-weight-bold orange--text text--darken-1"
-                >Turn-based strategy game for your AI</div>
-
-                <div class="hidden-sm-and-down mt-2 title font-weight-regular"
-                >Start your new coding adventure with 3 simple steps</div>
-              </v-flex>
-              <v-flex sm10 md6>
-                <div @click="playPausePlayer()" id="player" class="ant-player">
-                  <h2 class="loading">Loading...</h2>
-                </div>
-              </v-flex>
-            </v-layout>
-          </v-container>
-        </v-parallax>
-      </section>
-
-      <section>
-        <v-layout column class="my-5" align-center>
+        <v-layout column class="my-5 mt-n12" align-center>
           <v-flex xs12 md8 lg8 class="steps-section__flex">
             <v-container grid-list-xl>
               <v-layout justify-center row wrap fill-height>
@@ -348,56 +324,22 @@
           </v-layout>
         </v-parallax>
       </section>
-    </v-content>
-  </v-app>
+   </div>
 </template>
 <script>
-var homepagePlayer = null;
+import parallaxSection from '../components/indexPage/parallaxSection.vue'
 
 export default {
   data: () => ({
-    isPlaying: true,
     dialog: false
   }),
-  mounted() {
-    const dataUrl = 'https://storage.googleapis.com/anthive-dev-games/Kj5A2SydOFlqgLIu35Br.zip';
-    // const dataUrl = 'https://storage.googleapis.com/anthive-dev-games/LyJ6Lfq3FG8sbE0KO3bp.zip'
-
-    homepagePlayer = new AnthivePlayer(dataUrl, '#player');
-
-    // homepagePlayer.on(AnthivePlayer.onFrameRendered, () => {
-    //   var total = homepagePlayer.total;
-    //   var current = homepagePlayer.currentIndex + 1;
-
-    //   if(current == total) {
-    //     // TO DO:
-    //   }
-    // });
-
+  components: {
+    parallaxSection
   },
-  methods: {
-    playPausePlayer() {
-      if (this.isPlaying){
-        homepagePlayer.pause();
-        this.isPlaying = false;
-      }else {
-        homepagePlayer.play();
-        this.isPlaying = true;
-      }
-    },
-  }
 }
 </script>
 
-<style>
-.ant-player {
-  background-image: url('https://anthive.io/skins/server/1/background.png');
-}
-
-.steps-section__flex {
-  margin-top: -180px;
-}
-
+<style scoped>
 .feature-section__layout {
   position: relative;
 }
