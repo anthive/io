@@ -2,113 +2,8 @@
 <template>
      <div>
       <parallaxSection></parallaxSection>
-      <section>
-        <v-layout column class="my-5 mt-n12" align-center>
-          <v-flex xs12 md8 lg8 class="steps-section__flex">
-            <v-container grid-list-xl>
-              <v-layout justify-center row wrap fill-height>
-
-                <v-flex xs12 md4 lg4 pa-2 justify-left>
-                  <v-card class="elevation-6 white" height="100%">
-                    <v-card-text class="pb-0">
-                      <v-layout row wrap justify-space-between pa-2>
-                        <v-avatar
-                          size="45"
-                          color="brown"
-                          class="lighten-1"
-                        >
-                          <v-card-text pa-0 class="title white--text">1</v-card-text>
-                        </v-avatar>
-                    
-                        <v-icon x-large class="orange--text text--lighten-2">cloud_download</v-icon>
-
-                      </v-layout>
-                    </v-card-text>
-                    <v-card-title class="pt-3 display-1 font-weight-thin">Get a sample bot</v-card-title>
-                    
-                    <v-card-text class="subheading">
-                      Choose coding language that you prefer. Git clone sample repository or
-                      <a
-                        href="https://github.com/new/import"
-                        style="color: blue"
-                      >import</a> it. You can choose sample from next languages.
-                    </v-card-text>
-                    <div class="text-xs-left px-3 py-3">
-                      <v-chip class="brown lighten-2 white--text">
-                        <a href="https://github.com/anthive/js" target="_blank">JS</a>
-                      </v-chip>
-                      <v-chip class="brown lighten-2 white--text">
-                        <a href="https://github.com/anthive/python" target="_blank">Python</a>
-                      </v-chip>
-                      <v-chip class="brown lighten-2 white--text">
-                        <a href="https://github.com/anthive/go" target="_blank">Go</a>
-                      </v-chip>
-                      <v-chip class="brown lighten-2 white--text">
-                        <a href="https://github.com/anthive/cpp" target="_blank">C++</a>
-                      </v-chip>
-
-                      <v-chip to="/" class="brown lighten-2 white--text">
-                        <a href="https://github.com/anthive/php" target="_blank">PHP</a>
-                      </v-chip>
-                    </div>
-                  </v-card>
-                </v-flex>
-
-                <v-flex xs12 md4 lg4 pa-2 justify-left>
-                  <v-card class="elevation-6 white" height="100%">
-                    <v-card-text class="pb-0">
-                      <v-layout row wrap justify-space-between pa-2>
-                        <v-avatar
-                          size="45"
-                          color="brown"
-                          class="lighten-1"
-                        >
-                          <v-card-text pa-0 class="title white--text">2</v-card-text>
-                        </v-avatar>
-                    
-                        <v-icon x-large class="orange--text text--lighten-2">insert_link</v-icon>
-
-                      </v-layout>
-                    </v-card-text>
-                    <v-card-title class="pt-3 display-1 font-weight-thin">Link your repo</v-card-title>
-
-                    <v-card-text
-                      class="subheading"
-                    >In your repository set your username in ANTHIVE file. Link your repository in profile settings page.</v-card-text>
-                    <v-btn href="https://profile.anthive.io/login/" class="ma-3" color="brown white--text">Profile</v-btn>
-                  </v-card>
-                </v-flex>
-
-                <v-flex xs12 md4 lg4 pa-2 justify-left>
-                  <v-card class="elevation-6 white" height="100%">
-                    
-                    <v-card-text class="pb-0">
-                      <v-layout row wrap justify-space-between pa-2>
-                        <v-avatar
-                          size="45"
-                          color="brown"
-                          class="lighten-1"
-                        >
-                          <v-card-text pa-0 class="title white--text">3</v-card-text>
-                        </v-avatar>
-                    
-                        <v-icon x-large class="orange--text text--lighten-2">flash_on</v-icon>
-
-                      </v-layout>
-                    </v-card-text>
-                    <v-card-title class="pt-3 display-1 font-weight-thin">Code strategies code</v-card-title>
-                    <v-card-text
-                      class="subheading"
-                    >Refactor code with your own strategies. Git push to origin. Start games, compete and climb the
-                      <a href="/leaderboard/" style="color: blue">leaderboard</a>.</v-card-text>
-                    <v-btn to="/rules/" class="ma-3" color="brown white--text">Rules</v-btn>
-                  </v-card>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-flex>
-        </v-layout>
-      </section>
+       <stepsSection></stepsSection>
+      
 
       <section class="feature-section">
         <v-parallax src="/img/leaderboard_bg.png" align height="100%">
@@ -328,18 +223,23 @@
 </template>
 <script>
 import parallaxSection from '../components/indexPage/parallaxSection.vue'
+import stepsSection from '../components/indexPage/stepsSection.vue'
 
 export default {
   data: () => ({
     dialog: false
   }),
   components: {
-    parallaxSection
+    parallaxSection,
+     stepsSection
   },
 }
 </script>
 
 <style scoped>
+a{ 
+		text-decoration: none;
+	} 
 .feature-section__layout {
   position: relative;
 }
