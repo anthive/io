@@ -35,8 +35,7 @@ export default {
 		us: userService,
 		players:[],
 		elastic: axios.create({
-			baseURL: ' http://159.203.163.51:9200/',  // временное решение
-			// baseURL: 'https://search.anthive.io/',
+			baseURL: 'https://search.anthive.io/',
 			timeout: 3000
 		})
 	}),
