@@ -1,52 +1,29 @@
 <template lang="pug">
-	#Leaderboard
-		section(class="section section-lg pt-lg-0")
-			v-parallax(src="/img/leaderboard_bg.png" align height="300")
-			v-layout(align-center justify-center row fill-height)
-				v-flex(xs12 md8 offset2)
-					v-card.leaderboard__card
-						v-list.pb-0(three-line subheader)
-							template(v-for="(player, index) in players.slice(0, 3)")
-								v-list-tile.orange.lighten-5(:to="{ path: '/user/?username=' + player.Username}")
-									v-list-tile-avatar(class='mt-0')
-										span(class='title orange--text text--darken-3') {{index+1}}
-									v-avatar(size="70")
-										v-img(:src="us.photoUrl(player.Username, 70)" class="grey lighten-4")
-										v-flex(column style="margin-left: -15px;")
-											v-avatar.grey.lighten-3.overflow-hidden(size="30")
-												v-img(:src="us.langUrl(player.Lang)")
-											v-avatar.grey.lighten-4(size="30")
-												v-card-text.pa-0.lighten-4.caption v.{{ player.Version }}
-									v-list-tile-content.ml-1.px-3
-										v-list-tile-title(class='title') {{player.Username}}
-										v-list-tile-sub-title {{player.Games}} games
-									v-list-tile-action.pr-3
-										v-list-tile-sub-title {{us.scoreString(player.Wealth)}} wealth
-									v-list-tile-action.pr-3
-										span(class='title') {{player.Wg}}
-											v-icon.orange--text.text--lighten-2(class="ml-1") bubble_chart
-								v-divider
-						v-list.pb-0(three-line subheader)
-							template(v-for="(player, index) in players.slice(3)")
-								v-list-tile(:to="{ path: '/user/?username=' + player.Username}")
-									v-list-tile-avatar
-										span {{index+4}}
-									v-avatar(size="70")
-										v-img(:src="us.photoUrl(player.Username, 70)" class="grey lighten-4")
-										v-flex(column style="margin-left: -15px;")
-											v-avatar.grey.lighten-3.overflow-hidden(size="30")
-												v-img(:src="us.langUrl(player.Lang)")
-											v-avatar.grey.lighten-4(size="30")
-												v-card-text.pa-0.lighten-4.caption v.{{ player.Version }}
-									v-list-tile-content.ml-1.px-3
-										v-list-tile-title {{player.Username}}
-										v-list-tile-sub-title {{player.Games}} games
-									v-list-tile-action.pr-3
-										v-list-tile-sub-title {{us.scoreString(player.Wealth)}} wealth
-									v-list-tile-action.pr-3
-										span(class='subtitle') {{player.Wg}}
-											v-icon.orange--text.text--lighten-2(class="ml-1") bubble_chart
-								v-divider
+	section
+		v-parallax(src="/img/leaderboard_bg.png" height="400")
+		v-row.justify-center
+			v-col(cols="11" md="9")
+				v-card.leaderboard__card
+					v-list.py-0
+						template(v-for="(player, index) in players")
+							v-list-item(:class="(index < 3) && 'orange lighten-5'"  :to="{ path: '/user/?username=' + player.Username}")
+								span.ml-2(:class=" (index < 3) && 'title orange--text'") {{index+1}}
+								v-list-item-avatar.ml-5(size="70")
+									v-img(:src="us.photoUrl(player.Username, 70)" class="grey lighten-4")
+									.d-flex.flex-column.ml-n4
+										v-avatar(size="30")
+											v-img(:src="us.langUrl(player.Lang)")
+										v-avatar.grey.lighten-4(size="30")
+											v-card-text.pa-0.caption v.{{ player.Version }}
+								v-list-item-content.pl-5
+									v-list-item-title( :class="(index < 3) && 'title'") {{player.Username}}
+									v-list-item-subtitle {{player.Games}} games
+								v-list-tile-action.pr-3
+									v-list-item-subtitle {{us.scoreString(player.Wealth)}} wealth
+								v-list-tile-action.pr-3
+									span(:class="(index < 3) && 'title'") {{player.Wg}}
+										v-icon.orange--text.text--lighten-2(class="ml-1") bubble_chart
+							v-divider
 </template>
 
 <script>
@@ -58,7 +35,8 @@ export default {
 		us: userService,
 		players:[],
 		elastic: axios.create({
-			baseURL: 'http://159.203.163.51:9200/',
+			baseURL: ' http://159.203.163.51:9200/',  // временное решение
+			// baseURL: 'https://search.anthive.io/',
 			timeout: 3000
 		})
 	}),
@@ -99,6 +77,6 @@ export default {
 </script>
 <style>
 .leaderboard__card {
-	margin-top: -178px;
+	margin-top: -350px;
 }
 </style>
