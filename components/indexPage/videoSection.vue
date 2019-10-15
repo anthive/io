@@ -1,30 +1,23 @@
 <template lang="pug">
-	section.video_bg
-		v-layout(column='', wrap='', align-center='', pa-0='')
-			v-flex.md8.video_filter(xs12='')
-				v-container(grid-list-xl='', mt-5='')
-					v-layout(align-center='', justify-center='', row='', wrap='', fill-height='')
-						v-flex(xs12='', md12='', lg8='', ma-0='', pa-0='')
-							v-layout(align-center='', justify-space-around='', row='', wrap='', fill-height='', ma-0='', pa-0='')
-								v-flex(xs12='', md12='', lg4='', my-0='', justify-center='')
-									v-card.py-3.transparent(@click='dialog = !dialog', style='cursor: pointer;')
-										v-img(src='/img/play_button.png', style='margin: 0 auto;', aspect-ratio='1', max-width='128px', contain='')
-									.text-xs-center
-										v-dialog(v-model='dialog', width='70%')
-											v-card
-												iframe(width='100%', height='500', src='https://www.youtube.com/embed/8CKeXZQdKKU', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
-								v-flex.align-center.justify-center(xs12='', md12='', lg6='', my-0='')
-									v-card.pa-3.transparent(elevation='0')
-										v-card-title.layout.justify-start(primary-title='')
-											.headline.brown--text.text-xs-left.px-2 Get Started!
-										v-card-text.subheading
-											p This is a turn-based strategy game for your Bot.
-											p
-												| Compute, contemplate and plan each step of your ants. Send commands to your ants in order for them to collect food, bring it to your hive, and to grow your colony.
-											p
-												| A player with the biggest colony and least errors wins the game. To start the game please follow three steps below.
-											p For detailed rules please visit link
-										v-btn.mx-3.mb-3(to='/rules/', color='brown white--text') Rules
+	section.video_bg.my-12
+		v-row.video_filter.align-center.justify-space-around
+			v-col(cols="11", lg='3')
+				v-card.py-3.transparent(@click='dialog = !dialog', style='cursor: pointer;')
+					v-img(src='/img/play_button.png', style='margin: 0 auto;', aspect-ratio='1', max-width='128px', contain='')
+				.text-xs-center
+					v-dialog(v-model='dialog', width='70%')
+						v-card
+							iframe(width='100%', height='500', src='https://www.youtube.com/embed/8CKeXZQdKKU', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen)
+			v-col(cols="11", lg='6')
+				v-card.pa-3.transparent(flat)
+					v-card-title
+						.headline.brown--text.text-xs-left.px-2 Get Started!
+					v-card-text.subheading
+						p This is a turn-based strategy game for your Bot.
+						p Compute, contemplate and plan each step of your ants. Send commands to your ants in order for them to collect food, bring it to your hive, and to grow your colony.
+						p A player with the biggest colony and least errors wins the game. To start the game please follow three steps below.
+						p For detailed rules please visit link
+					v-btn.ma-3(to='/rules/', color='brown white--text') Rules
 </template>
 
 <script>
