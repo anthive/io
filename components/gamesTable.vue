@@ -2,7 +2,6 @@
 <template lang="pug">
   #games-table
     v-data-table(
-      hide-actions
       :loading="loading"
       loading-text="Loading... Please wait"
       :headers="columns"
