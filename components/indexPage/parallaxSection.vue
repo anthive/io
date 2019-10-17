@@ -22,18 +22,7 @@ export default {
   mounted() {
     const dataUrl = 'https://storage.googleapis.com/anthive-dev-games/Kj5A2SydOFlqgLIu35Br.zip';
     // const dataUrl = 'https://storage.googleapis.com/anthive-dev-games/LyJ6Lfq3FG8sbE0KO3bp.zip'
-
     homepagePlayer = new AnthivePlayer(dataUrl, '#player');
-
-    // homepagePlayer.on(AnthivePlayer.onFrameRendered, () => {
-    //   var total = homepagePlayer.total;
-    //   var current = homepagePlayer.currentIndex + 1;
-
-    //   if(current == total) {
-    //     // TO DO:
-    //   }
-    // });
-
   },
   methods: {
     playPausePlayer() {

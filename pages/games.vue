@@ -24,8 +24,6 @@ export default {
 		user: {}
 	}),
 	created() {
-		var username = 'kezlya'
-
 		this.filters = [
 			{"term": { "Age": 1000 }},
 			{"range": { "Wealth": { "gte": 1000, "lte": 3000 }}}
