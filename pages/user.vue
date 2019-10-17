@@ -1,25 +1,24 @@
 <template lang="pug">
-  #user
-    v-container.pb-0
-      v-layout(row wrap mt-5 pt-3)
-        v-flex(shrink class="mr-4 mb-4")
-          v-card(max-width="250")
-            v-img(min-width="250" :src="user.avatar" v-if="user.avatar")
-            v-card-title()
-              h3(class="headline") {{ user.name }}
-            v-card-text(class="user__card-text pt-0" v-if="user.company")
-              v-icon(size="20" class="mr-2") people
-              span {{ user.company }}
-            v-card-text(class="user__card-text pt-0" v-if="user.location")
-              v-icon(size="20" class="mr-2") place
-              span {{ user.location }}
-            v-card-text(class="user__card-text pt-0" v-if="user.blog")
-              v-icon(size="20" class="mr-2") public
-              a(:href="user.blog" target="_blank") {{ user.blog }}
-        v-flex.mb-4.pa-0(grow)
-          h3(class="headline mt-1 mb-3") Bot performance in the last 10 days
-          Chart.elevation-1(:values="userChartData" username="kezlya")
-      v-flex(grow)
+  section
+    v-row.ma-10.justify-center
+      v-col(cols="11" lg="3")
+        v-card(max-width="250")
+          v-img(min-width="250" :src="user.avatar" v-if="user.avatar")
+          v-card-title
+            h3(class="headline") {{ user.name }}
+          v-card-text(class="user__card-text pt-0" v-if="user.company")
+            v-icon(size="20" class="mr-2") people
+            span {{ user.company }}
+          v-card-text(class="user__card-text pt-0" v-if="user.location")
+            v-icon(size="20" class="mr-2") place
+            span {{ user.location }}
+          v-card-text(class="user__card-text pt-0" v-if="user.blog")
+            v-icon(size="20" class="mr-2") public
+            a(:href="user.blog" target="_blank") {{ user.blog }}
+      v-col(cols="11" lg="7" xl="5")
+        h3.headline.mt-1.mb-3 Bot performance in the last 10 days
+        Chart.elevation-1(:values="userChartData" username="kezlya")
+      v-col.mt-4(cols="11" lg="8")
         h3(class="headline mt-1 mb-3") User games:
           //TODO: use v-on span(class="grey--text") ({{ totalGames }})
         gamesTable(:Filters="filters" :PageSize=17)

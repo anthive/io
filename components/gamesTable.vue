@@ -1,34 +1,37 @@
+
 <template lang="pug">
   #games-table
     v-data-table(
-      hide-actions
       :loading="loading"
+      loading-text="Loading... Please wait"
       :headers="columns"
       :items="items"
+      hide-default-header
+      hide-default-footer
       class="text-xs-center"
     )
-      template(slot="headers" slot-scope="props")
-        th(class="text-xs-left") Players
-        th(
-          v-for="(column, index) in props.headers"
-          :class="dataTableClasses(column)"
-          :key="index"
-          @click="doSort(column)"
-        ) {{ column.text }}
-          v-icon(
-            small
-            v-if="(column.hasOwnProperty('sort')) && column.sort =='desc'"
-          ) arrow_upward
-          v-icon(
-            small
-            v-if="(column.hasOwnProperty('sort')) && column.sort == 'asc'"
-          ) arrow_downward
-
-      template(slot="items" slot-scope="props")
+      template(v-slot:header="{ props: { headers } }") 
+        tr
+          th(class="text-xs-left") Players
+          th(
+            v-for="(column, index) in headers"
+            :class="dataTableClasses(column)"
+            :key="index"
+            @click="doSort(column)"
+          ) {{ column.text }}
+            v-icon(
+              small
+              v-if="(column.hasOwnProperty('sort')) && column.sort =='desc'"
+            ) arrow_upward
+            v-icon(
+              small
+              v-if="(column.hasOwnProperty('sort')) && column.sort == 'asc'"
+            ) arrow_downward
+      template(v-slot:item=" { item } ")
         tr(style="cursor: pointer;")
-          td.py-1.text-xs-left(@click.self="openGame(props.item)")
-            userInfo.my-1.mr-3(
-              v-for="(player, pIndex) in props.item._source.Players"
+          td.py-1.text-xs-left(@click.self="openGame(item)")
+            userInfo.ma-3(
+              v-for="(player, pIndex) in item._source.Players"
               :key="player.id"
               :username="player.Username"
               :lang="player.Lang"
@@ -37,10 +40,10 @@
               :score="player.Wealth"
             )
           td.games-table__meta.subheading(
-            @click="openGame(props.item)"
+            @click="openGame(item)"
             v-for="(column, index) in columns"
             :key="index"
-            v-html="getColumnData(props.item, column)"
+            v-html="getColumnData(item, column)"
           )
 
     v-toolbar(flat)
@@ -151,7 +154,7 @@ export default {
     },
 
     openGame(data){
-       this.$router.push("/game/?id="+data._id+"&v="+data._source.Version);
+      this.$router.push("/game/?id="+data._id+"&v="+data._source.Version);
     },
 
     //READY
@@ -180,6 +183,8 @@ export default {
           // TODO:
           // use $emit  to pass data back to parent games.total;
           // https://forum.vuejs.org/t/passing-data-back-to-parent/1201
+          console.log(games);
+          
           this.items = games.hits;
         }
         this.loading = false;

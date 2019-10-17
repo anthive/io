@@ -1,7 +1,7 @@
 <template lang="pug">
   section
-    v-layout(column align-center style="overflow: scroll;")
-      v-flex.players.mx-4.px-5.text-xs-center(xs12 md8 lg8)
+    v-row.flex-column.align-center.ma-8()
+      v-col.players.text-center(cols="12" md="8")
         template(v-for="(player, index) in players")
           userInfoFull(
             :username="player.Username"
@@ -13,13 +13,10 @@
             :stats="player.Stats"
           )
           span.game__vs-separator.mx-4(v-if="index+1<players.length") VS
-
-      v-flex.player__section
-        v-layout.player__actions(wrap @mouseover="showActionsState = true" @mouseleave="showActionsState = false" ref="playerActions" v-show="showActionsState")
-          v-layout.player__progress
-            v-progress-linear.my-0(height="5" color="warning" :value="percentTick")
+      v-col.pa-0.player__section(cols="auto" style="overflow: auto;")
+        .player__actions( @mouseover="showActionsState = true" @mouseleave="showActionsState = false" ref="playerActions" v-show="showActionsState")
+          v-progress-linear.my-0(height="5" color="warning" :value="percentTick")
           v-toolbar.transparent(v-if="players.length>0" flat)
-
             v-toolbar-items
               v-btn(@click="navigate('prev')" title="Previous" icon)
                 v-icon.white--text skip_previous
@@ -35,16 +32,14 @@
               v-btn.white--text(@click="setSpeed(1)" title="Speed 1x" :disabled="currentSpeed == 1" icon) 1x
               v-btn.white--text(@click="setSpeed(2)" title="Speed 2x" :disabled="currentSpeed == 2" icon) 2x
               v-btn.white--text(active-class="btn-disabled" @click="setSpeed(4)" title="Speed 4x" :disabled="currentSpeed == 4" icon) 4x
-        v-layout.player__wrap(@click="playPause()" @mouseover="showActionsState = true" @mouseleave="showActionsState = false" ref="playerWrap")
+        .player__wrap(@click="playPause()" @mouseover="showActionsState = true" @mouseleave="showActionsState = false" ref="playerWrap")
         div(id="player" :style="{background: '#ccc url(/skins/server/'+theme+'/background.png)' }")
           h2.px-2.white--text(class="loading") {{status}}
 </template>
 
 <script>
 import userInfoFull from "@/components/UserInfoFull";
-
 var player = null;
-
 export default {
   data: () => ({
     status: "Loading...",
@@ -68,10 +63,9 @@ export default {
     if (dataUrl != null){
       player = new AnthivePlayer(dataUrl,"#player");
       player.on(AnthivePlayer.onReady, () => {
-        this.totalTicks = player.total;
+        this.totalTicks = player.total;
         this.players = player.players;
         this.theme = player.theme;
-
         var width = player.size.width * 20 + 'px'
         this.$refs.playerWrap.style.minWidth = width
         this.$refs.playerActions.style.width = width
@@ -118,20 +112,16 @@ export default {
 #player {
   background-repeat: repeat;
 }
-
 .players {
-  margin-top: 100px;
-}
 
+}
 .game__vs-separator {
   position: relative;
   top: -80px;
 }
-
 .player__section {
   position: relative;
 }
-
 .player__actions {
   position: absolute;
   bottom: 0;
@@ -140,34 +130,19 @@ export default {
   background: rgba(0, 0, 0, .3);
   z-index: 10;
 }
-
 .player__progress {
-  width: 100%;
 }
-
 .v-btn--disabled {
   background: rgba(255, 255, 255, .2);
 }
-
 .v-btn--disabled > .v-btn__content {
   color: rgba(255, 255, 255, .8);
 }
-
 .player__wrap {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.bot-info__title {
-  width: 50px;
-}
-
-.bot-info__data {
-  display: inline-block;
-  width: 60px;
-  text-align: center;
 }
 </style>
