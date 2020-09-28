@@ -9,9 +9,6 @@ workbox.setConfig({
   "debug": false
 })
 
-// Start controlling any existing clients as soon as it activates
-workbox.core.clientsClaim()
-
 // Skip over the SW waiting lifecycle stage
 workbox.core.skipWaiting()
 
