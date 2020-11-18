@@ -1,0 +1,19 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    branches: [ master ]
+    inputs:
+      notes:
+        description: 'Release Notes'  
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/setup-node@v2.1.2
+    - name: Build the site in the jekyll/builder container
+      run: |
+        echo "Relase notes: ${{ github.event.inputs.notes }}"
+
+    
