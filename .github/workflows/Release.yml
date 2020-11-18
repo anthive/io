@@ -11,9 +11,19 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/setup-node@v2.1.2
-    - name: Build the site in the jekyll/builder container
+    - uses: actions/checkout@v2
       run: |
-        echo "Relase notes: ${{ github.event.inputs.notes }}"
-
-    
+        shopt -s extglob
+        rm -r !("CNAME"|"README.md")
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git clone https://github.com/anthive/website.git
+        cd website
+        npm ci
+        npm run generate
+        cd ..
+        cp -r website/dist/** .
+        rm -rf website
+        git add .
+        git commit -m "Release: ${{ github.event.inputs.notes }}"
+        echo "Done"
