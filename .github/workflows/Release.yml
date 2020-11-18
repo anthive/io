@@ -1,5 +1,4 @@
-name: Release ${{ github.event.inputs.notes }}
-
+name: Release
 on:
   workflow_dispatch:
     branches: [master]
