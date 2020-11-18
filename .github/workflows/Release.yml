@@ -1,11 +1,11 @@
-name: Release
+name: Release ${{ github.event.inputs.notes }}
 
 on:
   workflow_dispatch:
-    branches: [ master ]
+    branches: [master]
     inputs:
       notes:
-        description: 'Release Notes'  
+        description: "Release Notes"
 
 jobs:
   build:
@@ -38,7 +38,6 @@ jobs:
         run: |
           shopt -s extglob
           rm -r !("CNAME"|"README.md")
-          ls -R
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
@@ -47,6 +46,7 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git status
-          ls -R
+          git add .
+          git commit -m "${{ github.event.inputs.notes }}"
+          git push
           echo "Done"
