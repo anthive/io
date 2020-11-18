@@ -41,11 +41,10 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: gh-pages
-      - name: Checking
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "${{ github.event.inputs.notes }}"
-          git push
-          echo "Done"
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with: 
+          branch: pre-release
+          delete-branch: true
+          title: ${{ github.event.inputs.notes }}
+          reviewers: kezlya
