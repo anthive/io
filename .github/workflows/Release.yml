@@ -18,11 +18,11 @@ jobs:
           npm ci
           npm run generate
         env:
-        API_URL: https://api.anthive.io/
-        PROFILE_URL: https://profile.anthive.io/
-        SANDBOX_STORAGE: https://storage.googleapis.com/anthive-prod-sandbox/
-        SIM_VERSION: 5.0
-        SANDBOX_API_URL: https://sandbox-luvkm7etwa-uc.a.run.app/
+          API_URL: https://api.anthive.io/
+          PROFILE_URL: https://profile.anthive.io/
+          SANDBOX_STORAGE: https://storage.googleapis.com/anthive-prod-sandbox/
+          SIM_VERSION: 5.0
+          SANDBOX_API_URL: https://sandbox-luvkm7etwa-uc.a.run.app/
       - name: Archive prod pages
         uses: actions/upload-artifact@v2
         with:
@@ -33,8 +33,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Remove old files
-        uses: actions/checkout@v2
         run: |
           shopt -s extglob
           rm -r !("CNAME"|"README.md")
