@@ -24,6 +24,7 @@ jobs:
           GAMES_STORAGE: https://storage.googleapis.com/anthive-prod-games
           LOGS_STORAGE: https://storage.googleapis.com/anthive-prod-logs
           SANDBOX_STORAGE: https://storage.googleapis.com/anthive-prod-sandbox
+          RDB_URL: https://anthive-prod.firebaseio.com
       - name: Archive prod pages
         uses: actions/upload-artifact@v2
         with:
