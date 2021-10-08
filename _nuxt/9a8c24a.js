@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{1314:function(t,e,n){"use strict";n.r(e);var o={mounted:function(){this.$router.push("".concat(this.localePath("leaderboard"),"/bots"))}},c=n(6),component=Object(c.a)(o,(function(){var t=this.$createElement;return(this._self._c||t)("div")}),[],!1,null,null,null);e.default=component.exports}}]);
